@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2025-10-16T00:00:00.000Z" agent="5.0 (Windows)" etag="1" version="20.6.3" type="device">
+  <diagram id="diagram1" name="Diagrama flujo testing">
+    <mxGraphModel dx="1000" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Start -->
+        <mxCell id="start" value="Inicio" style="ellipse;whiteSpace=wrap;html=1;fillColor=#b7e4c7;strokeColor=#3a7d44;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="120" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Crear repositorio -->
+        <mxCell id="repo" value="Crear repositorio\n(GitHub/GitLab)\nREADME.md, .gitignore, ramas" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#cfe2ff;strokeColor=#2b6cb0;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="200" y="40" width="220" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- Configurar CI -->
+        <mxCell id="ci" value="Configurar CI y plantilla de issues\n(workflow, badge)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#cfe2ff;strokeColor=#2b6cb0;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="460" y="40" width="220" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- Diseñar casos -->
+        <mxCell id="disenar" value="Diseñar casos de prueba\n(objetivo, precondiciones, pasos, datos, resultado esperado)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#cfe2ff;strokeColor=#2b6cb0;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="40" y="160" width="320" height="90" as="geometry"/>
+        </mxCell>
+
+        <!-- Implementar tests -->
+        <mxCell id="implementar" value="Implementar tests\n(dir: tests/, convención, framework)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#cfe2ff;strokeColor=#2b6cb0;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="400" y="170" width="280" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- Ejecutar tests -->
+        <mxCell id="ejecutar" value="Ejecutar tests\n(local / CI)\n(comando, versión, logs)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#cfe2ff;strokeColor=#2b6cb0;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="160" y="280" width="260" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- Decision -->
+        <mxCell id="decision" value="¿Tests OK?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#e9ecef;strokeColor=#6c757d;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="460" y="300" width="120" height="100" as="geometry"/>
+        </mxCell>
+
+        <!-- Flujo NO: Crear issue -->
+        <mxCell id="issue" value="Crear issue / Reportar bug\n(pasos, logs, evidencias, asignado)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffd6d6;strokeColor=#c02626;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="620" y="260" width="260" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- Corregir y commitear -->
+        <mxCell id="corregir" value="Corregir y commitear\n(rama feature/fix, ref issue)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffd6d6;strokeColor=#c02626;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="620" y="360" width="260" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- Flujo SI: Generar reporte -->
+        <mxCell id="reporte" value="Generar reporte de pruebas\n(HTML/JSON/XML, métricas, cobertura)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d4f7d6;strokeColor=#1f7a1f;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="160" y="420" width="260" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- Documentar en Wiki -->
+        <mxCell id="wiki" value="Documentar en Wiki / Pages\n(enlace, pasos reproducibles, artefactos)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff3bf;strokeColor=#b77900;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="460" y="420" width="320" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- Actualizar Trello -->
+        <mxCell id="trello" value="Actualizar Trello\n(mover tarjeta, adjuntar evidencias, Done)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff3bf;strokeColor=#b77900;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="820" y="420" width="260" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- End -->
+        <mxCell id="end" value="Fin" style="ellipse;whiteSpace=wrap;html=1;fillColor=#9ad3bc;strokeColor=#166534;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="820" y="540" width="120" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Artefacto: badge/report -->
+        <mxCell id="artefacto" value="Artefactos:\n- badge CI\n- tests/report.html\n- screenshots/\n- issue/PR links\n- .drawio" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff7cc;strokeColor=#b77900;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="40" y="520" width="360" height="120" as="geometry"/>
+        </mxCell>
+
+        <!-- Edges -->
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000" edge="1" parent="1" source="start" target="repo">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#000000" edge="1" parent="1" source="repo" target="ci">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#000000" edge="1" parent="1" source="ci" target="disenar">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#000000" edge="1" parent="1" source="disenar" target="implementar">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#000000" edge="1" parent="1" source="implementar" target="ejecutar">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#000000" edge="1" parent="1" source="ejecutar" target="decision">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Decision branches -->
+        <mxCell id="e_no" value="No" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#c02626;fontSize=12" edge="1" parent="1" source="decision" target="issue">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e_fix" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#c02626" edge="1" parent="1" source="issue" target="corregir">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e_back" style="edgeStyle=orthogonalEdgeStyle;dashed=1;html=1;strokeColor=#c02626" edge="1" parent="1" source="corregir" target="implementar">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e_si" value="Sí" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#1f7a1f;fontSize=12" edge="1" parent="1" source="decision" target="reporte">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e_rep_wiki" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#000000" edge="1" parent="1" source="reporte" target="wiki">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e_wiki_trello" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#000000" edge="1" parent="1" source="wiki" target="trello">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e_trello_end" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#000000" edge="1" parent="1" source="trello" target="end">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
