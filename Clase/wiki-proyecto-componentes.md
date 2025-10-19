@@ -1,4 +1,4 @@
-# Wiki del Proyecto 'componentes'
+# Wiki del Proyecto 'inmotech'
 
 ## Índice
 - [Introducción](#introducción)
