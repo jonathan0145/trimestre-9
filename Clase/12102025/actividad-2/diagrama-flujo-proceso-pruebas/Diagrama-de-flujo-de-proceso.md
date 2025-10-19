@@ -82,7 +82,7 @@ Este diagrama muestra el proceso de documentación de un proceso de testing. Sug
 
 ## Diagrama de flujo
 
-![Diagrama de flujo del proceso de testing](./actividad-2-diagrama-flujo-testing.png "Diagrama de flujo del proceso de testing")
+![Diagrama de flujo del proceso de testing](./actividad-2-diagrama-flujo-testing.drawio.png "Diagrama de flujo del proceso de testing")
 
 Descargar archivo editable: [actividad-2-diagrama-flujo-testing.drawio](./actividad-2-diagrama-flujo-testing.drawio)
 

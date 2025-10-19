@@ -37,7 +37,7 @@ Puntos fuertes: El backend puede desplegarse en diferentes entornos y el fronten
 [Ver gráficos y resultados en Google Sheets](https://docs.google.com/spreadsheets/d/16KmWtrbSy7ZfVbz_W65NMoz2f2ARImRggA5cGpTaQT0/edit?usp=sharing)
 
 ## Conclusiones
-El proyecto 'componentes' muestra un buen nivel de calidad en la mayoría de los criterios evaluados según ISO 25010. Los resultados reflejan fortalezas en funcionalidad, fiabilidad, usabilidad, seguridad, mantenibilidad y portabilidad, aunque existen áreas de mejora en la cobertura de pruebas y la documentación. Se recomienda continuar con la revisión y mejora continua, especialmente en los aspectos donde se detectaron respuestas negativas, para alcanzar un nivel óptimo de calidad.
+El proyecto 'inmotech' muestra un buen nivel de calidad en la mayoría de los criterios evaluados según ISO 25010. Los resultados reflejan fortalezas en funcionalidad, fiabilidad, usabilidad, seguridad, mantenibilidad y portabilidad, aunque existen áreas de mejora en la cobertura de pruebas y la documentación. Se recomienda continuar con la revisión y mejora continua, especialmente en los aspectos donde se detectaron respuestas negativas, para alcanzar un nivel óptimo de calidad.
 
 ## Observaciones Adicionales
 No se recibieron observaciones adicionales por parte de los evaluadores en esta aplicación del checklist.
