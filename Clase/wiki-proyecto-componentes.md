@@ -41,10 +41,31 @@ Este proyecto integra un sistema de gestión de propiedades con backend en Node.
 - **Buenas prácticas de desarrollo**: Modularidad, documentación, pruebas
 
 ## Herramientas Utilizadas
+
+Durante el proceso de validación de la app Inmotech, se han utilizado diversas herramientas que cumplen funciones clave dentro del ciclo de aseguramiento de calidad. Estas herramientas permiten gestionar pruebas, evaluar rendimiento, validar integración y documentar hallazgos. A continuación se describen las principales:
+
+1. **Postman** – Pruebas de Integración y Validación de API  
+   - Contribución a la calidad: Permite verificar que los servicios estén activos, respondan correctamente y cumplan con los contratos definidos. Es esencial para validar funcionalidad técnica antes de pruebas funcionales.
+
+2. **Apache JMeter** – Pruebas de Rendimiento  
+   - Contribución a la calidad: Evalúa la fiabilidad y escalabilidad del sistema bajo carga, detectando cuellos de botella y puntos críticos de latencia.
+
+3. **Jest + Supertest** – Pruebas Automatizadas de API  
+   - Función: Validar respuestas HTTP, estructuras de datos y comportamiento esperado de los endpoints.  
+   - Aplicación: Se diseñaron y ejecutaron pruebas sobre módulos como Roles, Archivos, Mensajes, Citas e Historial de Precios. Todas fallaron por errores 403, 404 y 500.  
+   - Contribución a la calidad: Automatiza la validación técnica, detecta errores en la lógica del backend y permite integración continua.
+
+4. **Casos de Prueba Documentados (Excel / Artefactos)**  
+   - Función: Planificar y estructurar pruebas funcionales manuales por módulo.  
+   - Aplicación: Se diseñaron casos para Login, Registro, Gestión de Usuarios, Propiedades, Ventas/Publicación, Landing Page y módulos móviles (Favoritos, Chat).  
+   - Contribución a la calidad: Asegura trazabilidad, cobertura funcional y permite registrar resultados, defectos y evidencias.
+
+5. **Configuración de Peticiones HTTP (Manual / JMeter)**
+
+Otras herramientas:
 - **Google Forms**: Checklist de calidad
 - **Google Sheets**: Reportes automáticos
 - **SonarQube**: Análisis estático de código (opcional)
-- **JIRA/TestRail**: Gestión de incidencias y pruebas (opcional)
 
 ## Checklist de Calidad
 - Preguntas basadas en ISO 25010 para backend y frontend
