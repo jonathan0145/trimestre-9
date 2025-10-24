@@ -1,7 +1,8 @@
-# Plantilla Integral de Implantación de Software
+# Plantilla Integral de Implantación de Software - Proyecto Inmotech
 
 ## 1. Introducción
 - Objetivo del documento
+- Proyecto: Inmotech
 - Alcance del proyecto
 - Equipo responsable
 
@@ -25,7 +26,7 @@
 - Cumplimiento normativo (LOPD, ISO 27001)
 
 ## 3. Estrategia de Implantación (Fase 2 / Módulo 3)
-- Piloto: implementación en área pequeña
+- Piloto: implementación en área pequeña ([ver documento](./fase%202/modulo%203%20estrategia%20de%20implantacion/Piloto%20implementaci%C3%B3n%20en%20%C3%A1rea%20peque%C3%B1a.md))
 - Por fases: despliegue modular
 - Big Bang: despliegue total
 - Matriz de decisión y justificación
