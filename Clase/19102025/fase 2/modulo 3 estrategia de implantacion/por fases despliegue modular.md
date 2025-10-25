@@ -308,25 +308,7 @@ Cada fase incluye backend, frontend y documentación del módulo correspondiente
 	8. El feedback de usuarios y stakeholders ha sido incorporado en mejoras clave antes del cierre del proyecto.
 	9. El despliegue se realizó sin interrupciones graves en el servicio y con comunicación efectiva al equipo y usuarios.
 	10. Se cuenta con un registro histórico de incidencias, mejoras y decisiones tomadas durante todo el proceso.
-
-9. Repetir el ciclo hasta completar todos los módulos
-	- Mantener actualizado el checklist de avance y la documentación de cada fase.
-
----
-
-**Criterios de éxito globales del proyecto Inmotech:**
-1. Todos los módulos implementados cumplen con los requisitos funcionales y no funcionales definidos en la documentación.
-2. El sistema es estable, seguro y escalable, con integración correcta entre backend y frontend.
-3. Los usuarios finales pueden operar cada módulo según su perfil, con capacitación y materiales adecuados.
-4. Las incidencias críticas detectadas en cada fase han sido resueltas antes de avanzar.
-5. La documentación técnica y de usuario está completa, actualizada y accesible.
-6. El sistema ha superado pruebas funcionales, técnicas y de integración, con evidencia documentada.
-7. El monitoreo y los mecanismos de soporte están activos para la operación continua.
-8. El feedback de usuarios y stakeholders ha sido incorporado en mejoras clave antes del cierre del proyecto.
-9. El despliegue se realizó sin interrupciones graves en el servicio y con comunicación efectiva al equipo y usuarios.
-10. Se cuenta con un registro histórico de incidencias, mejoras y decisiones tomadas durante todo el proceso.
-
----
+	---
 
 ## Hitos Clave del Despliegue Modular
 | Hito Clave                                 | Fase/Módulo                  | Fecha Objetivo   | Estado       | Evidencia/Documento                      | Responsable           |

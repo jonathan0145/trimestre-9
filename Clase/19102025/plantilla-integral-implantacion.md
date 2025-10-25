@@ -29,7 +29,7 @@
 - Piloto: implementación en área pequeña ([ver documento](./fase%202/modulo%203%20estrategia%20de%20implantacion/Piloto%20implementaci%C3%B3n%20en%20%C3%A1rea%20peque%C3%B1a.md))
 - Por fases: despliegue modular ([ver documento](./fase%202/modulo%203%20estrategia%20de%20implantacion/por%20fases%20despliegue%20modular.md))
 - Big Bang: despliegue total ([ver documento](./fase%202/modulo%203%20estrategia%20de%20implantacion/big%20bang%20despliegue%20total.md))
-- Matriz de decisión y justificación
+- Matriz de decisión y justificación ([ver documento](./fase%202/modulo%203%20estrategia%20de%20implantacion/matriz%20de%20decision%20y%20justificacion.md))
 
 ## 4. Cronograma y Hitos (Fase 2 / Módulo 3)
 - Fechas clave: instalación, migración, pruebas, entrenamiento
