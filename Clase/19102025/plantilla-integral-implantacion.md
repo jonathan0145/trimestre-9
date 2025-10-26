@@ -32,20 +32,20 @@
 - Matriz de decisión y justificación ([ver documento](./fase%202/modulo%203%20estrategia%20de%20implantacion/matriz%20de%20decision%20y%20justificacion.md))
 
 ## 4. Cronograma y Hitos (Fase 2 / Módulo 3)
-- Fechas clave: instalación, migración, pruebas, entrenamiento
-- Diagrama de Gantt
+- Fechas clave: instalación, migración, pruebas, entrenamiento ([ver documento](./fase%202/modulo%203%20cronograma%20e%20hitos/cronograma-y-hitos.md))
+- Diagrama de Gantt ([ver documento](./fase%202/modulo%203%20cronograma%20e%20hitos/diagrama-gantt.md))
 
 ## 5. Asignación de Recursos (Fase 2)
-- Equipo del proyecto (roles y responsables)
-- Presupuesto estimado
+- Equipo del proyecto (roles y responsables) ([ver documento](./fase%202/asignacion%20de%20recursos/equipo-del-proyecto.md))
+- Presupuesto estimado ([ver documento](./fase%202/asignacion%20de%20recursos/presupuesto-estimado.md))
 
 ## 6. Planificación Técnica (Fase 2 / Módulo 4)
-### 6.1 Plan de Migración de Datos
+### 6.1 Plan de Migración de Datos ([ver documento](./fase%202/modulo%204%20planificacion%20tecnica/plan%20de%20migracion%20de%20datos/plan-migracion-datos.md))
 - Estrategia (manual, automatizada, híbrida)
 - Limpieza y validación
 - Checklist de migración
 
-### 6.2 Plan de Pruebas y Rollback
+### 6.2 Plan de Pruebas y Rollback ([ver documento](./fase%202/modulo%204%20planificacion%20tecnica/plan%20de%20pruebas%20y%20rollback/plan-pruebas-rollback.md))
 - Pruebas técnicas: rendimiento, estrés, seguridad
 - Pruebas funcionales: usuarios finales
 - Procedimiento de reversión
