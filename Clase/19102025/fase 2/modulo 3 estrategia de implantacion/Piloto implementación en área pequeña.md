@@ -32,6 +32,7 @@ Realizar una implementación inicial del sistema Inmotech en un área controlada
    - Comprobar que los datos retornados tienen el formato esperado.
    - Validar que los endpoints gestionan correctamente los errores (404, 400, 500, etc.).
    - Testear la integración entre endpoints relacionados (por ejemplo, crear y luego consultar un recurso).
+     
 
    **Pruebas de seguridad:**
    - Validar autenticación: solo usuarios autorizados pueden acceder a endpoints protegidos.
