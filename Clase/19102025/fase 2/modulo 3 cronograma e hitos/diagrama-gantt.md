@@ -1,6 +1,10 @@
 # Diagrama de Gantt
 
-Adjunta aquí el diagrama visual del cronograma del proyecto. Puedes crearlo en draw.io, Excel, o cualquier herramienta de diagramación y exportar el archivo a esta carpeta.
+Adjunto el diagrama visual del cronograma del proyecto en formato draw.io. Puedes editarlo con Draw.io o diagrams.net.
+
+## Diagrama de Gantt (Draw.io)
+
+[Descargar archivo editable: diagrama-gantt.drawio](./diagrama-gantt.drawio)
 
 ## Sugerencia de estructura
 - Fases del proyecto (análisis, instalación, migración, pruebas, capacitación, despliegue)
@@ -10,8 +14,10 @@ Adjunta aquí el diagrama visual del cronograma del proyecto. Puedes crearlo en 
 
 ---
 
+![Diagrama de Gantt - Proyecto de Implantación](./diagrama-gantt.png "Diagrama de Gantt - Proyecto de Implantación")
+
 **Checklist para el diagrama de Gantt:**
-- [ ] Crear diagrama con todas las fases y hitos
-- [ ] Incluir fechas y responsables
-- [ ] Actualizar el diagrama según avances
-- [ ] Compartir el diagrama con el equipo
+- [x] Crear diagrama con todas las fases y hitos
+- [x] Incluir fechas y responsables
+- [x] Actualizar el diagrama según avances
+- [x] Compartir el diagrama con el equipo
