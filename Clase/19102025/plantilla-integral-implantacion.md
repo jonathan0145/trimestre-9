@@ -1,10 +1,14 @@
 # Plantilla Integral de Implantación de Software - Proyecto Inmotech
 
+
 ## 1. Introducción
 - Objetivo del documento
 - Proyecto: Inmotech
 - Alcance del proyecto
 - Equipo responsable
+
+> **Consulta la arquitectura técnica del sistema en el siguiente documento:**
+> [Documento de Arquitectura del Sistema (DAS)](../25102025/plantillas/capturas/Plantilla_%20Documento%20de%20Arquitectura%20del%20Sistema%20(DAS)/documento-arquitectura-sistema.md)
 
 
 ## 2. Análisis de Condiciones del Sistema (Fase 1 / Módulo 2)
@@ -59,7 +63,10 @@
 - Checklist de migración
 
 
+
 ### 6.2 Plan de Pruebas y Rollback ([ver documento](./fase%202/modulo%204%20planificacion%20tecnica/plan%20de%20pruebas%20y%20rollback/plan-pruebas-rollback.md))
+> **Consulta y completa el plan detallado en la siguiente plantilla:**
+> [Plantilla 6: Plan de Pruebas](./capturas/6%20plan%20de%20pruebas/plantilla-plan-pruebas.md)
 - Pruebas técnicas: rendimiento, estrés, seguridad
 - Pruebas funcionales: usuarios finales
 - Procedimiento de reversión
@@ -82,7 +89,7 @@
 > [Plantilla 4: Checklist de Implantación](./capturas/4%20checklist%20de%20implantacion/plantilla-checklist-implantacion.md)
 
 ## 8. Soporte Post-Implantación (Fase 4 / Módulo 6)
-- Capacitación a usuarios finales
+- Capacitación a usuarios finales ([ver Plan de Capacitación y Formación](../25102025/plantillas/capturas/Plantilla%20para%20el%20Plan%20de%20Capacitaci%C3%B3n%20y%20Formaci%C3%B3n/plan-capacitacion-formacion.md))
 - Manuales y guías rápidas
 - Canal de soporte (mesa de ayuda)
 - Evaluación y retroalimentación
@@ -92,6 +99,14 @@
 - Documentación final
 - Presentación del plan
 - Feedback y mejora continua
+
+---
+
+## Inmotech Móvil
+
+Para la aplicación móvil de Inmotech, consulta el siguiente manual de instalación:
+
+> [Manual de Instalación - Inmotech Móvil](../25102025/plantillas/capturas/Plantilla%20para%20el%20Manual%20de%20Instalaci%C3%B3n/manual-instalacion.md)
 
 ---
 
