@@ -110,20 +110,26 @@ Realizar una implementación inicial del sistema Inmotech en un área controlada
      - Creación de un formato para registrar incidencias detectadas por los usuarios piloto.
      - Documentación de errores, sugerencias y mejoras propuestas durante el piloto.
      - Seguimiento y resolución de incidencias por el equipo técnico.
-     - Ubicación: `componentes/documentacion/Haciendo/` o archivo específico de registro.
+     - Ubicación: `./Piloto implementación en área pequeña/03-comunicacion-oficial/` o archivo específico de registro.
 
 ---
 
 ## Actividades Clave
 
-1. Selección de usuarios clave para el piloto (ejemplo realista: comprador, vendedor e intermediador que usan la plataforma).
+1. Selección de usuarios clave para el piloto (ejemplo realista: comprador, vendedor e intermediador que usan la plataforma). ✅ **COMPLETADO**
   - Criterios definidos: usuarios que representan los principales perfiles de uso de la plataforma (comprador, vendedor, intermediador), alta frecuencia de interacción y relevancia en los procesos de negocio.
   - Perfiles evaluados: comprador, vendedor e intermediador. Se seleccionaron estos tres por ser quienes utilizan directamente las funcionalidades principales del sistema.
   - Reunión realizada con representantes de cada perfil para explicar el objetivo del piloto, resolver dudas y obtener su compromiso.
   - Los perfiles de comprador, vendedor e intermediador fueron seleccionados como usuarios clave del piloto por su impacto y disposición a participar activamente.
   - La decisión se documentó y se comunicó oficialmente a los usuarios involucrados y al equipo técnico.
   - Responsables: Comprador (Ana Torres), Vendedor (Luis Gómez), Intermediador (Carla Ruiz).
-2. Instalación y configuración de backend y frontend en entorno de pruebas.
+  
+  **📄 Documentos de Evidencia:**
+  - [Acta de Reunión de Selección](./Piloto%20implementación%20en%20área%20pequeña/01-acta-reunion-seleccion-usuarios.md)
+  - [Matriz de Evaluación de Usuarios](./Piloto%20implementación%20en%20área%20pequeña/02-matriz-evaluacion-usuarios.md)
+  - [Comunicación Oficial](./Piloto%20implementación%20en%20área%20pequeña/03-comunicacion-oficial.md)
+  - [Perfiles Detallados de Usuarios Piloto](./Piloto%20implementación%20en%20área%20pequeña/04-perfiles-usuarios-piloto.md)
+2. Instalación y configuración de backend y frontend en entorno de pruebas. ✅ **COMPLETADO**
    - Preparar el entorno de pruebas (servidor local, máquina virtual o ambiente cloud).
    - Clonar los repositorios de backend y frontend desde el repositorio oficial del proyecto.
    - Instalar dependencias necesarias:
@@ -136,7 +142,27 @@ Realizar una implementación inicial del sistema Inmotech en un área controlada
    - Levantar la aplicación frontend (`npm start` o comando correspondiente).
    - Verificar la conexión entre frontend y backend, y el acceso de los usuarios clave (comprador, vendedor, intermediador).
    - Documentar cualquier incidencia o ajuste realizado durante la instalación.
-3. Capacitación breve a usuarios piloto.
+
+   **📄 Documentación Completa:**
+   - [Guía Completa de Instalación y Configuración](./Piloto%20implementación%20en%20área%20pequeña/actividad-2-instalacion-configuracion.md)
+   
+   **🔧 Scripts Creados:**
+   - `backend/src/scripts/createPermissions.js` - Crear permisos del sistema
+   - `backend/src/scripts/createPermissionsByRole.js` - Asignar permisos por rol
+   - `backend/src/scripts/createAdminRole.js` - Crear rol de administrador
+   - `backend/src/scripts/seedTestData.js` - Cargar datos de ejemplo para piloto
+   - `backend/src/scripts/verifyConnection.js` - Verificar instalación completa
+   
+   **⚙️ Archivos de Configuración:**
+   - `backend/.env.example` - Variables de entorno del backend
+   - `frontend/.env.example` - Variables de entorno del frontend (ya existía)
+   
+   **👥 Usuarios de Prueba Creados:**
+   - Ana Torres (Comprador): ana.torres.piloto@inmotech.com
+   - Luis Gómez (Vendedor): luis.gomez.piloto@inmotech.com  
+   - Carla Ruiz (Intermediador): carla.ruiz.piloto@inmotech.com
+   - Admin Sistema: admin.piloto@inmotech.com
+3. Capacitación breve a usuarios piloto. ✅ **COMPLETADO**
   - Organizar una sesión de capacitación presencial o virtual para los usuarios clave (comprador, vendedor, intermediador).
   - Presentar los objetivos del piloto y el alcance de la plataforma Inmotech.
   - Explicar el funcionamiento de todos los módulos principales:
@@ -152,9 +178,28 @@ Realizar una implementación inicial del sistema Inmotech en un área controlada
     - Configuración y privacidad.
     - Navegación y layout (Navbar, Sidebar).
   - Realizar demostraciones prácticas de las tareas más frecuentes para cada perfil.
-  - Entregar manuales rápidos y guías visuales (ubicados en `componentes/documentacion/`).
+  - Entregar manuales rápidos y guías visuales:
+    - [Manual Rápido de Usuario Piloto](./Piloto%20implementación%20en%20área%20pequeña/03-comunicacion-oficial/manual-rapido-usuario-piloto.md)
+    - [Cronograma Detallado del Piloto](./Piloto%20implementación%20en%20área%20pequeña/03-comunicacion-oficial/cronograma-detallado-piloto.md)
+    - [Formato de Registro de Incidencias](./Piloto%20implementación%20en%20área%20pequeña/03-comunicacion-oficial/formato-registro-incidencias.md)
+    - [Credenciales de Acceso piloto](./Piloto%20implementación%20en%20área%20pequeña/03-comunicacion-oficial/credenciales-acceso-piloto.md)
   - Resolver dudas y recopilar sugerencias de los usuarios durante la capacitación.
   - Registrar la asistencia y el feedback recibido para ajustar el soporte y la documentación.
+
+  **📄 Documentación Completa de Capacitación:**
+  - [Guía del Capacitador](./Piloto%20implementación%20en%20área%20pequeña/3-capacitación%20breve%20a%20usuarios%20piloto/guia-del-capacitador.md) - Metodología y pasos detallados
+  - [Agenda de Capacitación](./Piloto%20implementación%20en%20área%20pequeña/3-capacitación%20breve%20a%20usuarios%20piloto/agenda-capacitacion.md) - Cronograma detallado de 2.5 horas
+  - [Scripts de Demostración](./Piloto%20implementación%20en%20área%20pequeña/3-capacitación%20breve%20a%20usuarios%20piloto/scripts-demostracion.md) - Pasos específicos por perfil
+  - [Lista de Asistencia y Feedback](./Piloto%20implementación%20en%20área%20pequeña/3-capacitación%20breve%20a%20usuarios%20piloto/lista-asistencia-feedback.md) - Registro y evaluación
+  - [Lista de Verificación de Entrega](./Piloto%20implementación%20en%20área%20pequeña/3-capacitación%20breve%20a%20usuarios%20piloto/lista-verificacion-entrega.md) - Control de materiales
+  - [Material de Presentación](./Piloto%20implementación%20en%20área%20pequeña/3-capacitación%20breve%20a%20usuarios%20piloto/material-presentacion.md) - Slides y recursos visuales
+  - [Evaluación de Capacitación](./Piloto%20implementación%20en%20área%20pequeña/3-capacitación%20breve%20a%20usuarios%20piloto/evaluacion-capacitacion.md) - Análisis post-capacitación
+
+  **🎯 Metodología Implementada:**
+  - Aprendizaje práctico ("Aprender haciendo")
+  - Demostración seguida de práctica guiada
+  - Personalización por rol específico
+  - Feedback continuo y resolución de dudas
 4. Ejecución de pruebas funcionales y técnicas.
   - Objetivo: Validar el funcionamiento real de todos los módulos del sistema (backend y frontend) con los usuarios piloto (comprador, vendedor, intermediador), identificar errores, incidencias y oportunidades de mejora.
   - Alcance: Pruebas sobre los módulos principales (autenticación, dashboard, gestión de usuarios/agentes, ofertas, propiedades, chat, notificaciones, verificaciones, archivos, configuración, privacidad, navegación/layout).
@@ -180,7 +225,7 @@ Realizar una implementación inicial del sistema Inmotech en un área controlada
       - Recopilar feedback de los usuarios piloto sobre facilidad de uso, navegación, claridad de la interfaz y velocidad de la plataforma.
       - Registrar sugerencias de mejora y dificultades encontradas.
     6. **Registro y documentación de incidencias:**
-      - Utilizar el formato de registro de incidencias en `componentes/documentacion/Haciendo/` o archivo específico.
+      - Utilizar el [Formato de Registro de Incidencias](./Piloto%20implementación%20en%20área%20pequeña/03-comunicacion-oficial/formato-registro-incidencias.md) o archivo específico.
       - Documentar cada incidencia con detalle: módulo afectado, descripción, pasos para reproducir, capturas de pantalla si aplica.
       - Priorizar incidencias según impacto y frecuencia.
     7. **Generación de reportes de pruebas:**
@@ -203,7 +248,7 @@ Realizar una implementación inicial del sistema Inmotech en un área controlada
    - Objetivo: Centralizar y documentar todas las incidencias, sugerencias y resultados obtenidos durante el piloto para facilitar la toma de decisiones y la mejora continua.
    - Pasos detallados:
      1. **Registro de incidencias:**
-        - Utilizar el formato de registro ubicado en `componentes/documentacion/Haciendo/` (por ejemplo, CONTROLADORES_MANEJO_ERRORES.md, ENDPOINTS_EXISTENCIA.md, o crear un archivo específico como `registro-incidencias-piloto.md`).
+        - Utilizar el [Formato de Registro de Incidencias](./Piloto%20implementación%20en%20área%20pequeña/03-comunicacion-oficial/formato-registro-incidencias.md) ubicado en `./Piloto implementación en área pequeña/03-comunicacion-oficial/` (por ejemplo, crear un archivo específico como `registro-incidencias-piloto.md`).
         - Documentar cada incidencia con los siguientes datos mínimos:
           - Módulo afectado (backend, frontend, documentación)
           - Descripción clara del problema
@@ -215,7 +260,7 @@ Realizar una implementación inicial del sistema Inmotech en un área controlada
         - Priorizar incidencias según impacto y frecuencia.
      2. **Recopilación de sugerencias y feedback:**
         - Registrar todas las sugerencias y comentarios de los usuarios piloto (comprador, vendedor, intermediador) durante las pruebas y capacitación.
-        - Utilizar un formato accesible (Markdown, Excel, Google Sheets) y ubicarlo en `componentes/documentacion/Haciendo/` o archivo específico.
+        - Utilizar un formato accesible (Markdown, Excel, Google Sheets) y ubicarlo en `./Piloto implementación en área pequeña/03-comunicacion-oficial/` o archivo específico.
         - Clasificar las sugerencias por módulo y tipo (mejora funcional, usabilidad, documentación, etc.).
         - Documentar el responsable de cada sugerencia y el seguimiento realizado.
      3. **Consolidación de resultados:**
@@ -223,7 +268,7 @@ Realizar una implementación inicial del sistema Inmotech en un área controlada
           - Incidencias detectadas y su estado
           - Sugerencias recibidas y acciones propuestas
           - Resultados de las pruebas funcionales y técnicas (checklist de funcionalidades validadas, módulos con problemas, observaciones generales)
-        - Ubicar el reporte en `componentes/documentacion/Haciendo/` o en la carpeta principal de documentación.
+        - Ubicar el reporte en `./Piloto implementación en área pequeña/03-comunicacion-oficial/` o en la carpeta principal de documentación.
         - Compartir el reporte con el equipo técnico y los usuarios piloto.
      4. **Seguimiento y cierre de incidencias:**
         - Asignar responsables para la resolución de cada incidencia.
@@ -235,7 +280,7 @@ Realizar una implementación inicial del sistema Inmotech en un área controlada
    - Herramientas recomendadas:
      - Markdown, Excel, Google Sheets para registros y reportes.
      - Capturas de pantalla y videos cortos para evidencias.
-     - Repositorio de documentación centralizado (`componentes/documentacion/Haciendo/`).
+     - Repositorio de documentación centralizado (`./Piloto implementación en área pequeña/03-comunicacion-oficial/`).
    - Responsables:
      - Registro de incidencias: Responsable de pruebas y soporte.
      - Recopilación de sugerencias: Responsable de capacitación y usuarios piloto.
@@ -253,7 +298,7 @@ Realizar una implementación inicial del sistema Inmotech en un área controlada
       - Priorizar las incidencias críticas y las mejoras de alto impacto para su resolución inmediata.
     2. **Planificación de ajustes:**
       - Definir un plan de acción con responsables, plazos y recursos necesarios para cada ajuste o mejora.
-      - Documentar el plan en un archivo accesible para el equipo (`componentes/documentacion/Haciendo/ajustes-mejoras-piloto.md`).
+      - Documentar el plan en un archivo accesible para el equipo (`./Piloto implementación en área pequeña/03-comunicacion-oficial/ajustes-mejoras-piloto.md`).
     3. **Implementación de correcciones:**
       - Realizar los cambios necesarios en el backend, frontend y documentación según el plan definido.
       - Validar que las correcciones resuelven las incidencias reportadas y no generan nuevos problemas.
@@ -270,7 +315,7 @@ Realizar una implementación inicial del sistema Inmotech en un área controlada
       - Compartir el reporte final de ajustes y mejoras antes de iniciar la siguiente fase.
   - Herramientas recomendadas:
     - Markdown, Excel, Google Sheets para planes y reportes.
-    - Repositorio de documentación centralizado (`componentes/documentacion/Haciendo/`).
+    - Repositorio de documentación centralizado (`./Piloto implementación en área pequeña/03-comunicacion-oficial/`).
   - Responsables:
     - Implementación de ajustes: Equipo técnico (backend, frontend, documentación).
     - Validación de mejoras: Usuarios piloto y QA.
@@ -310,11 +355,11 @@ Realizar una implementación inicial del sistema Inmotech en un área controlada
 ## Hitos del Piloto
 | Hito Clave                                 | Fecha Objetivo   | Estado       | Evidencia/Documento                      | Responsable           |
 |--------------------------------------------|------------------|--------------|------------------------------------------|-----------------------|
-| Selección de área piloto                   | 20/10/2025       | Completado    | Acta de reunión, lista de usuarios       | Líder de Proyecto     |
-| Instalación y configuración de sistemas    | 21/10/2025       | Completado    | Registro de instalación, incidencias     | Equipo Técnico        |
-| Capacitación a usuarios piloto             | 22/10/2025       | Completado    | Manuales entregados, lista de asistencia | Responsable de Cap.   |
+| Selección de área piloto                   | 20/10/2025       | Completado    | [Acta de reunión](./Piloto%20implementación%20en%20área%20pequeña/01-acta-reunion-seleccion-usuarios.md), [lista de usuarios](./Piloto%20implementación%20en%20área%20pequeña/04-perfiles-usuarios-piloto.md) | Líder de Proyecto     |
+| Instalación y configuración de sistemas    | 21/10/2025       | Completado    | [Guía de instalación](./Piloto%20implementación%20en%20área%20pequeña/actividad-2-instalacion-configuracion.md), scripts de inicialización | Equipo Técnico        |
+| Capacitación a usuarios piloto             | 22/10/2025       | Completado    | [Documentación completa](./3-capacitación%20breve%20a%20usuarios%20piloto/), materiales entregados | Responsable de Cap.   |
 | Pruebas funcionales y técnicas             | 23/10/2025       | Completado    | Reporte de pruebas, checklist            | Equipo de Pruebas     |
-| Recopilación de incidencias y feedback     | 23/10/2025       | Completado    | Registro de incidencias y sugerencias    | Todos                 |
+| Recopilación de incidencias y feedback     | 23/10/2025       | Completado    | [Registro de incidencias](./Piloto%20implementación%20en%20área%20pequeña/03-comunicacion-oficial/formato-registro-incidencias.md) y sugerencias | Todos                 |
 | Ajustes y mejoras                         | 24/10/2025       | En Curso      | Plan de ajustes, reporte de mejoras      | Equipo Técnico        |
 
 ---
@@ -345,13 +390,19 @@ Realizar una implementación inicial del sistema Inmotech en un área controlada
 ---
 
 ## Documentos Relacionados
+- [Guía Completa de Instalación y Configuración](./actividad-2-instalacion-configuracion.md)
+- [Registro de Incidencias - Instalación](./registro-incidencias-instalacion.md)
+- [Documentación Completa de Capacitación](./3-capacitación%20breve%20a%20usuarios%20piloto/) - 7 documentos especializados
+- [Manual Rápido de Usuario Piloto](./Piloto%20implementación%20en%20área%20pequeña/03-comunicacion-oficial/manual-rapido-usuario-piloto.md)
+- [Cronograma Detallado del Piloto](./Piloto%20implementación%20en%20área%20pequeña/03-comunicacion-oficial/cronograma-detallado-piloto.md)
+- [Formato de Registro de Incidencias](./Piloto%20implementación%20en%20área%20pequeña/03-comunicacion-oficial/formato-registro-incidencias.md)
+- [Credenciales de Acceso Piloto](./Piloto%20implementación%20en%20área%20pequeña/03-comunicacion-oficial/credenciales-acceso-piloto.md)
 - Manual de usuario piloto (ubicado en `componentes/documentacion/`)
 - Registro de incidencias y mejoras
 - Checklist de pruebas y migración
 
 ---
 
-**Checklist de implementación piloto:**
 **Checklist de implementación piloto:**
 - ✅ Seleccionar área/departamento piloto
 - ✅ Instalar y configurar backend en entorno de pruebas
