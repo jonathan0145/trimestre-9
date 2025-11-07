@@ -211,11 +211,11 @@
 ## 📋 CHECKLIST DE PRIMER ACCESO
 
 ### **Antes de usar el sistema:**
-- [ ] **Acceder con credenciales temporales**
-- [ ] **Cambiar contraseña obligatoriamente**
-- [ ] **Completar información de perfil**
+- [x] **Acceder con credenciales temporales**
+- [x] **Cambiar contraseña obligatoriamente**
+- [x] **Completar información de perfil**
 - [ ] **Revisar permisos asignados**
-- [ ] **Probar navegación básica**
+- [x] **Probar navegación básica**
 - [ ] **Verificar recepción de notificaciones**
 
 ### **Durante las primeras pruebas:**

@@ -187,11 +187,29 @@
 
 ## 📚 Referencias y Documentación
 
-- [Guía Completa de Instalación](./actividad-2-instalacion-configuracion.md)
-- [Documentación Técnica del Proyecto](../../componentes/documentacion/)
-- [Scripts de Inicialización](../../componentes/backend/src/scripts/)
-- [Configuraciones de Entorno](../../componentes/backend/.env.example)
-////////////////////////////////////// solo el primero funciona ///////////////////////////////////
+- [Guía Completa de Instalación](./actividad-2-instalacion-configuracion.md) ✅
+- [Documentación Técnica del Proyecto](../../documentacion/menu.md) ✅
+- [Scripts de Inicialización](../../scripts/menu-scripts.md) ✅
+- [Configuraciones de Entorno Backend repositorio componentes](../../../../../componentes/backend/.env.example) ✅
+- [Configuraciones de Entorno Frontend repositorio componentes](../../../../../componentes/frontend/.env.example) ✅
+
+### 📂 Contenido Disponible
+
+#### Documentación Técnica:
+- [Requisitos del Sistema](../../documentacion/01-requisitos-del-sistema.md)
+- [Arquitectura Técnica](../../documentacion/02-arquitectura-tecnica.md)
+- [Roles y Permisos](../../documentacion/03-roles-y-permisos.md)
+- [Casos de Uso](../../documentacion/04-casos-de-uso.md)
+- [API Documentación](../../documentacion/05-api-documentacion.md)
+- [README Principal](../../documentacion/README.md)
+- [README Backend](../../documentacion/READMEBACK.md)
+
+#### Scripts de Inicialización:
+- [Crear Permisos](../../scripts/createPermissions.js)
+- [Crear Rol Admin](../../scripts/createAdminRole.js)
+- [Asignar Permisos por Rol](../../scripts/createPermissionsByRole.js)
+- [Verificar Conexión DB](../../scripts/verifyConnection.js)
+- [Datos de Prueba](../../scripts/seedTestData.js)
 
 ---
 
