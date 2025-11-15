@@ -196,9 +196,18 @@ por fases despliegue modular/
 │   ├── fase-01-metricas.md
 │   └── fase-01-migracion-datos.md
 │   
-├── fase-02-desarrollo-core/      # 📁 FASE 2 (11 documentos)
+├── fase-02-autenticacion-autorizacion/      # 📁 FASE 2 (11 documentos)
 │   ├── fase-02-plan-implementacion.md
-│   ├── ... (mismo patrón)
+│   ├── fase-02-incidencias.md
+│   ├── fase-02-pruebas.md
+│   ├── fase-02-capacitacion.md
+│   ├── fase-02-reporte-final.md
+│   ├── fase-02-riesgos.md
+│   ├── fase-02-rollback.md
+│   ├── fase-02-validacion.md
+│   ├── fase-02-comunicacion.md
+│   ├── fase-02-metricas.md
+│   └── fase-02-migracion-datos.md
 │   
 ├── ... (fases 3-18)
 │   
