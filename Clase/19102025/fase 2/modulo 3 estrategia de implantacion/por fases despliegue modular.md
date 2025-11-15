@@ -40,74 +40,82 @@ Documentación: manuales y guías específicas para cada módulo, checklist y re
 
 **Orden y alcance sugerido de los módulos/fases:**
 
-1. Base de datos y migraciones
+1. **Base de datos y migraciones** → [📋 Plan de Implementación](./por%20fases%20despliegue%20modular/fase-01-base-datos-migraciones/plan-implementacion-fase1.md)
 	- Estructura de tablas, relaciones, scripts de migración y restauración.
 	- Documentación: modelo entidad-relación, instructivo de migración.
-2. Autenticación y autorización
+2. **Autenticación y autorización** → [📋 Plan de Implementación](./por%20fases%20despliegue%20modular/fase-02-autenticacion-autorizacion/plan-implementacion-fase2.md)
 	- Backend: authController.js, middlewares de autenticación, endpoints de login/register.
 	- Frontend: LoginPage.js, RegisterPage.js, rutas protegidas.
 	- Documentación: guía de acceso y roles.
-3. Gestión de usuarios y agentes
+3. **Gestión de usuarios y agentes** → [📋 Plan de Implementación](./por%20fases%20despliegue%20modular/fase-03-gestion-usuarios-agentes/plan-implementacion-fase3.md)
 	- Backend: userController.js, agentController.js, modelos y rutas asociadas.
 	- Frontend: páginas de gestión de usuarios y agentes, UserPermissionsInfo.js, agentsSlice.js.
 	- Documentación: manual de administración de usuarios.
-4. Gestión de roles y permisos
+4. **Gestión de roles y permisos** → [📋 Plan de Implementación](./por%20fases%20despliegue%20modular/fase-04-gestion-roles-permisos/plan-implementacion-fase4.md)
 	- Backend: scripts de roles (createAdminRole.js, createPermissions.js, createPermissionsByRole.js), endpoints de permisos.
 	- Frontend: interfaces para asignación de roles/permisos.
 	- Documentación: tabla de roles y permisos.
-5. Gestión de propiedades
+5. **Gestión de propiedades** → [📋 Plan de Implementación](./por%20fases%20despliegue%20modular/fase-05-gestion-propiedades/plan-implementacion-fase5.md)
 	- Backend: propertyController.js, modelos y rutas de propiedades.
 	- Frontend: PropertiesPage.js, CreatePropertyPage.js, AdvancedSearchBar.js.
 	- Documentación: guía de alta y edición de propiedades.
-6. Gestión de ofertas
+6. **Gestión de ofertas** → [📋 Plan de Implementación](./por%20fases%20despliegue%20modular/fase-06-gestion-ofertas/plan-implementacion-fase6.md)
 	- Backend: offerController.js, endpoints de ofertas.
 	- Frontend: OffersPage.js, MakeOfferModal.js.
 	- Documentación: flujo de ofertas.
-7. Mensajería y chat
+7. **Mensajería y chat** → [📋 Plan de Implementación](./por%20fases%20despliegue%20modular/fase-07-mensajeria-chat/plan-implementacion-fase7.md)
 	- Backend: chatController.js, conversationController.js, sockets.
 	- Frontend: ChatPage.js, ChatWindow.js, ConversationsList.js.
 	- Documentación: uso del chat.
-8. Notificaciones
+8. **Notificaciones** → [📋 Plan de Implementación](./por%20fases%20despliegue%20modular/fase-08-notificaciones/plan-implementacion-fase8.md)
 	- Backend: notificationController.js, servicios de notificaciones.
 	- Frontend: NotificationCenter.js, NotificationToast.js.
 	- Documentación: tipos y gestión de notificaciones.
-9. Archivos y almacenamiento
+9. **Archivos y almacenamiento** → [📋 Plan de Implementación](./por%20fases%20despliegue%20modular/fase-09-archivos-almacenamiento/plan-implementacion-fase9.md)
 	- Backend: fileController.js, endpoints de subida/descarga.
 	- Frontend: FileUploadModal.js, fileService.js.
 	- Documentación: formatos y límites de archivos.
-10. Verificaciones y badges
+10. **Verificaciones y badges** → [📋 Plan de Implementación](./por%20fases%20despliegue%20modular/fase-10-verificaciones-badges/plan-implementacion-fase10.md)
 	- Backend: verificationController.js, endpoints de verificación.
 	- Frontend: UserVerificationPage.js, VerificationBadges.js.
 	- Documentación: proceso de verificación.
-11. Price History (historial de precios)
+11. **Price History (historial de precios)** → [📋 Plan de Implementación](./por%20fases%20despliegue%20modular/fase-11-price-history/plan-implementacion-fase11.md)
 	- Backend: priceHistoryController.js, endpoints asociados.
 	- Frontend: componentes de historial de precios.
 	- Documentación: consulta y uso del historial.
-12. Configuración y privacidad
+12. **Configuración y privacidad** → [📋 Plan de Implementación](./por%20fases%20despliegue%20modular/fase-12-configuracion-privacidad/plan-implementacion-fase12.md)
 	- Backend: endpoints de configuración.
 	- Frontend: PrivacySettingsPage.js.
 	- Documentación: opciones de privacidad.
-13. Navegación y layout
+13. **Navegación y layout** → [📋 Plan de Implementación](./por%20fases%20despliegue%20modular/fase-13-navegacion-layout/plan-implementacion-fase13.md)
 	- Frontend: Navbar.js, Sidebar.js, estructura de navegación.
 	- Documentación: mapa de navegación.
-14. Push notifications y servicios adicionales
+14. **Push notifications y servicios adicionales** → [📋 Plan de Implementación](./por%20fases%20despliegue%20modular/fase-14-push-notifications/plan-implementacion-fase14.md)
 	- Backend: integración de push notifications.
 	- Frontend: recepción y visualización.
 	- Documentación: configuración de notificaciones push.
-15. Integraciones externas
+15. **Integraciones externas** → [📋 Plan de Implementación](./por%20fases%20despliegue%20modular/fase-15-integraciones-externas/plan-implementacion-fase15.md)
 	- Backend/Frontend: APIs externas, servicios de terceros, pagos, etc.
 	- Documentación: integración y pruebas de servicios externos.
-16. Pruebas automatizadas y QA
+16. **Pruebas automatizadas y QA** → [📋 Plan de Implementación](./por%20fases%20despliegue%20modular/fase-16-pruebas-automatizadas-qa/plan-implementacion-fase16.md)
 	- Backend: tests en tests/ (Jest, Supertest, etc.).
 	- Frontend: tests de componentes y flujos.
 	- Documentación: reporte de cobertura y resultados.
-17. Documentación técnica y manuales de usuario
+17. **Documentación técnica y manuales de usuario** → [📋 Plan de Implementación](./por%20fases%20despliegue%20modular/fase-17-documentacion-tecnica-manuales/plan-implementacion-fase17.md)
 	- Manuales, guías rápidas, instructivos de uso y administración.
-18. Despliegue y monitoreo
+18. **Despliegue y monitoreo** → [📋 Plan de Implementación](./por%20fases%20despliegue%20modular/fase-18-despliegue-monitoreo/plan-implementacion-fase18.md)
 	- Scripts de despliegue, logs, alertas, dashboards.
 	- Documentación: instructivo de despliegue y monitoreo.
 
-Cada fase incluye backend, frontend y documentación del módulo correspondiente, pruebas funcionales y técnicas, capacitación a usuarios y registro de incidencias.
+**📋 Componentes garantizados en cada una de las 18 fases:**
+- ✅ **Backend**: Controllers, services, models, API endpoints del módulo
+- ✅ **Frontend**: Componentes React, páginas, UI/UX del módulo  
+- ✅ **Documentación**: Guías técnicas, manuales de usuario, API docs del módulo
+- ✅ **Pruebas funcionales y técnicas**: Testing unitario, integración, E2E del módulo
+- ✅ **Capacitación a usuarios**: Training materials, workshops para el módulo
+- ✅ **Registro de incidencias**: Bug tracking, feedback, mejoras del módulo
+
+*Cada fase tiene un plan de implementación detallado que incluye todos estos componentes.*
 
 ---
 2. Desplegar el primer módulo en ambiente de pruebas.
