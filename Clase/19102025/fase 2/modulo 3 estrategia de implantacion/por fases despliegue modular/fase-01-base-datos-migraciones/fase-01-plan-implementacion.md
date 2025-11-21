@@ -391,5 +391,25 @@ Establecer la infraestructura de base de datos completa para el sistema InmoTech
 
 ---
 
+## 📁 Documentación Complementaria de la Fase 1
+
+### Documentos de Planificación Estratégica
+- **[Plan de Migración de Datos](./fase-01-plan-migracion-datos.md)** - Estrategia detallada para migración de estructura y datos semilla
+- **[Plan de Comunicación con Stakeholders](./fase-01-plan-comunicacion-stakeholders.md)** - Matriz de comunicación y reportes para todas las audiencias
+- **[Análisis de Riesgos](./fase-01-analisis-riesgos.md)** - Identificación, evaluación y planes de mitigación de riesgos críticos
+
+### Documentos de Calidad y Testing
+- **[Checklist de Pruebas](./fase-01-checklist-pruebas.md)** - Validación exhaustiva de estructura, integridad y performance
+- **[Checklist de Cumplimiento de Seguridad](./fase-01-checklist-cumplimiento-seguridad.md)** - Verificación de estándares GDPR, ISO 27001 y OWASP
+- **[Métricas y KPIs](./fase-01-metricas-kpis.md)** - Sistema de métricas para monitoreo y evaluación de la fase
+
+### Documentos Operacionales
+- **[Procedimientos de Rollback](./fase-01-procedimientos-rollback.md)** - Planes de contingencia y reversión de migraciones
+- **[Manual de Capacitación](./fase-01-manual-capacitacion.md)** - Entrenamiento técnico para el equipo de base de datos
+- **[Documento de Handover y Soporte](./fase-01-documento-handover-soporte.md)** - Transferencia de conocimiento al equipo de operaciones
+- **[Registro de Incidentes](./fase-01-registro-incidentes.md)** - Seguimiento y resolución de issues durante la implementación
+
+---
+
 *Plan creado para el Proyecto InmoTech - Sistema de Gestión Inmobiliaria*  
 *Fase 1: Base de Datos y Migraciones | Enero 2026 | Equipo de Proyecto*

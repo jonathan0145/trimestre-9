@@ -40,10 +40,10 @@ Documentación: manuales y guías específicas para cada módulo, checklist y re
 
 **Orden y alcance sugerido de los módulos/fases:**
 
-1. **Base de datos y migraciones** → [📋 Plan de Implementación](./por%20fases%20despliegue%20modular/fase-01-base-datos-migraciones/plan-implementacion-fase1.md)
+1. **Base de datos y migraciones** → [📋 Plan de Implementación](./por%20fases%20despliegue%20modular/fase-01-base-datos-migraciones/fase-01-plan-implementacion.md)
 	- Estructura de tablas, relaciones, scripts de migración y restauración.
 	- Documentación: modelo entidad-relación, instructivo de migración.
-2. **Autenticación y autorización** → [📋 Plan de Implementación](./por%20fases%20despliegue%20modular/fase-02-autenticacion-autorizacion/plan-implementacion-fase2.md)
+2. **Autenticación y autorización** → [📋 Plan de Implementación](./por%20fases%20despliegue%20modular/fase-02-autenticacion-autorizacion/fase-02-plan-implementacion.md)
 	- Backend: authController.js, middlewares de autenticación, endpoints de login/register.
 	- Frontend: LoginPage.js, RegisterPage.js, rutas protegidas.
 	- Documentación: guía de acceso y roles.

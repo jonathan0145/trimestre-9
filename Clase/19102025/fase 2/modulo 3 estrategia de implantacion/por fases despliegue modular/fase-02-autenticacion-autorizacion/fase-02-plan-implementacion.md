@@ -330,6 +330,26 @@ PUT  /api/user/change-password (Protected)
 
 ---
 
+## Documentación Relacionada
+
+### Documentos de Gestión de la Fase 2
+- [Análisis de Riesgos - Fase 2](./fase-02-analisis-riesgos.md)
+- [Plan de Migración y Validación de Datos - Fase 2](./fase-02-plan-migracion-datos.md)
+- [Checklist de Pruebas - Fase 2](./fase-02-checklist-pruebas.md)
+- [Procedimientos de Rollback - Fase 2](./fase-02-procedimientos-rollback.md)
+
+### Documentos de Seguimiento y Control
+- [Métricas y KPIs - Fase 2](./fase-02-metricas-kpi.md)
+- [Registro de Incidentes - Fase 2](./fase-02-registro-incidentes.md)
+- [Plan de Comunicación con Stakeholders - Fase 2](./fase-02-plan-comunicacion-stakeholders.md)
+- [Validación de Integración entre Módulos - Fase 2](./fase-02-validacion-integracion.md)
+
+### Documentos de Capacitación y Cierre
+- [Manual de Capacitación - Fase 2](./fase-02-manual-capacitacion.md)
+- [Reporte Final de Fase 2](./fase-02-reporte-final.md)
+
+---
+
 **Fecha de Creación:** 01/12/2025
 **Última Actualización:** 01/12/2025
 **Versión:** 1.0

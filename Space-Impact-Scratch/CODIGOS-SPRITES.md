@@ -16,46 +16,77 @@ Al presionar bandera verde
 ├── fijar [Puntos v] a [0]
 ├── fijar [JefeActivo v] a [0]
 ├── fijar [VidaJefe v] a [5]
+├── fijar [GameOver v] a [0]
 │
 └── para siempre
     │
-    ├── si <¿tecla [flecha arriba v] presionada?> entonces
-    │   └── cambiar y por [10]
-    │
-    ├── si <¿tecla [flecha abajo v] presionada?> entonces
-    │   └── cambiar y por [-10]
-    │
-    ├── si <(posición y) > [160]> entonces
-    │   └── fijar y a [160]
-    │
-    └── si <(posición y) < [-160]> entonces
-        └── fijar y a [-160]
+    └── si <(GameOver) = [0]> entonces
+        │
+        ├── si <¿tecla [flecha arriba v] presionada?> entonces
+        │   └── cambiar y por [10]
+        │
+        ├── si <¿tecla [flecha abajo v] presionada?> entonces
+        │   └── cambiar y por [-10]
+        │
+        ├── si <(posición y) > [160]> entonces
+        │   └── fijar y a [160]
+        │
+        └── si <(posición y) < [-160]> entonces
+            └── fijar y a [-160]
 ```
 
 #### Script de Disparo
 ```scratch
 Al presionar tecla [espacio v]
 │
-├── crear clon de [Proyectil v]
-└── tocar sonido [Laser v]
+└── si <(GameOver) = [0]> entonces
+    │
+    ├── crear clon de [Proyectil v]
+    └── tocar sonido [Laser v]
 ```
 
 #### Script de Game Over
 ```scratch
-para siempre
+Al presionar bandera verde
 │
-└── si <(Vidas) < [1]> entonces
+└── para siempre
     │
+    └── si <(Vidas) ≤ [0]> entonces
+        │
+        ├── fijar [GameOver v] a [1]
+        ├── decir [GAME OVER - Presiona R para reiniciar] por [3] segundos
+        │
+        └── esperar hasta que <¿tecla [r v] presionada?>
+            │
+            └── enviar [reiniciar v]
+```
+
+#### Script Alternativo - Detector de Game Over
+```scratch
+Al presionar bandera verde
+│
+└── para siempre
+    │
+    ├── esperar hasta que <(Vidas) ≤ [0]>
     ├── decir [GAME OVER - Presiona R para reiniciar] por [3] segundos
     ├── parar [otros programas del objeto v]
     │
     └── esperar hasta que <¿tecla [r v] presionada?>
         │
-        ├── fijar [Vidas v] a [3]
-        ├── fijar [Puntos v] a [0]
-        ├── fijar [JefeActivo v] a [0]
-        ├── ir a x: [-200] y: [0]
-        └── al presionar bandera verde
+        └── enviar [reiniciar v]
+```
+
+#### Script de Reinicio
+```scratch
+al recibir [reiniciar v]
+│
+├── fijar [Vidas v] a [3]
+├── fijar [Puntos v] a [0]
+├── fijar [JefeActivo v] a [0]
+├── fijar [VidaJefe v] a [5]
+├── fijar [GameOver v] a [0]
+├── ir a x: [-200] y: [0]
+└── enviar [iniciar v] a todos
 ```
 
 ---
@@ -68,6 +99,14 @@ para siempre
 ```scratch
 Al presionar bandera verde
 │
+└── esconder
+```
+
+#### Script de Reinicio del Proyectil
+```scratch
+al recibir [iniciar v]
+│
+├── enviar [borrarProyectiles v]
 └── esconder
 ```
 
@@ -99,6 +138,13 @@ al empezar como clon
     └── borrar este clon
 ```
 
+#### Script para Borrar Proyectiles
+```scratch
+al recibir [borrarProyectiles v]
+│
+└── borrar este clon
+```
+
 ---
 
 ## 🦇 SPRITE 3: MURCIÉLAGO (Enemigo Básico)
@@ -113,7 +159,7 @@ Al presionar bandera verde
     │
     ├── esperar (número al azar entre [1] y [3]) segundos
     │
-    └── si <(JefeActivo) = [0]> entonces
+    └── si <<(JefeActivo) = [0]> y <(GameOver) = [0]>> entonces
         │
         └── crear clon de [Murciélago v]
 ```
@@ -125,7 +171,15 @@ Al presionar bandera verde
 └── esconder
 ```
 
-#### Script del Clon del Murciélago
+#### Script de Reinicio del Murciélago
+```scratch
+al recibir [iniciar v]
+│
+├── enviar [borrarMurcielagos v]
+└── esconder
+```
+
+#### Script del Clon del Murciélago - Movimiento
 ```scratch
 al empezar como clon
 │
@@ -133,24 +187,45 @@ al empezar como clon
 ├── mostrar
 ├── fijar tamaño a [50] %
 │
-├── para siempre
-│   │
-│   ├── cambiar x por [-4]
-│   ├── cambiar y por (número al azar entre [-2] y [2])
-│   │
-│   └── si <(posición x) < [-240]> entonces
-│       └── borrar este clon
-│
-├── si <¿tocando [Nave v]?> entonces
-│   │
-│   ├── cambiar [Vidas v] por [-1]
-│   ├── tocar sonido [Chomp v]
-│   └── borrar este clon
-│
-└── si <¿tocando [Proyectil v]?> entonces
+└── para siempre
     │
-    ├── crear clon de [Explosión v]
-    └── borrar este clon
+    ├── cambiar x por [-4]
+    ├── cambiar y por (número al azar entre [-2] y [2])
+    │
+    └── si <(posición x) < [-240]> entonces
+        └── borrar este clon
+```
+
+#### Script del Clon del Murciélago - Colisión Nave
+```scratch
+al empezar como clon
+│
+└── para siempre
+    │
+    └── si <¿tocando [Nave v]?> entonces
+        │
+        ├── cambiar [Vidas v] por [-1]
+        ├── tocar sonido [Chomp v]
+        └── borrar este clon
+```
+
+#### Script del Clon del Murciélago - Colisión Proyectil
+```scratch
+al empezar como clon
+│
+└── para siempre
+    │
+    └── si <¿tocando [Proyectil v]?> entonces
+        │
+        ├── crear clon de [Explosión v]
+        └── borrar este clon
+```
+
+#### Script para Borrar Murciélagos
+```scratch
+al recibir [borrarMurcielagos v]
+│
+└── borrar este clon
 ```
 
 ---
@@ -167,12 +242,21 @@ Al presionar bandera verde
 │
 └── para siempre
     │
-    └── si <<(Puntos) > [100]> y <(JefeActivo) = [0]>> entonces
+    └── si <<<(Puntos) > [100]> y <(JefeActivo) = [0]>> y <(GameOver) = [0]>> entonces
         │
         ├── fijar [JefeActivo v] a [1]
         ├── fijar [VidaJefe v] a [5]
         ├── decir [¡¡¡JEFE FINAL!!!] por [2] segundos
         └── crear clon de [Cucaracha v]
+```
+
+#### Script de Reinicio de la Cucaracha
+```scratch
+al recibir [iniciar v]
+│
+├── enviar [borrarJefes v]
+├── fijar [JefeActivo v] a [0]
+└── esconder
 ```
 
 #### Script del Clon del Jefe
@@ -220,6 +304,13 @@ al empezar como clon
     └── borrar este clon
 ```
 
+#### Script para Borrar Jefes
+```scratch
+al recibir [borrarJefes v]
+│
+└── borrar este clon
+```
+
 ---
 
 ## 💥 SPRITE 5: EXPLOSIÓN (Efectos)
@@ -230,6 +321,14 @@ al empezar como clon
 ```scratch
 Al presionar bandera verde
 │
+└── esconder
+```
+
+#### Script de Reinicio de la Explosión
+```scratch
+al recibir [iniciar v]
+│
+├── enviar [borrarExplosiones v]
 └── esconder
 ```
 
@@ -250,6 +349,13 @@ al empezar como clon
 └── borrar este clon
 ```
 
+#### Script para Borrar Explosiones
+```scratch
+al recibir [borrarExplosiones v]
+│
+└── borrar este clon
+```
+
 ---
 
 ## 🎯 SPRITE 6: PROYECTIL DEL JEFE
@@ -260,6 +366,14 @@ al empezar como clon
 ```scratch
 Al presionar bandera verde
 │
+└── esconder
+```
+
+#### Script de Reinicio del Proyectil del Jefe
+```scratch
+al recibir [iniciar v]
+│
+├── enviar [borrarProyectilesJefe v]
 └── esconder
 ```
 
@@ -286,6 +400,13 @@ al empezar como clon
     └── borrar este clon
 ```
 
+#### Script para Borrar Proyectiles del Jefe
+```scratch
+al recibir [borrarProyectilesJefe v]
+│
+└── borrar este clon
+```
+
 ---
 
 ## 🎵 SPRITE 7: CONTROLADOR DE MÚSICA (Opcional)
@@ -307,6 +428,37 @@ Al presionar bandera verde
 - **Vidas** (Para todos los objetos) = 3  
 - **JefeActivo** (Para todos los objetos) = 0
 - **VidaJefe** (Para todos los objetos) = 5
+- **GameOver** (Para todos los objetos) = 0
+
+## 📡 Mensajes Necesarios
+- **reiniciar** - Para reiniciar el juego
+- **iniciar** - Para iniciar todos los sprites
+- **borrarProyectiles** - Para borrar todos los proyectiles
+- **borrarMurcielagos** - Para borrar todos los murciélagos
+- **borrarJefes** - Para borrar todos los jefes
+- **borrarExplosiones** - Para borrar todas las explosiones
+- **borrarProyectilesJefe** - Para borrar proyectiles del jefe
+
+## 🎮 Alternativa: Función Personalizada para Reiniciar
+Si prefieres usar bloques personalizados, puedes crear:
+
+**Definir bloque:** `Reiniciar Juego`
+```scratch
+definir [Reiniciar Juego]
+│
+├── fijar [Vidas v] a [3]
+├── fijar [Puntos v] a [0]
+├── fijar [JefeActivo v] a [0]
+├── fijar [VidaJefe v] a [5]
+└── ir a x: [-200] y: [0]
+```
+
+Y luego usarlo así:
+```scratch
+esperar hasta que <¿tecla [r v] presionada?>
+│
+└── [Reiniciar Juego v]
+```
 
 ## 🎨 Diseño de Sprites Sugerido
 - **Nave**: Triángulo gris/azul apuntando a la derecha

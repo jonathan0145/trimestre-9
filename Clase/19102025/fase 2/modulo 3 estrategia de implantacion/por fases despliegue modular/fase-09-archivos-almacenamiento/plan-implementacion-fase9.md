@@ -1,15 +1,12 @@
-# 📁 Plan de Implementación - Fase 9: Archivos y Almacenamiento
+# Plan de Implementación - Fase 9: Archivos y Almacenamiento
 
-## 📋 Información General
+## Información de la Fase
 
-| Campo | Valor |
-|-------|-------|
-| **Nombre** | Fase 9: Archivos y Almacenamiento |
-| **Duración** | 2 semanas |
-| **Fecha Inicio** | 11 de marzo, 2026 |
-| **Fecha Fin** | 25 de marzo, 2026 |
-| **Responsable** | Equipo Desarrollo Full-Stack + DevOps |
-| **Prioridad** | Alta |
+**Nombre de la Fase:** Archivos y Almacenamiento
+**Número de Fase:** 9
+**Fecha de Inicio:** 17/02/2026
+**Fecha de Fin:** 24/02/2026
+**Responsable Principal:** Ricardo Fernández (DevOps Engineer)
 
 ## 🎯 Objetivos
 
@@ -133,15 +130,15 @@ Implementar un sistema robusto de gestión de archivos que permita subir, almace
 
 ## 🚀 Actividades de Implementación
 
-### Semana 1: Backend y Storage
+### Semana 1: Backend y Almacenamiento
 
-#### Día 1-2: Infrastructure Setup
+#### Día 1-2: Configuración de Infraestructura
 - [ ] Configurar AWS S3 bucket
 - [ ] Configurar Cloudinary account
-- [ ] Implementar CDN setup (CloudFront)
+- [ ] Implementar configuración de CDN (CloudFront)
 - [ ] Crear modelos de File y FileCategory
 
-#### Día 3-4: Core Backend
+#### Día 3-4: Núcleo Backend
 - [ ] Desarrollar fileController.js
 - [ ] Implementar uploadService.js
 - [ ] Crear storageService.js
@@ -171,7 +168,7 @@ Implementar un sistema robusto de gestión de archivos que permita subir, almace
 - [ ] Integrar con PropertyGallery.js
 - [ ] Conectar con MessageAttachments.js
 - [ ] Implementar FileManager.js
-- [ ] Testing completo y optimización
+- [ ] Pruebas completas y optimización
 
 ## 📊 API Endpoints
 
