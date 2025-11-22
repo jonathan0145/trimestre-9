@@ -16,6 +16,7 @@ Al presionar bandera verde
 ├── fijar [Puntos v] a [0]
 ├── fijar [JefeActivo v] a [0]
 ├── fijar [VidaJefe v] a [5]
+├── fijar [JefesDerrotados v] a [0]
 ├── fijar [GameOver v] a [0]
 │
 └── para siempre
@@ -84,6 +85,7 @@ al recibir [reiniciar v]
 ├── fijar [Puntos v] a [0]
 ├── fijar [JefeActivo v] a [0]
 ├── fijar [VidaJefe v] a [5]
+├── fijar [JefesDerrotados v] a [0]
 ├── fijar [GameOver v] a [0]
 ├── ir a x: [-200] y: [0]
 └── enviar [iniciar v] a todos
@@ -118,24 +120,26 @@ al empezar como clon
 ├── mostrar
 ├── apuntar hacia [90 v] grados
 │
-├── para siempre
-│   │
-│   ├── cambiar x por [15]
-│   │
-│   └── si <(posición x) > [240]> entonces
-│       └── borrar este clon
-│
-├── si <¿tocando [Murciélago v]?> entonces
-│   │
-│   ├── cambiar [Puntos v] por [10]
-│   ├── tocar sonido [pop v]
-│   └── borrar este clon
-│
-└── si <¿tocando [Cucaracha v]?> entonces
+└── para siempre
     │
-    ├── cambiar [VidaJefe v] por [-1]
-    ├── tocar sonido [pop v]
-    └── borrar este clon
+    ├── cambiar x por [15]
+    │
+    ├── si <(posición x) > [240]> entonces
+    │   └── borrar este clon
+    │
+    ├── si <¿tocando [Murciélago v]?> entonces
+    │   │
+    │   ├── cambiar [Puntos v] por [10]
+    │   ├── tocar sonido [pop v]
+    │   └── borrar este clon
+    │
+    └── si <<¿tocando [Cucaracha v]?> y <(JefeActivo) = [1]>> entonces
+        │
+        ├── cambiar [Puntos v] por [20]
+        ├── si <(VidaJefe) > [0]> entonces
+        │   └── cambiar [VidaJefe v] por [-1]
+        ├── tocar sonido [pop v]
+        └── borrar este clon
 ```
 
 #### Script para Borrar Proyectiles
@@ -204,7 +208,8 @@ al empezar como clon
     │
     └── si <¿tocando [Nave v]?> entonces
         │
-        ├── cambiar [Vidas v] por [-1]
+        ├── si <(Vidas) > [0]> entonces
+        │   └── cambiar [Vidas v] por [-1]
         ├── tocar sonido [Chomp v]
         └── borrar este clon
 ```
@@ -242,7 +247,7 @@ Al presionar bandera verde
 │
 └── para siempre
     │
-    └── si <<<(Puntos) > [100]> y <(JefeActivo) = [0]>> y <(GameOver) = [0]>> entonces
+    └── si <<<<(Puntos) > ((JefesDerrotados) * [100] + [100])> y <(JefeActivo) = [0]>> y <(JefesDerrotados) < [3]>> y <(GameOver) = [0]>> entonces
         │
         ├── fijar [JefeActivo v] a [1]
         ├── fijar [VidaJefe v] a [5]
@@ -259,7 +264,7 @@ al recibir [iniciar v]
 └── esconder
 ```
 
-#### Script del Clon del Jefe
+#### Script del Clon del Jefe - Movimiento y Control
 ```scratch
 al empezar como clon
 │
@@ -267,41 +272,68 @@ al empezar como clon
 ├── mostrar
 ├── fijar tamaño a [80] %
 │
-├── para siempre
-│   │
-│   ├── cambiar y por (número al azar entre [-8] y [8])
-│   ├── cambiar x por [-1]
-│   │
-│   ├── si <(posición y) > [150]> entonces
-│   │   └── fijar y a [150]
-│   │
-│   ├── si <(posición y) < [-150]> entonces
-│   │   └── fijar y a [-150]
-│   │
-│   ├── si <(posición x) < [50]> entonces
-│   │   └── fijar x a [200]
-│   │
-│   ├── si <(VidaJefe) ≤ [0]> entonces
-│   │   │
-│   │   ├── cambiar [Puntos v] por [100]
-│   │   ├── fijar [JefeActivo v] a [0]
-│   │   ├── decir [¡JEFE DERROTADO!] por [3] segundos
-│   │   └── borrar este clon
-│   │
-│   └── esperar [2] segundos
-│       └── crear clon de [ProyectilJefe v]
-│
-├── si <¿tocando [Nave v]?> entonces
-│   │
-│   ├── cambiar [Vidas v] por [-2]
-│   ├── tocar sonido [Chomp v]
-│   └── borrar este clon
-│
-└── si <¿tocando [Proyectil v]?> entonces
+└── para siempre
     │
-    ├── crear clon de [Explosión v]
-    ├── decir (unir [Vida: ] (VidaJefe)) por [1] segundos
-    └── borrar este clon
+    ├── cambiar y por (número al azar entre [-8] y [8])
+    ├── cambiar x por [-1]
+    │
+    ├── si <(posición y) > [150]> entonces
+    │   └── fijar y a [150]
+    │
+    ├── si <(posición y) < [-150]> entonces
+    │   └── fijar y a [-150]
+    │
+    ├── si <(posición x) < [50]> entonces
+    │   └── fijar x a [200]
+    │
+    ├── si <(VidaJefe) ≤ [0]> entonces
+    │   │
+    │   ├── cambiar [Puntos v] por [100]
+    │   ├── cambiar [JefesDerrotados v] por [1]
+    │   ├── fijar [JefeActivo v] a [0]
+    │   ├── si <(JefesDerrotados) = [3]> entonces
+    │   │   │
+    │   │   ├── fijar [GameOver v] a [1]
+    │   │   ├── decir [¡¡¡GANASTE!!! - Presiona R para jugar de nuevo] por [5] segundos
+    │   │   └── esperar hasta que <¿tecla [r v] presionada?>
+    │   │       └── enviar [reiniciar v]
+    │   │
+    │   └── si no
+    │       └── decir [¡JEFE DERROTADO!] por [3] segundos
+    │   └── borrar este clon
+    │
+    ├── esperar [2] segundos
+    ├── fijar [posicion_jefe_x v] a (posición x)
+    ├── fijar [posicion_jefe_y v] a (posición y)
+    └── crear clon de [proyectiljefe v]
+```
+
+#### Script del Clon del Jefe - Colisión con Nave
+```scratch
+al empezar como clon
+│
+└── para siempre
+    │
+    └── si <¿tocando [Nave v]?> entonces
+        │
+        ├── si <(Vidas) > [1]> entonces
+        │   └── cambiar [Vidas v] por [-2]
+        ├── si no
+        │   └── fijar [Vidas v] a [0]
+        ├── tocar sonido [Chomp v]
+        └── borrar este clon
+```
+
+#### Script del Clon del Jefe - Colisión con Proyectil
+```scratch
+al empezar como clon
+│
+└── para siempre
+    │
+    └── si <¿tocando [Proyectil v]?> entonces
+        │
+        ├── crear clon de [Explosión v]
+        └── tocar sonido [pop v]
 ```
 
 #### Script para Borrar Jefes
@@ -358,7 +390,7 @@ al recibir [borrarExplosiones v]
 
 ---
 
-## 🎯 SPRITE 6: PROYECTIL DEL JEFE
+## 🎯 SPRITE 6: PROYECTIL DEL JEFE (proyectiljefe)
 
 ### Scripts del Proyectil del Jefe
 
@@ -377,27 +409,35 @@ al recibir [iniciar v]
 └── esconder
 ```
 
-#### Script del Clon del Proyectil del Jefe
+#### Script del Clon del Proyectil del Jefe - Movimiento
 ```scratch
 al empezar como clon
 │
-├── ir a x: (posición x de [Cucaracha v]) y: (posición y de [Cucaracha v])
+├── ir a x: (mi variable [posicion_jefe_x v]) y: (mi variable [posicion_jefe_y v])
 ├── mostrar
 ├── fijar tamaño a [20] %
 ├── apuntar hacia [Nave v]
 │
-├── para siempre
-│   │
-│   ├── cambiar x por [-8]
-│   │
-│   └── si <(posición x) < [-240]> entonces
-│       └── borrar este clon
-│
-└── si <¿tocando [Nave v]?> entonces
+└── para siempre
     │
-    ├── cambiar [Vidas v] por [-1]
-    ├── tocar sonido [Chomp v]
-    └── borrar este clon
+    ├── cambiar x por [-8]
+    │
+    └── si <(posición x) < [-240]> entonces
+        └── borrar este clon
+```
+
+#### Script del Clon del Proyectil del Jefe - Colisión
+```scratch
+al empezar como clon
+│
+└── para siempre
+    │
+    └── si <¿tocando [Nave v]?> entonces
+        │
+        ├── si <(Vidas) > [0]> entonces
+        │   └── cambiar [Vidas v] por [-1]
+        ├── tocar sonido [Chomp v]
+        └── borrar este clon
 ```
 
 #### Script para Borrar Proyectiles del Jefe
@@ -428,7 +468,10 @@ Al presionar bandera verde
 - **Vidas** (Para todos los objetos) = 3  
 - **JefeActivo** (Para todos los objetos) = 0
 - **VidaJefe** (Para todos los objetos) = 5
+- **JefesDerrotados** (Para todos los objetos) = 0
 - **GameOver** (Para todos los objetos) = 0
+- **posicion_jefe_x** (Para todos los objetos) = 0
+- **posicion_jefe_y** (Para todos los objetos) = 0
 
 ## 📡 Mensajes Necesarios
 - **reiniciar** - Para reiniciar el juego
