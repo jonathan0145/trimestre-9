@@ -2,6 +2,7 @@
 
 # Estado de Evidencias de Implantación, Calidad y Operación
 
+
 ## Evidencias que ya tienes completas:
 
 - Plan de Pruebas
@@ -17,11 +18,12 @@
 - Carpeta/Repositorio de Evidencias de Implantación
 - Reporte de Monitoreo Inicial
 - Reporte de Pruebas de Rendimiento
+- Scripts de Prueba Automatizados (Selenium, JUnit, Jest, etc.)
+- Reporte/Artefacto de Análisis Estático de Código (SonarQube)
+
 
 ## Evidencias que faltan por hacer (según la última imagen):
 
-- Scripts de Prueba Automatizados (Selenium, JUnit, Jest, etc.)
-- Reporte/Artefacto de Análisis Estático de Código (SonarQube)
 - Diagrama de Arquitectura de Producción
 - Pipeline de CI/CD Configurado y Ejecutado (ejemplo: Jenkins, GitLab CI)
 - Scripts de Despliegue Automatizado (Ansible, Shell, etc.)
