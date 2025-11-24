@@ -1,20 +1,59 @@
 # Plantilla Integral de Implantación de Software - Proyecto Inmotech
 
 
+
 ## 1. Introducción
-- Objetivo del documento
-- Proyecto: Inmotech
-- Alcance del proyecto
-- Equipo responsable
+
+- **Objetivo del documento:**  
+	Describir el proceso integral de implantación del sistema Inmotech, detallando la arquitectura, los componentes desarrollados y la evidencia de calidad y operación.
+
+- **Proyecto:**  
+	Inmotech
+
+
+- **Alcance del proyecto:**  
+		El proyecto Inmotech incluye el desarrollo, despliegue, integración y documentación de los siguientes componentes principales:
+
+		- **Backend:**  
+			- API RESTful para gestión de usuarios, propiedades, ofertas, notificaciones, chat y verificación.
+			- Servicios de autenticación y autorización.
+			- Integración con bases de datos relacionales y servicios externos (Firebase, correo electrónico).
+			- Scripts de automatización para roles, permisos y migraciones.
+			- Pruebas automatizadas (Jest, Supertest) y reportes de calidad.
+			- Configuración de despliegue y migración de datos.
+
+		- **Frontend:**  
+			- Aplicación web responsiva para usuarios finales, agentes y administradores.
+			- Módulos de autenticación, gestión de propiedades, chat, notificaciones y verificación.
+			- Integración con la API backend y servicios de sockets en tiempo real.
+			- Pruebas de interfaz y validación de funcionalidades.
+			- Configuración de entorno y despliegue.
+
+		- **Documentación:**  
+			- Manuales técnicos y de usuario.
+			- Reportes de pruebas, ejecución y cierre de defectos.
+			- Evidencias de calidad, checklist de implantación y monitoreo.
+			- Especificaciones de casos de prueba, arquitectura y cronograma.
+			- Guías de instalación, operación y soporte post-implantación.
+
+		- **Infraestructura y DevOps:**  
+			- Pipeline de CI/CD para integración y despliegue continuo.
+			- Scripts de despliegue automatizado.
+			- Monitoreo en tiempo real y dashboard de KPIs.
+			- Reportes de análisis estático de código y aseguramiento de la calidad.
+
+- **Equipo responsable:**  
+	- **Jonathan Ivan Rendon Bermeo**
+	- **Nadia Fernanda Masmela**
+	- **Anderson Stiff Mora**
 
 > **Consulta la arquitectura técnica del sistema en el siguiente documento:**
-> [Documento de Arquitectura del Sistema (DAS)](../25102025/plantillas/capturas/Plantilla_%20Documento%20de%20Arquitectura%20del%20Sistema%20(DAS)/documento-arquitectura-sistema.md)
-
+> [Documento de Arquitectura del Sistema (DAS)](./Arquitectura%20tecnica%20del%20sistema/documento-arquitectura-sistema.md)
 
 ## 2. Análisis de Condiciones del Sistema (Fase 1 / Módulo 2)
 
 > **Consulta y completa el inventario detallado en el siguiente archivo:**
-> [Plantilla 1: Inventario de Condiciones del Software](./capturas/1%20inventario%20de%20condiciones%20del%20sistema%20del%20software/plantilla-inventario-condiciones-software.md)
+> [Plantilla 1: Inventario de Condiciones del Software](./fase%201/plantilla-inventario-condiciones-software.md)
 
 ### 2.1 Inventario de Hardware
 - Servidores (CPU, RAM, almacenamiento)
@@ -80,23 +119,35 @@
 > [Plantilla 3: Matriz de Riesgos](./capturas/3%20matriz%20de%20riesgo/plantilla-matriz-riesgos.md)
 
 
+
+
 ## 7. Ejecución y Monitoreo (Fase 3 / Módulo 5)
-- Preparación del entorno
-- Instalación y configuración
-- Migración de datos controlada
-- Monitoreo continuo (KPIs, dashboard)
-- Gestión del cambio y comunicación
+Cada una de las estrategias de implantación (Piloto, Por Fases, Big Bang) cuenta con documentación y evidencias específicas para los siguientes procesos:
+
+- **Preparación del entorno:** Manuales, cronogramas y listas de verificación para asegurar que todo el entorno esté listo antes de la implantación.
+- **Instalación y configuración:** Guías técnicas, registros de incidencias y checklist para la correcta instalación y configuración de los sistemas.
+- **Migración de datos controlada:** Planes de migración, procedimientos de rollback y reportes de ejecución para garantizar la integridad de los datos.
+- **Monitoreo continuo (KPIs, dashboard):** Documentos de métricas, reportes de rendimiento y dashboards para el seguimiento en tiempo real.
+- **Gestión del cambio y comunicación:** Planes de comunicación, matrices de stakeholders, registros de incidencias y reportes de feedback para asegurar la correcta gestión del cambio y la comunicación con todos los involucrados.
+
+Cada carpeta de estrategia contiene los archivos y evidencias que respaldan estos procesos, permitiendo una trazabilidad completa y validación de la implantación.
 
 ### Checklist de Implantación y Validación Final
 > **Consulta y completa el checklist detallado en la siguiente plantilla:**
 > [Plantilla 4: Checklist de Implantación](./capturas/4%20checklist%20de%20implantacion/plantilla-checklist-implantacion.md)
 
+
+
 ## 8. Soporte Post-Implantación (Fase 4 / Módulo 6)
-- Capacitación a usuarios finales ([ver Plan de Capacitación y Formación](../25102025/plantillas/capturas/Plantilla%20para%20el%20Plan%20de%20Capacitaci%C3%B3n%20y%20Formaci%C3%B3n/plan-capacitacion-formacion.md))
-- Manuales y guías rápidas
-- Canal de soporte (mesa de ayuda)
-- Evaluación y retroalimentación
-- Mantenimiento continuo (parches, actualizaciones, backups)
+Para cada uno de los siguientes puntos existen documentos y evidencias en las carpetas de las tres estrategias de implantación (piloto, big bang y por fases):
+
+- **Capacitación a usuarios finales:** Manuales, guías rápidas, presentaciones y registros de capacitación, además del [Plan de Capacitación y Formación](../25102025/plantillas/capturas/Plantilla%20para%20el%20Plan%20de%20Capacitaci%C3%B3n%20y%20Formaci%C3%B3n/plan-capacitacion-formacion.md), disponibles en piloto, big bang y por fases.
+- **Manuales y guías rápidas:** Documentos específicos para usuarios y soporte, disponibles en piloto, big bang y por fases.
+- **Canal de soporte (mesa de ayuda):** Procedimientos, manuales de respuesta a incidentes y registros de incidencias, disponibles en piloto, big bang y por fases.
+- **Evaluación y retroalimentación:** Encuestas, reportes de feedback, resultados de capacitación y reportes de incidencias, disponibles en piloto, big bang y por fases.
+- **Mantenimiento continuo (parches, actualizaciones, backups):** Planes de seguimiento, procedimientos de rollback, checklist de validación y reportes de mantenimiento, disponibles en piloto, big bang y por fases.
+
+Esto garantiza que el soporte post-implantación está documentado y respaldado en cada una de las estrategias.
 
 ## 9. Integración y Presentación (Módulo 7)
 - Documentación final
