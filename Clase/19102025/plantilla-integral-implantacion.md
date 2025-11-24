@@ -72,6 +72,9 @@
 - Procedimiento de reversión
 - Checklist de pruebas
 
+> **Consulta y completa el reporte de análisis estático de código en el siguiente archivo:**
+> [Reporte-Artefacto-Analisis-Estatico-Codigo.md](./fase%202/plan%20de%20pruebas%20y%20rollback/Reporte-Artefacto-Analisis-Estatico-Codigo.md)
+
 ### 6.3 Matriz de Riesgos y Planes de Contingencia
 > **Consulta y completa la matriz detallada en la siguiente plantilla:**
 > [Plantilla 3: Matriz de Riesgos](./capturas/3%20matriz%20de%20riesgo/plantilla-matriz-riesgos.md)
