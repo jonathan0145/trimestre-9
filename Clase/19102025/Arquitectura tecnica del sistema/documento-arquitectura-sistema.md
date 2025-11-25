@@ -39,20 +39,26 @@
 ---
 
 ## 1. Introducción
-[Describir el contexto general del proyecto, la empresa o área para la que se desarrollará el sistema y la justificación de la necesidad de esta nueva solución.]
+INMOTECH es una plataforma web orientada a la gestión integral de propiedades inmobiliarias, agentes y usuarios finales. El sistema está diseñado para digitalizar y automatizar procesos que tradicionalmente se realizan de forma manual, como la administración de ofertas, la comunicación entre usuarios y agentes, y la verificación de información. La solución responde a la necesidad de modernizar la gestión inmobiliaria, mejorar la seguridad y trazabilidad de los datos, y facilitar la interacción en tiempo real entre los diferentes actores del sector.
 
 ## 2. Problema
-[Describir el problema o la necesidad actual que motiva el desarrollo de este nuevo sistema. El documento de base lo enfoca en cómo se maneja la información actualmente (ej. de manera manual, ofimática) y las inconsistencias o problemas de seguridad que esto genera.]
+Actualmente, la gestión de propiedades, ofertas y usuarios en el sector inmobiliario se realiza en gran parte de manera manual o mediante herramientas ofimáticas dispersas, lo que genera inconsistencias, duplicidad de información y problemas de seguridad. La falta de integración y automatización dificulta el seguimiento de procesos, la verificación de datos y la comunicación eficiente entre agentes y clientes. Además, existen riesgos asociados al manejo de información sensible sin mecanismos robustos de autenticación y protección.
 
 ## 3. Solución Propuesta
-[Presentar una visión de alto nivel de la solución tecnológica. Indicar el tipo de solución (ej. aplicación web, móvil, de escritorio, microservicios) y los beneficios principales que aportará, como la dinamización de procesos y la gestión sistematizada de la información.]
+Se propone el desarrollo de una plataforma web modular compuesta por un backend en Node.js (Express, Sequelize, Socket.io) y un frontend en React. El sistema implementa una arquitectura de capas, con API RESTful y servicios de sockets para comunicación en tiempo real, y una base de datos relacional (MySQL/MariaDB). La solución integra autenticación segura (JWT, Firebase), gestión de roles y permisos, y automatización de procesos clave como la verificación de usuarios y propiedades, la administración de ofertas y la comunicación instantánea. Los principales beneficios incluyen la sistematización de la información, la mejora en la seguridad, la trazabilidad de los procesos y la escalabilidad para soportar alta concurrencia.
 
 ## 4. Objetivos
 ### 4.1. Objetivo general
-[Definir la meta principal y el alcance del sistema en una frase clara y medible.]
+Desarrollar e implementar una plataforma web integral para la gestión inmobiliaria, que permita la administración segura y eficiente de propiedades, usuarios, agentes y ofertas, facilitando la comunicación y la verificación de información en tiempo real.
 
 ### 4.2. Objetivos específicos
-[Enumerar las metas detalladas y concretas que se deben lograr para cumplir con el objetivo general. Estos deben ser medibles (ej. "Permitir la gestión de reportes", "Diseñar un esquema arquitectónico").]
+1. Digitalizar y automatizar el proceso de registro, gestión y verificación de usuarios, agentes y propiedades.
+2. Implementar mecanismos de autenticación y autorización robustos, incluyendo roles y permisos diferenciados.
+3. Facilitar la comunicación en tiempo real entre usuarios y agentes mediante servicios de chat y notificaciones.
+4. Integrar la gestión de ofertas y transacciones inmobiliarias con trazabilidad y control de cambios.
+5. Garantizar la seguridad y protección de datos sensibles mediante cifrado y buenas prácticas de desarrollo.
+6. Proveer herramientas para el monitoreo, análisis y reporte de la calidad del software (ISO 25010, SonarQube, checklist de calidad).
+7. Asegurar la escalabilidad y disponibilidad del sistema para soportar alta concurrencia y crecimiento futuro.
 
 ## 5. Propuesta Arquitectónica
 El objeto de esta sección es sustentar la solución propuesta desde la arquitectura técnica, sirviendo como referencia para el diseño y análisis de la implementación.

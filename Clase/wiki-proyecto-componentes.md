@@ -10,6 +10,21 @@
 - [Checklist de Calidad](#checklist-de-calidad)
 - [Reportes y Análisis](#reportes-y-análisis)
 - [Recursos y Documentación](#recursos-y-documentación)
+- [Plantilla Integral de Implantación](#plantilla-integral-de-implantación)
+  - [1. Introducción](#1-introducción)
+  - [2. Análisis de Condiciones del Sistema](#2-análisis-de-condiciones-del-sistema-fase-1--módulo-2)
+  - [3. Estrategia de Implantación](#3-estrategia-de-implantación-fase-2--módulo-3)
+  - [4. Cronograma y Hitos](#4-cronograma-y-hitos-fase-2--módulo-3)
+  - [5. Asignación de Recursos](#5-asignación-de-recursos-fase-2)
+  - [6. Planificación Técnica](#6-planificación-técnica-fase-2--módulo-4)
+    - [6.1 Plan de Migración de Datos](#61-plan-de-migración-de-datos-ver-documento)
+    - [6.2 Plan de Pruebas y Rollback](#62-plan-de-pruebas-y-rollback-ver-documento)
+    - [6.3 Matriz de Riesgos y Planes de Contingencia](#63-matriz-de-riesgos-y-planes-de-contingencia)
+  - [7. Ejecución y Monitoreo](#7-ejecución-y-monitoreo-fase-3--módulo-5)
+    - [Checklist de Implantación y Validación Final](#checklist-de-implantación-y-validación-final)
+  - [8. Soporte Post-Implantación](#8-soporte-post-implantación-fase-4--módulo-6)
+  - [9. Integración y Presentación](#9-integración-y-presentación-módulo-7)
+  - [Inmotech Móvil](#inmotech-móvil)
 
 ---
 
@@ -66,6 +81,7 @@ Otras herramientas:
 - **Google Forms**: Checklist de calidad
 - **Google Sheets**: Reportes automáticos
 - **SonarQube**: Análisis estático de código (opcional)
+- **JIRA/TestRail**: Gestión de incidencias y pruebas (opcional)
 
 ## Checklist de Calidad
 - Preguntas basadas en ISO 25010 para backend y frontend
@@ -86,4 +102,18 @@ Otras herramientas:
 
 ---
 
-> Para más detalles, consulta los archivos en cada carpeta y la documentación específica de cada módulo.
+## Plantilla Integral de Implantación
+
+### 1. Introducción
+- Objetivo del documento
+- Proyecto
+- Alcance del proyecto
+- Equipo responsable
+
+### 2. Análisis de Condiciones del Sistema (Fase 1 / Módulo 2)
+- Inventario de hardware
+- Auditoría de software
+- Evaluación de infraestructura de red
+- Análisis de seguridad
+
+### 3. Estrategia de Implantación
