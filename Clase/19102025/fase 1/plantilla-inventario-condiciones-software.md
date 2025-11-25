@@ -2,33 +2,33 @@
 
 **Propósito:** Evaluar y documentar el estado actual del software, la infraestructura y los procesos asociados antes de iniciar un proyecto de implantación o migración de un nuevo sistema.
 
-**Fecha de Elaboración:** [Día/Mes/Año]
-**Elaborado por:** [Nombre del Responsable/Equipo]
-**Sistema Evaluado:** [Nombre del Sistema/Módulo Actual]
-**Versión Actual:** [Número de Versión]
+**Fecha de Elaboración:** 20/11/2025
+**Elaborado por:** Jonathan Rendon, Nadia Masmela, Anderson Mora
+**Sistema Evaluado:** INMOTECH (Backend Node.js, Frontend React, Base de datos MySQL/MariaDB)
+**Versión Actual:** 1.0
 
 ## 1. Información General del Software Actual
 Esta sección documenta los detalles fundamentales del sistema existente.
 
 | Campo                                 | Descripción / Respuesta                                              |
 |---------------------------------------|---------------------------------------------------------------------|
-| Nombre del Proveedor/Desarrollador    | [Ej: Microsoft, SAP, Desarrollo Interno, etc.]                      |
-| Tecnología Principal                  | [Ej: Java, .NET, PHP, Legado (COBOL, FoxPro), etc.]                |
-| Licenciamiento                        | [Tipo de licencia y cantidad de usuarios/puestos.]                  |
-| Fecha de Última Actualización Mayor   | [Día/Mes/Año]                                                       |
-| Manuales/Documentación Disponibles    | [Sí/No. ¿Ubicación? ¿Estado de la documentación (Completa, Obsoleta)?] |
-| Nivel de Dependencia Operacional      | [Bajo, Medio, Alto. ¿Qué tan crítico es para el negocio?]           |
+| Nombre del Proveedor/Desarrollador    | Desarrollo Interno (Equipo INMOTECH)                                |
+| Tecnología Principal                  | Backend: Node.js (Express, Sequelize, Socket.io); Frontend: React; Base de datos: MySQL/MariaDB |
+| Licenciamiento                        | Software libre, sin restricciones de usuarios.                      |
+| Fecha de Última Actualización Mayor   | 20/11/2025                                                          |
+| Manuales/Documentación Disponibles    | Sí. Ubicación: carpeta `documentacion/` y archivos `.md` en el repositorio. Estado: Completa y actualizada. |
+| Nivel de Dependencia Operacional      | Alto. El sistema es crítico para la gestión inmobiliaria y la operación diaria. |
 
 ## 2. Infraestructura y Entorno Técnico
 Detalles sobre el entorno donde se ejecuta actualmente el software.
 
 | Componente                | Detalles Técnicos Actuales                                              | Observaciones / Restricciones                  |
 |---------------------------|------------------------------------------------------------------------|-----------------------------------------------|
-| Servidor (SO)             | [Ej: Windows Server 2019, RHEL 8, etc. – Versión y Edición]            | [Ej: No hay soporte extendido, hardware obsoleto.] |
-| Base de Datos (SGBD)      | [Ej: SQL Server 2017, Oracle 19c, MySQL 5.7 - Versión y Edición]       | [Ej: Alto volumen de datos (TBs), requiere optimización.] |
-| Integraciones/Interfaces  | [Sistemas con los que se comunica (Ej: ERP, CRM, Contabilidad).]       | [Ej: Utiliza una API REST/Archivo plano (CSV/XML), estado de la conexión.] |
-| Copia de Seguridad (Backup)| [Frecuencia (Diaria/Semanal), Tipo (Total/Incremental), Ubicación.]   | [Ej: Restauración lenta, copias en sitio único.] |
-| Hardware de Usuario Final | [Requisitos Mínimos (RAM, CPU, SO, Navegador).]                        | [Ej: Equipos con bajo rendimiento en ciertas áreas.] |
+| Servidor (SO)             | Debian-web-server, versión estable.                                     | Hardware virtualizado, escalable según demanda.|
+| Base de Datos (SGBD)      | MySQL/MariaDB 10.x, SQLite para pruebas.                               | Volumen de datos moderado, optimización periódica.|
+| Integraciones/Interfaces  | Firebase (autenticación, notificaciones), API RESTful, sockets.        | Integración estable, monitoreo activo.         |
+| Copia de Seguridad (Backup)| Diaria, total e incremental, almacenada en servidor y nube.            | Restauración rápida, copias redundantes.       |
+| Hardware de Usuario Final | Mínimo: 4GB RAM, CPU dual-core, SO Windows/Linux/Mac, navegador Chrome/Firefox. | Sin restricciones graves, rendimiento óptimo en la mayoría de equipos. |
 
 ## 3. Funcionalidades Críticas y Personalizaciones
 Identificación de las características esenciales y las modificaciones propias del sistema.
@@ -36,45 +36,47 @@ Identificación de las características esenciales y las modificaciones propias 
 ### A. Módulos y Funcionalidades Esenciales
 Enumere los módulos y las funciones críticas que deben ser cubiertas por el nuevo sistema.
 
-- **Módulo 1:** [Nombre del Módulo – Ej: Gestión de Inventario]
-  - Funcionalidades Críticas: [Ej: Cálculo de costos promedio, Recuento cíclico.]
-- **Módulo 2:** [Nombre del Módulo – Ej: Facturación]
-  - Funcionalidades Críticas: [Ej: Emisión electrónica, Reportes fiscales.]
-- **Módulo 3:** [Nombre del Módulo – Ej: Recursos Humanos]
-  - Funcionalidades Críticas: [Ej: Cálculo de nómina con reglas especiales.]
+**Módulo 1:** Gestión de usuarios y agentes
+  - Funcionalidades Críticas: Registro, autenticación, verificación, administración de roles y permisos.
+**Módulo 2:** Gestión de propiedades y ofertas
+  - Funcionalidades Críticas: Alta/baja/modificación de propiedades, publicación y gestión de ofertas, trazabilidad de transacciones.
+**Módulo 3:** Comunicación y notificaciones
+  - Funcionalidades Críticas: Chat en tiempo real, notificaciones push, historial de mensajes.
+**Módulo 4:** Verificación y control de calidad
+  - Funcionalidades Críticas: Checklist ISO 25010, análisis estático de código (SonarQube), reportes de calidad.
 
 ### B. Personalizaciones y Desarrollos a Medida
 Describa las modificaciones específicas que se hicieron al sistema actual.
 
-1. Personalización 1: [Descripción – Ej: Reporte de ventas especial no estándar.]
-   - Motivo/Razón de Ser: [¿Por qué se creó? Ej: Requerimiento legal local.]
-   - Impacto de la No Migración: [Bajo, Medio, Alto – ¿Qué pasa si no existe en el nuevo sistema?]
-2. Personalización 2: [Descripción – Ej: Campo extra en la ficha de cliente para “Clasificación de riesgo”]
-   - Motivo/Razón de Ser: [¿Por qué se creó? Ej: Proceso interno de la empresa.]
-   - Impacto de la No Migración: [Bajo, Medio, Alto.]
+1. Personalización 1: Integración con Firebase para autenticación y notificaciones.
+   - Motivo/Razón de Ser: Mejorar la seguridad y la experiencia de usuario.
+   - Impacto de la No Migración: Alto. Sin esta integración, se pierde doble factor y notificaciones seguras.
+2. Personalización 2: Implementación de checklist de calidad ISO 25010 y análisis SonarQube.
+   - Motivo/Razón de Ser: Cumplimiento de estándares de calidad y trazabilidad.
+   - Impacto de la No Migración: Medio. Se reduce la capacidad de auditar y mejorar la calidad del software.
 
 ## 4. Usuarios y Procesos de Negocio
 Evaluación del uso, el conocimiento del sistema y la dependencia de los procesos.
 
 | Aspecto                        | Detalles y Evaluación                                                  |
 |--------------------------------|-----------------------------------------------------------------------|
-| Número Total de Usuarios       | [Cantidad de usuarios con acceso y usuarios concurrentes promedio.]    |
-| Nivel de Satisfacción del Usuario | [Bajo, Medio, Alto. Razones principales de la insatisfacción (si aplica).] |
-| Conocimiento del Proceso (Usuarios) | [¿Los usuarios siguen el proceso o usan “atajos” en el sistema?]     |
-| Flujo de Trabajo Actual        | [¿El sistema actual fuerza el flujo de trabajo o es muy flexible/manual?] |
-| Resistencia al Cambio Esperada | [Baja, Media, Alta. ¿Quiénes son los principales reticentes (Stakeholders)?] |
+| Número Total de Usuarios       | 50 usuarios registrados, 10-15 concurrentes promedio.                  |
+| Nivel de Satisfacción del Usuario | Alto. Los usuarios valoran la automatización y la comunicación en tiempo real. |
+| Conocimiento del Proceso (Usuarios) | Los usuarios siguen el proceso definido, con mínima tendencia a atajos. |
+| Flujo de Trabajo Actual        | El sistema fuerza el flujo de trabajo, con validaciones y controles automáticos. |
+| Resistencia al Cambio Esperada | Baja. La mayoría de los usuarios están involucrados en el desarrollo y adopción. |
 
 ## 5. Riesgos y Conclusiones Preliminares
 Identificación de los puntos débiles y un resumen del estado general.
 
 ### A. Riesgos Identificados
-- Riesgo Técnico: [Ej: La base de datos actual no es compatible con el nuevo sistema y requiere una migración compleja de datos.]
-- Riesgo Funcional: [Ej: La función crítica de cálculo de costos es única y el nuevo sistema no la contempla de serie.]
-- Riesgo Humano: [Ej: El usuario clave que conoce las personalizaciones se jubila en 6 meses.]
+Riesgo Técnico: Posible incompatibilidad futura con servicios externos o escalabilidad limitada si no se actualizan dependencias.
+Riesgo Funcional: La trazabilidad de ofertas y propiedades depende de la correcta integración de módulos y validaciones.
+Riesgo Humano: Dependencia del equipo actual para el conocimiento de integraciones y personalizaciones.
 
 ### B. Conclusiones y Recomendaciones
 Resumen del estado del sistema y los pasos inmediatos sugeridos.
 
-- Estado General: [Ej: El sistema es funcional pero obsoleto. Requiere reemplazo urgente por riesgo de falla.]
-- Recomendación Clave: [Ej: Dar prioridad a la documentación de las personalizaciones críticas antes de iniciar la fase de Discovery del nuevo software.]
-- Datos Críticos a Preservar/Migrar: [Ej: Historial de ventas de los últimos 5 años, Maestros de clientes y proveedores.]
+Estado General: El sistema es funcional, moderno y cumple con los requisitos actuales de gestión inmobiliaria. Mantiene buenas prácticas de seguridad y calidad.
+Recomendación Clave: Documentar y mantener actualizadas las integraciones y personalizaciones críticas, así como los procedimientos de backup y recuperación.
+Datos Críticos a Preservar/Migrar: Historial de transacciones, usuarios, propiedades, ofertas y registros de comunicación.
