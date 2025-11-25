@@ -30,6 +30,40 @@ Detalles sobre el entorno donde se ejecuta actualmente el software.
 | Copia de Seguridad (Backup)| Diaria, total e incremental, almacenada en servidor y nube.            | Restauración rápida, copias redundantes.       |
 | Hardware de Usuario Final | Mínimo: 4GB RAM, CPU dual-core, SO Windows/Linux/Mac, navegador Chrome/Firefox. | Sin restricciones graves, rendimiento óptimo en la mayoría de equipos. |
 
+### 2.1 Inventario de Hardware
+**Servidores:**
+- CPU: 16 vCPU (virtualizados), RAM: 64GB, Almacenamiento: 2TB SSD
+- Ubicación: Centro de datos virtualizado, escalable bajo demanda
+**Estaciones de trabajo:**
+- 20 equipos, CPU i5/i7, RAM 8GB, SSD 256GB, SO Windows 10/11 y Ubuntu 22.04
+**Periféricos:**
+- Impresoras multifunción (2 HP LaserJet), escáneres (1 Epson), conectados en red
+
+### 2.2 Auditoría de Software
+**Sistemas operativos:**
+- Servidores: Debian 11 (estable), Estaciones: Windows 10/11, Ubuntu 22.04
+**Aplicaciones existentes:**
+- Navegadores Chrome/Firefox, Suite ofimática LibreOffice/Microsoft Office, herramientas de desarrollo (VS Code, Node.js, npm)
+- No se detectan conflictos graves, integración estable con el sistema INMOTECH
+**Bases de datos:**
+- MySQL/MariaDB 10.x, SQLite para pruebas
+
+### 2.3 Evaluación de Infraestructura de Red
+**Ancho de banda:**
+- 300 Mbps simétricos, latencia promedio <20ms, estabilidad alta
+**Acceso remoto:**
+- VPN corporativa configurada para acceso seguro de usuarios y administradores
+
+### 2.4 Análisis de Seguridad
+**Firewalls:**
+- Firewall perimetral en el centro de datos, reglas restrictivas para puertos y servicios
+**Antivirus:**
+- ESET Endpoint Security en estaciones y servidores
+**Permisos de usuario:**
+- Gestión de roles y permisos en INMOTECH, acceso restringido por perfil
+**Cumplimiento normativo:**
+- LOPD (protección de datos personales), ISO 27001 (seguridad de la información), controles de acceso y auditoría
+
 ## 3. Funcionalidades Críticas y Personalizaciones
 Identificación de las características esenciales y las modificaciones propias del sistema.
 
