@@ -1,0 +1,74 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Casos de Uso INMOTECH" id="casos-uso-inmotech">
+    <mxGraphModel dx="1000" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <!-- Actores -->
+        <mxCell id="actor1" value="Administrador" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="60" y="60" width="40" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="actor2" value="Agente" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="60" y="220" width="40" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="actor3" value="Usuario final" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="60" y="380" width="40" height="80" as="geometry"/>
+        </mxCell>
+        <!-- Casos de uso -->
+        <mxCell id="use1" value="Administrar usuarios" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="60" width="140" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="use2" value="Administrar roles y permisos" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="110" width="140" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="use3" value="Verificar usuarios y propiedades" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="160" width="140" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="use4" value="Gestionar propiedades" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="210" width="140" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="use5" value="Gestionar ofertas" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="260" width="140" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="use6" value="Monitorear calidad y reportes" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="310" width="140" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="use7" value="Autenticarse" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="420" y="220" width="140" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="use8" value="Chat y notificaciones en tiempo real" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="420" y="270" width="180" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="use9" value="Buscar propiedades" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="420" y="380" width="140" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="use10" value="Realizar ofertas" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="420" y="430" width="140" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="use11" value="Verificar información" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="420" y="480" width="140" height="40" as="geometry"/>
+        </mxCell>
+        <!-- Relaciones -->
+        <mxCell id="rel1" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;html=1;" edge="1" parent="1" source="actor1" target="use1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="rel2" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;html=1;" edge="1" parent="1" source="actor1" target="use2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="rel3" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;html=1;" edge="1" parent="1" source="actor1" target="use3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="rel4" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;html=1;" edge="1" parent="1" source="actor1" target="use4">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="rel5" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;html=1;" edge="1" parent="1" source="actor1" target="use5">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="rel6" style="edgeStyle=orthogonalEdgeStyle;endArrow=none;html=1;" edge="1" parent="1" source="actor1" target="use6">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- Puedes agregar más relaciones entre actores y casos de uso según tu necesidad en la interfaz de draw.io -->
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
