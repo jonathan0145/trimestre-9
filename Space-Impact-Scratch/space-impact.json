@@ -1,0 +1,1291 @@
+{
+  "targets": [
+    {
+      "isStage": true,
+      "name": "Stage",
+      "variables": {
+        "Puntos": ["Puntos", 0],
+        "Vidas": ["Vidas", 3],
+        "JefeActivo": ["JefeActivo", 0],
+        "VidaJefe": ["VidaJefe", 5]
+      },
+      "lists": {},
+      "broadcasts": {},
+      "blocks": {},
+      "comments": {},
+      "currentCostume": 0,
+      "costumes": [
+        {
+          "name": "Espacio",
+          "bitmapResolution": 1,
+          "dataFormat": "svg",
+          "assetId": "cd21514d0531fdffb22204e0ec5ed84a",
+          "md5ext": "cd21514d0531fdffb22204e0ec5ed84a.svg",
+          "rotationCenterX": 240,
+          "rotationCenterY": 180
+        }
+      ],
+      "sounds": [],
+      "volume": 100,
+      "layerOrder": 0,
+      "tempo": 60,
+      "videoTransparency": 50,
+      "videoState": "on",
+      "textToSpeechLanguage": null
+    },
+    {
+      "isStage": false,
+      "name": "Nave",
+      "variables": {},
+      "lists": {},
+      "broadcasts": {},
+      "blocks": {
+        "event_whenflagclicked": {
+          "opcode": "event_whenflagclicked",
+          "next": "motion_goto",
+          "parent": null,
+          "inputs": {},
+          "fields": {},
+          "shadow": false,
+          "topLevel": true,
+          "x": 48,
+          "y": 48
+        },
+        "motion_goto": {
+          "opcode": "motion_gotoxy",
+          "next": "data_setvariableto",
+          "parent": "event_whenflagclicked",
+          "inputs": {
+            "X": [1, [4, "-200"]],
+            "Y": [1, [4, "0"]]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "data_setvariableto": {
+          "opcode": "data_setvariableto",
+          "next": "data_setvariableto2",
+          "parent": "motion_goto",
+          "inputs": {
+            "VALUE": [1, [4, "3"]]
+          },
+          "fields": {
+            "VARIABLE": ["Vidas", "Vidas"]
+          },
+          "shadow": false,
+          "topLevel": false
+        },
+        "data_setvariableto2": {
+          "opcode": "data_setvariableto",
+          "next": "data_setvariableto3",
+          "parent": "data_setvariableto",
+          "inputs": {
+            "VALUE": [1, [4, "0"]]
+          },
+          "fields": {
+            "VARIABLE": ["Puntos", "Puntos"]
+          },
+          "shadow": false,
+          "topLevel": false
+        },
+        "data_setvariableto3": {
+          "opcode": "data_setvariableto",
+          "next": "control_forever",
+          "parent": "data_setvariableto2",
+          "inputs": {
+            "VALUE": [1, [4, "0"]]
+          },
+          "fields": {
+            "VARIABLE": ["JefeActivo", "JefeActivo"]
+          },
+          "shadow": false,
+          "topLevel": false
+        },
+        "control_forever": {
+          "opcode": "control_forever",
+          "next": null,
+          "parent": "data_setvariableto3",
+          "inputs": {
+            "SUBSTACK": [2, "control_if"]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "control_if": {
+          "opcode": "control_if",
+          "next": "control_if2",
+          "parent": null,
+          "inputs": {
+            "CONDITION": [2, "sensing_keypressed"],
+            "SUBSTACK": [2, "motion_changeyby"]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "sensing_keypressed": {
+          "opcode": "sensing_keypressed",
+          "next": null,
+          "parent": "control_if",
+          "inputs": {},
+          "fields": {
+            "KEY_OPTION": ["up arrow", null]
+          },
+          "shadow": false,
+          "topLevel": false
+        },
+        "motion_changeyby": {
+          "opcode": "motion_changeyby",
+          "next": null,
+          "parent": "control_if",
+          "inputs": {
+            "DY": [1, [4, "10"]]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "control_if2": {
+          "opcode": "control_if",
+          "next": null,
+          "parent": "control_if",
+          "inputs": {
+            "CONDITION": [2, "sensing_keypressed2"],
+            "SUBSTACK": [2, "motion_changeyby2"]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "sensing_keypressed2": {
+          "opcode": "sensing_keypressed",
+          "next": null,
+          "parent": "control_if2",
+          "inputs": {},
+          "fields": {
+            "KEY_OPTION": ["down arrow", null]
+          },
+          "shadow": false,
+          "topLevel": false
+        },
+        "motion_changeyby2": {
+          "opcode": "motion_changeyby",
+          "next": null,
+          "parent": "control_if2",
+          "inputs": {
+            "DY": [1, [4, "-10"]]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "event_whenkeypressed": {
+          "opcode": "event_whenkeypressed",
+          "next": "control_create_clone_of",
+          "parent": null,
+          "inputs": {},
+          "fields": {
+            "KEY_OPTION": ["space", null]
+          },
+          "shadow": false,
+          "topLevel": true,
+          "x": 48,
+          "y": 300
+        },
+        "control_create_clone_of": {
+          "opcode": "control_create_clone_of",
+          "next": null,
+          "parent": "event_whenkeypressed",
+          "inputs": {
+            "CLONE_OPTION": [1, "Proyectil"]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        }
+      },
+      "comments": {},
+      "currentCostume": 0,
+      "costumes": [
+        {
+          "name": "Nave",
+          "bitmapResolution": 1,
+          "dataFormat": "svg",
+          "assetId": "bcf454acf82e4504149f7ffe07081dbc",
+          "md5ext": "bcf454acf82e4504149f7ffe07081dbc.svg",
+          "rotationCenterX": 25,
+          "rotationCenterY": 15
+        }
+      ],
+      "sounds": [
+        {
+          "name": "laser",
+          "assetId": "83c36d806dc92327b9e7049a565c6bff",
+          "dataFormat": "wav",
+          "format": "",
+          "rate": 48000,
+          "sampleCount": 14073,
+          "md5ext": "83c36d806dc92327b9e7049a565c6bff.wav"
+        }
+      ],
+      "volume": 100,
+      "layerOrder": 1,
+      "visible": true,
+      "x": -200,
+      "y": 0,
+      "size": 100,
+      "direction": 90,
+      "draggable": false,
+      "rotationStyle": "all around"
+    },
+    {
+      "isStage": false,
+      "name": "Proyectil",
+      "variables": {},
+      "lists": {},
+      "broadcasts": {},
+      "blocks": {
+        "event_whenflagclicked": {
+          "opcode": "event_whenflagclicked",
+          "next": "looks_hide",
+          "parent": null,
+          "inputs": {},
+          "fields": {},
+          "shadow": false,
+          "topLevel": true,
+          "x": 48,
+          "y": 48
+        },
+        "looks_hide": {
+          "opcode": "looks_hide",
+          "next": null,
+          "parent": "event_whenflagclicked",
+          "inputs": {},
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "control_start_as_clone": {
+          "opcode": "control_start_as_clone",
+          "next": "motion_gotoxy",
+          "parent": null,
+          "inputs": {},
+          "fields": {},
+          "shadow": false,
+          "topLevel": true,
+          "x": 48,
+          "y": 150
+        },
+        "motion_gotoxy": {
+          "opcode": "motion_gotoxy",
+          "next": "looks_show",
+          "parent": "control_start_as_clone",
+          "inputs": {
+            "X": [2, "sensing_of"],
+            "Y": [2, "sensing_of2"]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "sensing_of": {
+          "opcode": "sensing_of",
+          "next": null,
+          "parent": "motion_gotoxy",
+          "inputs": {},
+          "fields": {
+            "PROPERTY": ["x position", null],
+            "OBJECT": ["Nave", null]
+          },
+          "shadow": false,
+          "topLevel": false
+        },
+        "sensing_of2": {
+          "opcode": "sensing_of",
+          "next": null,
+          "parent": "motion_gotoxy",
+          "inputs": {},
+          "fields": {
+            "PROPERTY": ["y position", null],
+            "OBJECT": ["Nave", null]
+          },
+          "shadow": false,
+          "topLevel": false
+        },
+        "looks_show": {
+          "opcode": "looks_show",
+          "next": "control_forever",
+          "parent": "motion_gotoxy",
+          "inputs": {},
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "control_forever": {
+          "opcode": "control_forever",
+          "next": null,
+          "parent": "looks_show",
+          "inputs": {
+            "SUBSTACK": [2, "motion_changexby"]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "motion_changexby": {
+          "opcode": "motion_changexby",
+          "next": "control_if",
+          "parent": null,
+          "inputs": {
+            "DX": [1, [4, "15"]]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "control_if": {
+          "opcode": "control_if",
+          "next": "control_if2",
+          "parent": "motion_changexby",
+          "inputs": {
+            "CONDITION": [2, "operator_gt"],
+            "SUBSTACK": [2, "control_delete_this_clone"]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "operator_gt": {
+          "opcode": "operator_gt",
+          "next": null,
+          "parent": "control_if",
+          "inputs": {
+            "OPERAND1": [3, "motion_xposition", [10, ""]],
+            "OPERAND2": [1, [10, "240"]]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "motion_xposition": {
+          "opcode": "motion_xposition",
+          "next": null,
+          "parent": "operator_gt",
+          "inputs": {},
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "control_delete_this_clone": {
+          "opcode": "control_delete_this_clone",
+          "next": null,
+          "parent": "control_if",
+          "inputs": {},
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "control_if2": {
+          "opcode": "control_if",
+          "next": null,
+          "parent": "control_if",
+          "inputs": {
+            "CONDITION": [2, "sensing_touchingobject"],
+            "SUBSTACK": [2, "data_changevariableby"]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "sensing_touchingobject": {
+          "opcode": "sensing_touchingobject",
+          "next": null,
+          "parent": "control_if2",
+          "inputs": {},
+          "fields": {
+            "TOUCHINGOBJECTMENU": ["Murciélago", null]
+          },
+          "shadow": false,
+          "topLevel": false
+        },
+        "data_changevariableby": {
+          "opcode": "data_changevariableby",
+          "next": "control_delete_this_clone2",
+          "parent": "control_if2",
+          "inputs": {
+            "VALUE": [1, [4, "10"]]
+          },
+          "fields": {
+            "VARIABLE": ["Puntos", "Puntos"]
+          },
+          "shadow": false,
+          "topLevel": false
+        },
+        "control_delete_this_clone2": {
+          "opcode": "control_delete_this_clone",
+          "next": null,
+          "parent": "data_changevariableby",
+          "inputs": {},
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        }
+      },
+      "comments": {},
+      "currentCostume": 0,
+      "costumes": [
+        {
+          "name": "Proyectil",
+          "bitmapResolution": 1,
+          "dataFormat": "svg",
+          "assetId": "739b5e2a2435f6e1ec2993791b423146",
+          "md5ext": "739b5e2a2435f6e1ec2993791b423146.svg",
+          "rotationCenterX": 5,
+          "rotationCenterY": 2
+        }
+      ],
+      "sounds": [],
+      "volume": 100,
+      "layerOrder": 2,
+      "visible": false,
+      "x": 0,
+      "y": 0,
+      "size": 100,
+      "direction": 90,
+      "draggable": false,
+      "rotationStyle": "all around"
+    },
+    {
+      "isStage": false,
+      "name": "Murciélago",
+      "variables": {},
+      "lists": {},
+      "broadcasts": {},
+      "blocks": {
+        "event_whenflagclicked": {
+          "opcode": "event_whenflagclicked",
+          "next": "looks_hide",
+          "parent": null,
+          "inputs": {},
+          "fields": {},
+          "shadow": false,
+          "topLevel": true,
+          "x": 48,
+          "y": 48
+        },
+        "looks_hide": {
+          "opcode": "looks_hide",
+          "next": "control_forever",
+          "parent": "event_whenflagclicked",
+          "inputs": {},
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "control_forever": {
+          "opcode": "control_forever",
+          "next": null,
+          "parent": "looks_hide",
+          "inputs": {
+            "SUBSTACK": [2, "control_wait"]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "control_wait": {
+          "opcode": "control_wait",
+          "next": "control_if",
+          "parent": null,
+          "inputs": {
+            "DURATION": [2, "operator_random"]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "operator_random": {
+          "opcode": "operator_random",
+          "next": null,
+          "parent": "control_wait",
+          "inputs": {
+            "FROM": [1, [10, "1"]],
+            "TO": [1, [10, "3"]]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "control_if": {
+          "opcode": "control_if",
+          "next": null,
+          "parent": "control_wait",
+          "inputs": {
+            "CONDITION": [2, "operator_equals"],
+            "SUBSTACK": [2, "control_create_clone_of"]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "operator_equals": {
+          "opcode": "operator_equals",
+          "next": null,
+          "parent": "control_if",
+          "inputs": {
+            "OPERAND1": [3, "data_variable", [10, ""]],
+            "OPERAND2": [1, [10, "0"]]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "data_variable": {
+          "opcode": "data_variable",
+          "next": null,
+          "parent": "operator_equals",
+          "inputs": {},
+          "fields": {
+            "VARIABLE": ["JefeActivo", "JefeActivo"]
+          },
+          "shadow": false,
+          "topLevel": false
+        },
+        "control_create_clone_of": {
+          "opcode": "control_create_clone_of",
+          "next": null,
+          "parent": "control_if",
+          "inputs": {
+            "CLONE_OPTION": [1, "Murciélago"]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "control_start_as_clone": {
+          "opcode": "control_start_as_clone",
+          "next": "motion_gotoxy",
+          "parent": null,
+          "inputs": {},
+          "fields": {},
+          "shadow": false,
+          "topLevel": true,
+          "x": 48,
+          "y": 200
+        },
+        "motion_gotoxy": {
+          "opcode": "motion_gotoxy",
+          "next": "looks_show",
+          "parent": "control_start_as_clone",
+          "inputs": {
+            "X": [1, [4, "240"]],
+            "Y": [2, "operator_random2"]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "operator_random2": {
+          "opcode": "operator_random",
+          "next": null,
+          "parent": "motion_gotoxy",
+          "inputs": {
+            "FROM": [1, [10, "-150"]],
+            "TO": [1, [10, "150"]]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "looks_show": {
+          "opcode": "looks_show",
+          "next": "control_forever2",
+          "parent": "motion_gotoxy",
+          "inputs": {},
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "control_forever2": {
+          "opcode": "control_forever",
+          "next": "control_if2",
+          "parent": "looks_show",
+          "inputs": {
+            "SUBSTACK": [2, "motion_changexby"]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "motion_changexby": {
+          "opcode": "motion_changexby",
+          "next": "control_if3",
+          "parent": null,
+          "inputs": {
+            "DX": [1, [4, "-4"]]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "control_if3": {
+          "opcode": "control_if",
+          "next": null,
+          "parent": "motion_changexby",
+          "inputs": {
+            "CONDITION": [2, "operator_lt"],
+            "SUBSTACK": [2, "control_delete_this_clone3"]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "operator_lt": {
+          "opcode": "operator_lt",
+          "next": null,
+          "parent": "control_if3",
+          "inputs": {
+            "OPERAND1": [3, "motion_xposition2", [10, ""]],
+            "OPERAND2": [1, [10, "-240"]]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "motion_xposition2": {
+          "opcode": "motion_xposition",
+          "next": null,
+          "parent": "operator_lt",
+          "inputs": {},
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "control_delete_this_clone3": {
+          "opcode": "control_delete_this_clone",
+          "next": null,
+          "parent": "control_if3",
+          "inputs": {},
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "control_if2": {
+          "opcode": "control_if",
+          "next": null,
+          "parent": "control_forever2",
+          "inputs": {
+            "CONDITION": [2, "sensing_touchingobject2"],
+            "SUBSTACK": [2, "data_changevariableby2"]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "sensing_touchingobject2": {
+          "opcode": "sensing_touchingobject",
+          "next": null,
+          "parent": "control_if2",
+          "inputs": {},
+          "fields": {
+            "TOUCHINGOBJECTMENU": ["Nave", null]
+          },
+          "shadow": false,
+          "topLevel": false
+        },
+        "data_changevariableby2": {
+          "opcode": "data_changevariableby",
+          "next": "control_delete_this_clone4",
+          "parent": "control_if2",
+          "inputs": {
+            "VALUE": [1, [4, "-1"]]
+          },
+          "fields": {
+            "VARIABLE": ["Vidas", "Vidas"]
+          },
+          "shadow": false,
+          "topLevel": false
+        },
+        "control_delete_this_clone4": {
+          "opcode": "control_delete_this_clone",
+          "next": null,
+          "parent": "data_changevariableby2",
+          "inputs": {},
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        }
+      },
+      "comments": {},
+      "currentCostume": 0,
+      "costumes": [
+        {
+          "name": "Murciélago",
+          "bitmapResolution": 1,
+          "dataFormat": "svg",
+          "assetId": "6e8bd9ae68fdb02b7e1e3df656a75635",
+          "md5ext": "6e8bd9ae68fdb02b7e1e3df656a75635.svg",
+          "rotationCenterX": 25,
+          "rotationCenterY": 20
+        }
+      ],
+      "sounds": [],
+      "volume": 100,
+      "layerOrder": 3,
+      "visible": false,
+      "x": 0,
+      "y": 0,
+      "size": 60,
+      "direction": 90,
+      "draggable": false,
+      "rotationStyle": "all around"
+    },
+    {
+      "isStage": false,
+      "name": "Cucaracha",
+      "variables": {},
+      "lists": {},
+      "broadcasts": {},
+      "blocks": {
+        "event_whenflagclicked": {
+          "opcode": "event_whenflagclicked",
+          "next": "looks_hide",
+          "parent": null,
+          "inputs": {},
+          "fields": {},
+          "shadow": false,
+          "topLevel": true,
+          "x": 48,
+          "y": 48
+        },
+        "looks_hide": {
+          "opcode": "looks_hide",
+          "next": "control_forever",
+          "parent": "event_whenflagclicked",
+          "inputs": {},
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "control_forever": {
+          "opcode": "control_forever",
+          "next": null,
+          "parent": "looks_hide",
+          "inputs": {
+            "SUBSTACK": [2, "control_if"]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "control_if": {
+          "opcode": "control_if",
+          "next": null,
+          "parent": null,
+          "inputs": {
+            "CONDITION": [2, "operator_and"],
+            "SUBSTACK": [2, "data_setvariableto"]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "operator_and": {
+          "opcode": "operator_and",
+          "next": null,
+          "parent": "control_if",
+          "inputs": {
+            "OPERAND1": [2, "operator_gt2"],
+            "OPERAND2": [2, "operator_equals2"]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "operator_gt2": {
+          "opcode": "operator_gt",
+          "next": null,
+          "parent": "operator_and",
+          "inputs": {
+            "OPERAND1": [3, "data_variable2", [10, ""]],
+            "OPERAND2": [1, [10, "100"]]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "data_variable2": {
+          "opcode": "data_variable",
+          "next": null,
+          "parent": "operator_gt2",
+          "inputs": {},
+          "fields": {
+            "VARIABLE": ["Puntos", "Puntos"]
+          },
+          "shadow": false,
+          "topLevel": false
+        },
+        "operator_equals2": {
+          "opcode": "operator_equals",
+          "next": null,
+          "parent": "operator_and",
+          "inputs": {
+            "OPERAND1": [3, "data_variable3", [10, ""]],
+            "OPERAND2": [1, [10, "0"]]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "data_variable3": {
+          "opcode": "data_variable",
+          "next": null,
+          "parent": "operator_equals2",
+          "inputs": {},
+          "fields": {
+            "VARIABLE": ["JefeActivo", "JefeActivo"]
+          },
+          "shadow": false,
+          "topLevel": false
+        },
+        "data_setvariableto": {
+          "opcode": "data_setvariableto",
+          "next": "data_setvariableto2",
+          "parent": "control_if",
+          "inputs": {
+            "VALUE": [1, [4, "1"]]
+          },
+          "fields": {
+            "VARIABLE": ["JefeActivo", "JefeActivo"]
+          },
+          "shadow": false,
+          "topLevel": false
+        },
+        "data_setvariableto2": {
+          "opcode": "data_setvariableto",
+          "next": "looks_sayforsecs",
+          "parent": "data_setvariableto",
+          "inputs": {
+            "VALUE": [1, [4, "5"]]
+          },
+          "fields": {
+            "VARIABLE": ["VidaJefe", "VidaJefe"]
+          },
+          "shadow": false,
+          "topLevel": false
+        },
+        "looks_sayforsecs": {
+          "opcode": "looks_sayforsecs",
+          "next": "control_create_clone_of",
+          "parent": "data_setvariableto2",
+          "inputs": {
+            "MESSAGE": [1, [10, "¡¡¡JEFE FINAL!!!"]],
+            "SECS": [1, [4, "2"]]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "control_create_clone_of": {
+          "opcode": "control_create_clone_of",
+          "next": null,
+          "parent": "looks_sayforsecs",
+          "inputs": {
+            "CLONE_OPTION": [1, "Cucaracha"]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "control_start_as_clone": {
+          "opcode": "control_start_as_clone",
+          "next": "motion_gotoxy",
+          "parent": null,
+          "inputs": {},
+          "fields": {},
+          "shadow": false,
+          "topLevel": true,
+          "x": 48,
+          "y": 300
+        },
+        "motion_gotoxy": {
+          "opcode": "motion_gotoxy",
+          "next": "looks_show",
+          "parent": "control_start_as_clone",
+          "inputs": {
+            "X": [1, [4, "200"]],
+            "Y": [1, [4, "0"]]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "looks_show": {
+          "opcode": "looks_show",
+          "next": "control_forever2",
+          "parent": "motion_gotoxy",
+          "inputs": {},
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "control_forever2": {
+          "opcode": "control_forever",
+          "next": "control_if2",
+          "parent": "looks_show",
+          "inputs": {
+            "SUBSTACK": [2, "motion_changeyby"]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "motion_changeyby": {
+          "opcode": "motion_changeyby",
+          "next": "motion_changexby",
+          "parent": null,
+          "inputs": {
+            "DY": [2, "operator_random3"]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "operator_random3": {
+          "opcode": "operator_random",
+          "next": null,
+          "parent": "motion_changeyby",
+          "inputs": {
+            "FROM": [1, [10, "-8"]],
+            "TO": [1, [10, "8"]]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "motion_changexby": {
+          "opcode": "motion_changexby",
+          "next": "control_if3",
+          "parent": "motion_changeyby",
+          "inputs": {
+            "DX": [1, [4, "-1"]]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "control_if3": {
+          "opcode": "control_if",
+          "next": "control_if4",
+          "parent": "motion_changexby",
+          "inputs": {
+            "CONDITION": [2, "operator_lt2"],
+            "SUBSTACK": [2, "motion_setx"]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "operator_lt2": {
+          "opcode": "operator_lt",
+          "next": null,
+          "parent": "control_if3",
+          "inputs": {
+            "OPERAND1": [3, "motion_xposition3", [10, ""]],
+            "OPERAND2": [1, [10, "50"]]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "motion_xposition3": {
+          "opcode": "motion_xposition",
+          "next": null,
+          "parent": "operator_lt2",
+          "inputs": {},
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "motion_setx": {
+          "opcode": "motion_setx",
+          "next": null,
+          "parent": "control_if3",
+          "inputs": {
+            "X": [1, [4, "200"]]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "control_if4": {
+          "opcode": "control_if",
+          "next": null,
+          "parent": "control_if3",
+          "inputs": {
+            "CONDITION": [2, "operator_lte"],
+            "SUBSTACK": [2, "data_changevariableby3"]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "operator_lte": {
+          "opcode": "operator_lte",
+          "next": null,
+          "parent": "control_if4",
+          "inputs": {
+            "OPERAND1": [3, "data_variable4", [10, ""]],
+            "OPERAND2": [1, [10, "0"]]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "data_variable4": {
+          "opcode": "data_variable",
+          "next": null,
+          "parent": "operator_lte",
+          "inputs": {},
+          "fields": {
+            "VARIABLE": ["VidaJefe", "VidaJefe"]
+          },
+          "shadow": false,
+          "topLevel": false
+        },
+        "data_changevariableby3": {
+          "opcode": "data_changevariableby",
+          "next": "data_setvariableto3",
+          "parent": "control_if4",
+          "inputs": {
+            "VALUE": [1, [4, "100"]]
+          },
+          "fields": {
+            "VARIABLE": ["Puntos", "Puntos"]
+          },
+          "shadow": false,
+          "topLevel": false
+        },
+        "data_setvariableto3": {
+          "opcode": "data_setvariableto",
+          "next": "looks_sayforsecs2",
+          "parent": "data_changevariableby3",
+          "inputs": {
+            "VALUE": [1, [4, "0"]]
+          },
+          "fields": {
+            "VARIABLE": ["JefeActivo", "JefeActivo"]
+          },
+          "shadow": false,
+          "topLevel": false
+        },
+        "looks_sayforsecs2": {
+          "opcode": "looks_sayforsecs",
+          "next": "control_delete_this_clone5",
+          "parent": "data_setvariableto3",
+          "inputs": {
+            "MESSAGE": [1, [10, "¡JEFE DERROTADO!"]],
+            "SECS": [1, [4, "3"]]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "control_delete_this_clone5": {
+          "opcode": "control_delete_this_clone",
+          "next": null,
+          "parent": "looks_sayforsecs2",
+          "inputs": {},
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "control_if2": {
+          "opcode": "control_if",
+          "next": "control_if5",
+          "parent": "control_forever2",
+          "inputs": {
+            "CONDITION": [2, "sensing_touchingobject3"],
+            "SUBSTACK": [2, "data_changevariableby4"]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "sensing_touchingobject3": {
+          "opcode": "sensing_touchingobject",
+          "next": null,
+          "parent": "control_if2",
+          "inputs": {},
+          "fields": {
+            "TOUCHINGOBJECTMENU": ["Nave", null]
+          },
+          "shadow": false,
+          "topLevel": false
+        },
+        "data_changevariableby4": {
+          "opcode": "data_changevariableby",
+          "next": "control_delete_this_clone6",
+          "parent": "control_if2",
+          "inputs": {
+            "VALUE": [1, [4, "-2"]]
+          },
+          "fields": {
+            "VARIABLE": ["Vidas", "Vidas"]
+          },
+          "shadow": false,
+          "topLevel": false
+        },
+        "control_delete_this_clone6": {
+          "opcode": "control_delete_this_clone",
+          "next": null,
+          "parent": "data_changevariableby4",
+          "inputs": {},
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "control_if5": {
+          "opcode": "control_if",
+          "next": null,
+          "parent": "control_if2",
+          "inputs": {
+            "CONDITION": [2, "sensing_touchingobject4"],
+            "SUBSTACK": [2, "data_changevariableby5"]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "sensing_touchingobject4": {
+          "opcode": "sensing_touchingobject",
+          "next": null,
+          "parent": "control_if5",
+          "inputs": {},
+          "fields": {
+            "TOUCHINGOBJECTMENU": ["Proyectil", null]
+          },
+          "shadow": false,
+          "topLevel": false
+        },
+        "data_changevariableby5": {
+          "opcode": "data_changevariableby",
+          "next": "looks_sayforsecs3",
+          "parent": "control_if5",
+          "inputs": {
+            "VALUE": [1, [4, "-1"]]
+          },
+          "fields": {
+            "VARIABLE": ["VidaJefe", "VidaJefe"]
+          },
+          "shadow": false,
+          "topLevel": false
+        },
+        "looks_sayforsecs3": {
+          "opcode": "looks_sayforsecs",
+          "next": null,
+          "parent": "data_changevariableby5",
+          "inputs": {
+            "MESSAGE": [2, "operator_join"],
+            "SECS": [1, [4, "1"]]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "operator_join": {
+          "opcode": "operator_join",
+          "next": null,
+          "parent": "looks_sayforsecs3",
+          "inputs": {
+            "STRING1": [1, [10, "Vida: "]],
+            "STRING2": [3, "data_variable5", [10, ""]]
+          },
+          "fields": {},
+          "shadow": false,
+          "topLevel": false
+        },
+        "data_variable5": {
+          "opcode": "data_variable",
+          "next": null,
+          "parent": "operator_join",
+          "inputs": {},
+          "fields": {
+            "VARIABLE": ["VidaJefe", "VidaJefe"]
+          },
+          "shadow": false,
+          "topLevel": false
+        }
+      },
+      "comments": {},
+      "currentCostume": 0,
+      "costumes": [
+        {
+          "name": "Cucaracha",
+          "bitmapResolution": 1,
+          "dataFormat": "svg",
+          "assetId": "f9a1c175dbe2e5dee472858dd30d16bb",
+          "md5ext": "f9a1c175dbe2e5dee472858dd30d16bb.svg",
+          "rotationCenterX": 45,
+          "rotationCenterY": 25
+        }
+      ],
+      "sounds": [],
+      "volume": 100,
+      "layerOrder": 4,
+      "visible": false,
+      "x": 0,
+      "y": 0,
+      "size": 80,
+      "direction": 90,
+      "draggable": false,
+      "rotationStyle": "all around"
+    }
+  ],
+  "monitors": [
+    {
+      "id": "Puntos",
+      "mode": "default",
+      "opcode": "data_variable",
+      "params": {
+        "VARIABLE": "Puntos"
+      },
+      "spriteName": null,
+      "value": 0,
+      "width": 0,
+      "height": 0,
+      "x": 5,
+      "y": 5,
+      "visible": true,
+      "sliderMin": 0,
+      "sliderMax": 100,
+      "isDiscrete": true
+    },
+    {
+      "id": "Vidas",
+      "mode": "default",
+      "opcode": "data_variable",
+      "params": {
+        "VARIABLE": "Vidas"
+      },
+      "spriteName": null,
+      "value": 3,
+      "width": 0,
+      "height": 0,
+      "x": 5,
+      "y": 30,
+      "visible": true,
+      "sliderMin": 0,
+      "sliderMax": 100,
+      "isDiscrete": true
+    }
+  ],
+  "extensions": [],
+  "meta": {
+    "semver": "3.0.0",
+    "vm": "0.2.0",
+    "agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+  }
+}

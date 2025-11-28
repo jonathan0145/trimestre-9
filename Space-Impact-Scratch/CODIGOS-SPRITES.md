@@ -1,0 +1,514 @@
+# 🚀 Código Completo para Sprites - Space Impact Scratch
+
+## 🎮 SPRITE 1: NAVE (Player)
+
+### Variables del Sprite
+- Sin variables específicas (usa variables globales)
+
+### Scripts de la Nave
+
+#### Script Principal - Movimiento
+```scratch
+Al presionar bandera verde
+│
+├── ir a x: -200 y: 0
+├── fijar [Vidas v] a [3]
+├── fijar [Puntos v] a [0]
+├── fijar [JefeActivo v] a [0]
+├── fijar [VidaJefe v] a [5]
+├── fijar [JefesDerrotados v] a [0]
+├── fijar [GameOver v] a [0]
+│
+└── para siempre
+    │
+    └── si <(GameOver) = [0]> entonces
+        │
+        ├── si <¿tecla [flecha arriba v] presionada?> entonces
+        │   └── cambiar y por [10]
+        │
+        ├── si <¿tecla [flecha abajo v] presionada?> entonces
+        │   └── cambiar y por [-10]
+        │
+        ├── si <(posición y) > [160]> entonces
+        │   └── fijar y a [160]
+        │
+        └── si <(posición y) < [-160]> entonces
+            └── fijar y a [-160]
+```
+
+#### Script de Disparo
+```scratch
+Al presionar tecla [espacio v]
+│
+└── si <(GameOver) = [0]> entonces
+    │
+    ├── crear clon de [Proyectil v]
+    └── tocar sonido [Laser v]
+```
+
+#### Script de Game Over
+```scratch
+Al presionar bandera verde
+│
+└── para siempre
+    │
+    └── si <(Vidas) ≤ [0]> entonces
+        │
+        ├── fijar [GameOver v] a [1]
+        ├── decir [GAME OVER - Presiona R para reiniciar] por [3] segundos
+        │
+        └── esperar hasta que <¿tecla [r v] presionada?>
+            │
+            └── enviar [reiniciar v]
+```
+
+#### Script Alternativo - Detector de Game Over
+```scratch
+Al presionar bandera verde
+│
+└── para siempre
+    │
+    ├── esperar hasta que <(Vidas) ≤ [0]>
+    ├── decir [GAME OVER - Presiona R para reiniciar] por [3] segundos
+    ├── parar [otros programas del objeto v]
+    │
+    └── esperar hasta que <¿tecla [r v] presionada?>
+        │
+        └── enviar [reiniciar v]
+```
+
+#### Script de Reinicio
+```scratch
+al recibir [reiniciar v]
+│
+├── fijar [Vidas v] a [3]
+├── fijar [Puntos v] a [0]
+├── fijar [JefeActivo v] a [0]
+├── fijar [VidaJefe v] a [5]
+├── fijar [JefesDerrotados v] a [0]
+├── fijar [GameOver v] a [0]
+├── ir a x: [-200] y: [0]
+└── enviar [iniciar v] a todos
+```
+
+---
+
+## 🎯 SPRITE 2: PROYECTIL (Laser)
+
+### Scripts del Proyectil
+
+#### Script de Inicialización
+```scratch
+Al presionar bandera verde
+│
+└── esconder
+```
+
+#### Script de Reinicio del Proyectil
+```scratch
+al recibir [iniciar v]
+│
+├── enviar [borrarProyectiles v]
+└── esconder
+```
+
+#### Script del Clon de Proyectil
+```scratch
+al empezar como clon
+│
+├── ir a x: (posición x de [Nave v]) y: (posición y de [Nave v])
+├── mostrar
+├── apuntar hacia [90 v] grados
+│
+└── para siempre
+    │
+    ├── cambiar x por [15]
+    │
+    ├── si <(posición x) > [240]> entonces
+    │   └── borrar este clon
+    │
+    ├── si <¿tocando [Murciélago v]?> entonces
+    │   │
+    │   ├── cambiar [Puntos v] por [10]
+    │   ├── tocar sonido [pop v]
+    │   └── borrar este clon
+    │
+    └── si <<¿tocando [Cucaracha v]?> y <(JefeActivo) = [1]>> entonces
+        │
+        ├── cambiar [Puntos v] por [20]
+        ├── si <(VidaJefe) > [0]> entonces
+        │   └── cambiar [VidaJefe v] por [-1]
+        ├── tocar sonido [pop v]
+        └── borrar este clon
+```
+
+#### Script para Borrar Proyectiles
+```scratch
+al recibir [borrarProyectiles v]
+│
+└── borrar este clon
+```
+
+---
+
+## 🦇 SPRITE 3: MURCIÉLAGO (Enemigo Básico)
+
+### Scripts del Murciélago
+
+#### Script Generador de Enemigos
+```scratch
+Al presionar bandera verde
+│
+└── para siempre
+    │
+    ├── esperar (número al azar entre [1] y [3]) segundos
+    │
+    └── si <<(JefeActivo) = [0]> y <(GameOver) = [0]>> entonces
+        │
+        └── crear clon de [Murciélago v]
+```
+
+#### Script Principal del Murciélago
+```scratch
+Al presionar bandera verde
+│
+└── esconder
+```
+
+#### Script de Reinicio del Murciélago
+```scratch
+al recibir [iniciar v]
+│
+├── enviar [borrarMurcielagos v]
+└── esconder
+```
+
+#### Script del Clon del Murciélago - Movimiento
+```scratch
+al empezar como clon
+│
+├── ir a x: [240] y: (número al azar entre [-150] y [150])
+├── mostrar
+├── fijar tamaño a [50] %
+│
+└── para siempre
+    │
+    ├── cambiar x por [-4]
+    ├── cambiar y por (número al azar entre [-2] y [2])
+    │
+    └── si <(posición x) < [-240]> entonces
+        └── borrar este clon
+```
+
+#### Script del Clon del Murciélago - Colisión Nave
+```scratch
+al empezar como clon
+│
+└── para siempre
+    │
+    └── si <¿tocando [Nave v]?> entonces
+        │
+        ├── si <(Vidas) > [0]> entonces
+        │   └── cambiar [Vidas v] por [-1]
+        ├── tocar sonido [Chomp v]
+        └── borrar este clon
+```
+
+#### Script del Clon del Murciélago - Colisión Proyectil
+```scratch
+al empezar como clon
+│
+└── para siempre
+    │
+    └── si <¿tocando [Proyectil v]?> entonces
+        │
+        ├── crear clon de [Explosión v]
+        └── borrar este clon
+```
+
+#### Script para Borrar Murciélagos
+```scratch
+al recibir [borrarMurcielagos v]
+│
+└── borrar este clon
+```
+
+---
+
+## 🪳 SPRITE 4: CUCARACHA (Jefe Final)
+
+### Scripts de la Cucaracha
+
+#### Script Controlador del Jefe
+```scratch
+Al presionar bandera verde
+│
+├── esconder
+│
+└── para siempre
+    │
+    └── si <<<<(Puntos) > ((JefesDerrotados) * [100] + [100])> y <(JefeActivo) = [0]>> y <(JefesDerrotados) < [3]>> y <(GameOver) = [0]>> entonces
+        │
+        ├── fijar [JefeActivo v] a [1]
+        ├── fijar [VidaJefe v] a [5]
+        ├── decir [¡¡¡JEFE FINAL!!!] por [2] segundos
+        └── crear clon de [Cucaracha v]
+```
+
+#### Script de Reinicio de la Cucaracha
+```scratch
+al recibir [iniciar v]
+│
+├── enviar [borrarJefes v]
+├── fijar [JefeActivo v] a [0]
+└── esconder
+```
+
+#### Script del Clon del Jefe - Movimiento y Control
+```scratch
+al empezar como clon
+│
+├── ir a x: [200] y: (número al azar entre [-100] y [100])
+├── mostrar
+├── fijar tamaño a [80] %
+│
+└── para siempre
+    │
+    ├── cambiar y por (número al azar entre [-8] y [8])
+    ├── cambiar x por [-1]
+    │
+    ├── si <(posición y) > [150]> entonces
+    │   └── fijar y a [150]
+    │
+    ├── si <(posición y) < [-150]> entonces
+    │   └── fijar y a [-150]
+    │
+    ├── si <(posición x) < [50]> entonces
+    │   └── fijar x a [200]
+    │
+    ├── si <(VidaJefe) ≤ [0]> entonces
+    │   │
+    │   ├── cambiar [Puntos v] por [100]
+    │   ├── cambiar [JefesDerrotados v] por [1]
+    │   ├── fijar [JefeActivo v] a [0]
+    │   ├── si <(JefesDerrotados) = [3]> entonces
+    │   │   │
+    │   │   ├── fijar [GameOver v] a [1]
+    │   │   ├── decir [¡¡¡GANASTE!!! - Presiona R para jugar de nuevo] por [5] segundos
+    │   │   └── esperar hasta que <¿tecla [r v] presionada?>
+    │   │       └── enviar [reiniciar v]
+    │   │
+    │   └── si no
+    │       └── decir [¡JEFE DERROTADO!] por [3] segundos
+    │   └── borrar este clon
+    │
+    ├── esperar [2] segundos
+    ├── fijar [posicion_jefe_x v] a (posición x)
+    ├── fijar [posicion_jefe_y v] a (posición y)
+    └── crear clon de [proyectiljefe v]
+```
+
+#### Script del Clon del Jefe - Colisión con Nave
+```scratch
+al empezar como clon
+│
+└── para siempre
+    │
+    └── si <¿tocando [Nave v]?> entonces
+        │
+        ├── si <(Vidas) > [1]> entonces
+        │   └── cambiar [Vidas v] por [-2]
+        ├── si no
+        │   └── fijar [Vidas v] a [0]
+        ├── tocar sonido [Chomp v]
+        └── borrar este clon
+```
+
+#### Script del Clon del Jefe - Colisión con Proyectil
+```scratch
+al empezar como clon
+│
+└── para siempre
+    │
+    └── si <¿tocando [Proyectil v]?> entonces
+        │
+        ├── crear clon de [Explosión v]
+        └── tocar sonido [pop v]
+```
+
+#### Script para Borrar Jefes
+```scratch
+al recibir [borrarJefes v]
+│
+└── borrar este clon
+```
+
+---
+
+## 💥 SPRITE 5: EXPLOSIÓN (Efectos)
+
+### Scripts de la Explosión
+
+#### Script de Inicialización
+```scratch
+Al presionar bandera verde
+│
+└── esconder
+```
+
+#### Script de Reinicio de la Explosión
+```scratch
+al recibir [iniciar v]
+│
+├── enviar [borrarExplosiones v]
+└── esconder
+```
+
+#### Script del Clon de Explosión
+```scratch
+al empezar como clon
+│
+├── mostrar
+├── fijar tamaño a [30] %
+├── tocar sonido [Boom v]
+│
+├── repetir [8] veces
+│   │
+│   ├── cambiar tamaño por [10]
+│   ├── cambiar efecto [color v] por [25]
+│   └── esperar [0.1] segundos
+│
+└── borrar este clon
+```
+
+#### Script para Borrar Explosiones
+```scratch
+al recibir [borrarExplosiones v]
+│
+└── borrar este clon
+```
+
+---
+
+## 🎯 SPRITE 6: PROYECTIL DEL JEFE (proyectiljefe)
+
+### Scripts del Proyectil del Jefe
+
+#### Script de Inicialización
+```scratch
+Al presionar bandera verde
+│
+└── esconder
+```
+
+#### Script de Reinicio del Proyectil del Jefe
+```scratch
+al recibir [iniciar v]
+│
+├── enviar [borrarProyectilesJefe v]
+└── esconder
+```
+
+#### Script del Clon del Proyectil del Jefe - Movimiento
+```scratch
+al empezar como clon
+│
+├── ir a x: (mi variable [posicion_jefe_x v]) y: (mi variable [posicion_jefe_y v])
+├── mostrar
+├── fijar tamaño a [20] %
+├── apuntar hacia [Nave v]
+│
+└── para siempre
+    │
+    ├── cambiar x por [-8]
+    │
+    └── si <(posición x) < [-240]> entonces
+        └── borrar este clon
+```
+
+#### Script del Clon del Proyectil del Jefe - Colisión
+```scratch
+al empezar como clon
+│
+└── para siempre
+    │
+    └── si <¿tocando [Nave v]?> entonces
+        │
+        ├── si <(Vidas) > [0]> entonces
+        │   └── cambiar [Vidas v] por [-1]
+        ├── tocar sonido [Chomp v]
+        └── borrar este clon
+```
+
+#### Script para Borrar Proyectiles del Jefe
+```scratch
+al recibir [borrarProyectilesJefe v]
+│
+└── borrar este clon
+```
+
+---
+
+## 🎵 SPRITE 7: CONTROLADOR DE MÚSICA (Opcional)
+
+### Script de Música de Fondo
+```scratch
+Al presionar bandera verde
+│
+└── para siempre
+    │
+    ├── tocar sonido [space music v] hasta que termine
+    └── esperar [1] segundos
+```
+
+---
+
+## 📊 Variables Globales Necesarias
+- **Puntos** (Para todos los objetos) = 0
+- **Vidas** (Para todos los objetos) = 3  
+- **JefeActivo** (Para todos los objetos) = 0
+- **VidaJefe** (Para todos los objetos) = 5
+- **JefesDerrotados** (Para todos los objetos) = 0
+- **GameOver** (Para todos los objetos) = 0
+- **posicion_jefe_x** (Para todos los objetos) = 0
+- **posicion_jefe_y** (Para todos los objetos) = 0
+
+## 📡 Mensajes Necesarios
+- **reiniciar** - Para reiniciar el juego
+- **iniciar** - Para iniciar todos los sprites
+- **borrarProyectiles** - Para borrar todos los proyectiles
+- **borrarMurcielagos** - Para borrar todos los murciélagos
+- **borrarJefes** - Para borrar todos los jefes
+- **borrarExplosiones** - Para borrar todas las explosiones
+- **borrarProyectilesJefe** - Para borrar proyectiles del jefe
+
+## 🎮 Alternativa: Función Personalizada para Reiniciar
+Si prefieres usar bloques personalizados, puedes crear:
+
+**Definir bloque:** `Reiniciar Juego`
+```scratch
+definir [Reiniciar Juego]
+│
+├── fijar [Vidas v] a [3]
+├── fijar [Puntos v] a [0]
+├── fijar [JefeActivo v] a [0]
+├── fijar [VidaJefe v] a [5]
+└── ir a x: [-200] y: [0]
+```
+
+Y luego usarlo así:
+```scratch
+esperar hasta que <¿tecla [r v] presionada?>
+│
+└── [Reiniciar Juego v]
+```
+
+## 🎨 Diseño de Sprites Sugerido
+- **Nave**: Triángulo gris/azul apuntando a la derecha
+- **Proyectil**: Línea amarilla pequeña
+- **Murciélago**: Forma de murciélago negro/morado
+- **Cucaracha**: Forma ovalada marrón/negra más grande
+- **Explosión**: Círculo con rayos, colores brillantes
+- **Fondo**: Negro con puntos blancos (estrellas)
+
+¡Con estos scripts tendrás un Space Impact completamente funcional en Scratch!
