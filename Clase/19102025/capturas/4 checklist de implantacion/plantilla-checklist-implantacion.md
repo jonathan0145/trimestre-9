@@ -15,7 +15,7 @@ Esta sección verifica que el entorno técnico esté listo y configurado correct
 | ID  | Tarea de Verificación                                                                 | Responsable   | Fecha Límite | Completado (Sí/No/NA) | Observaciones |
 |-----|---------------------------------------------------------------------------------------|--------------|--------------|----------------------|--------------|
 | I.1 | El servidor de producción ha sido instalado y configurado (SO y Hardware).            | IT           |              |                      |              |
-| I.2 | La base de datos de producción ha sido instalada y optimizada (índices, seguridad).   | DBA          |              |                      |              |
+| I.2 | La base de datos MariaDB de producción ha sido instalada y optimizada (índices, seguridad).   | Jonathan Ivan Rendon Bermeo          |              |                      |              |
 | I.3 | El software del sistema ha sido instalado y licenciado en el entorno de producción.    | Proveedor/IT |              |                      |              |
 | I.4 | Se ha implementado y probado la estrategia de respaldo (backup) y recuperación (restore). | IT       |              |                      |              |
 | I.5 | Se han configurado y probado los accesos de red y firewall para usuarios finales.      | IT           |              |                      |              |
@@ -43,8 +43,8 @@ Confirmación de que los datos antiguos se han trasladado de forma correcta y co
 | ID    | Tarea de Verificación                                                                 | Responsable         | Fecha Límite | Completado (Sí/No/NA) | Observaciones |
 |-------|---------------------------------------------------------------------------------------|---------------------|--------------|----------------------|--------------|
 | III.1 | Los datos maestros (Clientes, Proveedores, Productos) han sido limpiados y aprobados para migración. | Usuarios Clave      |              |                      |              |
-| III.2 | El plan de migración de datos históricos (si aplica) ha sido ejecutado exitosamente en el ambiente de prueba. | DBA |         |                      |              |
-| III.3 | La migración final de datos maestros se ha ejecutado en el ambiente de producción.     | DBA                |              |                      |              |
+| III.2 | El plan de migración de datos históricos (si aplica) ha sido ejecutado exitosamente en el ambiente de prueba sobre MariaDB. | Anderson Mora |         |                      |              |
+| III.3 | La migración final de datos maestros se ha ejecutado en el ambiente de producción sobre MariaDB.     | Nadia Masmela                |              |                      |              |
 | III.4 | Se ha verificado la integridad de los datos migrados (conciliación de saldos y registros clave). | Contabilidad/Finanzas |         |                      |              |
 | III.5 | Se ha establecido la fecha de "corte" del sistema antiguo y la comunicación a todos los usuarios. | Gerente de Proyecto |         |                      |              |
 

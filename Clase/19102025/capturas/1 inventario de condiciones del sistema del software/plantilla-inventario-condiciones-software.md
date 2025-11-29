@@ -3,7 +3,7 @@
 **Propósito:** Evaluar y documentar el estado actual del software, la infraestructura y los procesos asociados antes de iniciar un proyecto de implantación o migración de un nuevo sistema.
 
 **Fecha de Elaboración:** [Día/Mes/Año]
-**Elaborado por:** [Nombre del Responsable/Equipo]
+**Elaborado por:** Nadia Masmela, Anderson Mora y Jonathan Ivan Rendon Bermeo
 **Sistema Evaluado:** [Nombre del Sistema/Módulo Actual]
 **Versión Actual:** [Número de Versión]
 
@@ -25,7 +25,7 @@ Detalles sobre el entorno donde se ejecuta actualmente el software.
 | Componente                | Detalles Técnicos Actuales                                              | Observaciones / Restricciones                  |
 |---------------------------|------------------------------------------------------------------------|-----------------------------------------------|
 | Servidor (SO)             | [Ej: Windows Server 2019, RHEL 8, etc. – Versión y Edición]            | [Ej: No hay soporte extendido, hardware obsoleto.] |
-| Base de Datos (SGBD)      | [Ej: SQL Server 2017, Oracle 19c, MySQL 5.7 - Versión y Edición]       | [Ej: Alto volumen de datos (TBs), requiere optimización.] |
+| Base de Datos (SGBD)      | MariaDB [Versión]       | [Ej: Alto volumen de datos (TBs), requiere optimización.] |
 | Integraciones/Interfaces  | [Sistemas con los que se comunica (Ej: ERP, CRM, Contabilidad).]       | [Ej: Utiliza una API REST/Archivo plano (CSV/XML), estado de la conexión.] |
 | Copia de Seguridad (Backup)| [Frecuencia (Diaria/Semanal), Tipo (Total/Incremental), Ubicación.]   | [Ej: Restauración lenta, copias en sitio único.] |
 | Hardware de Usuario Final | [Requisitos Mínimos (RAM, CPU, SO, Navegador).]                        | [Ej: Equipos con bajo rendimiento en ciertas áreas.] |

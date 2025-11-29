@@ -35,14 +35,14 @@ Este proyecto integra un sistema de gestión de propiedades con backend en Node.
 - **backend/**: Servicios, controladores, modelos, rutas y utilidades.
 - **frontend/**: Componentes, páginas, servicios y estilos.
 - **documentacion/**: Requisitos, arquitectura, roles, casos de uso y API.
-- **base-de-datos/**: Recursos para la gestión de datos.
+- **base-de-datos/**: Recursos para la gestión de datos en MariaDB.
 
-## Backend
 - Node.js y Express
 - Controladores para entidades principales (usuarios, propiedades, ofertas, etc.)
 - Autenticación y autorización
 - Pruebas automatizadas (Jest)
 - Documentación de API (Swagger)
+- Base de datos MariaDB gestionada por Jonathan Ivan Rendon Bermeo, Anderson Mora y Nadia Masmela
 
 ## Frontend
 - React
@@ -57,7 +57,7 @@ Este proyecto integra un sistema de gestión de propiedades con backend en Node.
 
 ## Herramientas Utilizadas
 
-Durante el proceso de validación de la app Inmotech, se han utilizado diversas herramientas que cumplen funciones clave dentro del ciclo de aseguramiento de calidad. Estas herramientas permiten gestionar pruebas, evaluar rendimiento, validar integración y documentar hallazgos. A continuación se describen las principales:
+Durante el proceso de validación de la app Inmotech, se han utilizado diversas herramientas que cumplen funciones clave dentro del ciclo de aseguramiento de calidad. Estas herramientas permiten gestionar pruebas, evaluar rendimiento, validar integración y documentar hallazgos sobre MariaDB y otros componentes. A continuación se describen las principales:
 
 1. **Postman** – Pruebas de Integración y Validación de API  
    - Contribución a la calidad: Permite verificar que los servicios estén activos, respondan correctamente y cumplan con los contratos definidos. Es esencial para validar funcionalidad técnica antes de pruebas funcionales.
