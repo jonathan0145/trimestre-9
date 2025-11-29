@@ -478,10 +478,7 @@ Recommended order: Elasticsearch → CDN → Query Opt → Caching → Auto-scal
 ## 📋 **DASHBOARD DE MONITOREO EN VIVO**
 
 ### **🖥️ Acceso a Herramientas**
-- **Grafana Dashboard**: https://monitoring.inmotech.com/grafana
-- **Kibana Logs**: https://monitoring.inmotech.com/kibana  
-- **Server Status**: https://status.inmotech.com
-- **API Docs**: https://api.inmotech.com/docs
+- **API Docs (Swagger)**: http://localhost:3000/api-docs
 
 ### **📱 Alertas Móviles Configuradas**
 - Slack: #inmotech-alerts

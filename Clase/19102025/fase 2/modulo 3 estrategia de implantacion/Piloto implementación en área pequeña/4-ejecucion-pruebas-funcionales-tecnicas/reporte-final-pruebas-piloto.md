@@ -461,13 +461,13 @@ Métricas a monitorear:
 
 | Rol | Nombre | Fecha | Comentarios |
 |-----|--------|-------|-------------|
-| **Product Owner** | _______________ | ___/___/2025 | Funcionalidad core validada |
-| **Tech Lead** | _______________ | ___/___/2025 | Arquitectura técnica aprobada |
-| **QA Lead** | _______________ | ___/___/2025 | Calidad aceptable para lanzamiento |
-| **DevOps Lead** | _______________ | ___/___/2025 | Infraestructura lista para escalar |
-| **UX Designer** | _______________ | ___/___/2025 | Experiencia de usuario validada |
-| **Security Officer** | _______________ | ___/___/2025 | Controles de seguridad suficientes |
-| **Business Stakeholder** | _______________ | ___/___/2025 | ROI proyectado satisfactorio |
+| **Product Owner** | Jonathan Ivan Rendón Bermeo | 06/11/2025 | Funcionalidad core validada |
+| **Tech Lead** | Anderson Mora | 10/11/2025 | Arquitectura técnica aprobada |
+| **QA Lead** | Anderson Mora | 14/11/2025 | Calidad aceptable para lanzamiento |
+| **DevOps Lead** | Anderson Mora | 18/11/2025 | Infraestructura lista para escalar |
+| **UX Designer** | Nadia Masmela | 22/11/2025 | Experiencia de usuario validada |
+| **Security Officer** | Anderson Mora | 25/11/2025 | Controles de seguridad suficientes |
+| **Business Stakeholder** | Jonathan Ivan Rendón Bermeo | 27/11/2025 | ROI proyectado satisfactorio |
 
 ### **🎯 Condiciones de Aprobación**
 

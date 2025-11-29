@@ -116,7 +116,7 @@ Realizar una implementación inicial del sistema Inmotech en un área controlada
 
 ## Actividades Clave
 
-1. Selección de usuarios clave para el piloto (ejemplo realista: comprador, vendedor e intermediador que usan la plataforma). ✅ **COMPLETADO**
+1. Selección de usuarios clave para el piloto (comprador, vendedor e intermediador que usan la plataforma).
   - Criterios definidos: usuarios que representan los principales perfiles de uso de la plataforma (comprador, vendedor, intermediador), alta frecuencia de interacción y relevancia en los procesos de negocio.
   - Perfiles evaluados: comprador, vendedor e intermediador. Se seleccionaron estos tres por ser quienes utilizan directamente las funcionalidades principales del sistema.
   - Reunión realizada con representantes de cada perfil para explicar el objetivo del piloto, resolver dudas y obtener su compromiso.
@@ -129,7 +129,7 @@ Realizar una implementación inicial del sistema Inmotech en un área controlada
   - [Matriz de Evaluación de Usuarios](./Piloto%20implementación%20en%20área%20pequeña/02-matriz-evaluacion-usuarios.md)
   - [Comunicación Oficial](./Piloto%20implementación%20en%20área%20pequeña/03-comunicacion-oficial.md)
   - [Perfiles Detallados de Usuarios Piloto](./Piloto%20implementación%20en%20área%20pequeña/04-perfiles-usuarios-piloto.md)
-2. Instalación y configuración de backend y frontend en entorno de pruebas. ✅ **COMPLETADO**
+2. Instalación y configuración de backend y frontend en entorno de pruebas.
    - Preparar el entorno de pruebas (servidor local, máquina virtual o ambiente cloud).
    - Clonar los repositorios de backend y frontend desde el repositorio oficial del proyecto.
    - Instalar dependencias necesarias:
@@ -147,7 +147,7 @@ Realizar una implementación inicial del sistema Inmotech en un área controlada
    - [Guía Completa de Instalación y Configuración](./Piloto%20implementación%20en%20área%20pequeña/actividad-2-instalacion-configuracion.md)
    
    **🔧 Scripts Creados:**
-   - [⚙️ Menú Completo de Scripts](../../scripts/menu-scripts.md) - **ACCESO DIRECTO A TODOS**
+   - [⚙️ Menú Completo de Scripts](https://github.com/jonathan0145/componentes/tree/main/backend/scripts) - **ACCESO DIRECTO A TODOS**
    - `backend/src/scripts/createPermissions.js` - Crear permisos del sistema
    - `backend/src/scripts/createPermissionsByRole.js` - Asignar permisos por rol
    - `backend/src/scripts/createAdminRole.js` - Crear rol de administrador
@@ -209,7 +209,10 @@ Realizar una implementación inicial del sistema Inmotech en un área controlada
   ### **📋 Documentación Completa de Pruebas**:
 
   #### **📋 Planificación y Casos de Prueba**:
-  1. **[Plan de Casos de Prueba](./Piloto%20implementación%20en%20área%20pequeña/4-ejecucion-pruebas-funcionales-tecnicas/plan-casos-prueba-piloto.md)**
+  1. **[Plan de Casos de Prueba](https://drive.google.com/drive/folders/13WFtN69pNyk04Q5hEotxps_KCRezFbvs?usp=drive_link)**
+
+  [Plantilla de Casos de Prueba](./Piloto%20implementación%20en%20área%20pequeña/4-ejecucion-pruebas-funcionales-tecnicas/plan-casos-prueba-piloto.md)**
+  
      - 75 casos de prueba detallados por rol de usuario
      - Criterios de aceptación específicos y procedimientos paso a paso
      - Cobertura completa de funcionalidades críticas
@@ -553,7 +556,7 @@ Realizar una implementación inicial del sistema Inmotech en un área controlada
 
 ### 📁 **Documentación Externa Relacionada**
 - Manual de usuario piloto (ubicado en `componentes/documentacion/`)
-- [Scripts de Inicialización](../../scripts/menu-scripts.md) - Menú completo de scripts del proyecto
+- [Scripts de Inicialización](https://github.com/jonathan0145/componentes/tree/main/backend/scripts) - Menú completo de scripts del proyecto
 
 ---
 

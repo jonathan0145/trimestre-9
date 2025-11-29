@@ -4,12 +4,12 @@
 Documentar los resultados del análisis estático realizado sobre el código fuente del proyecto, identificando vulnerabilidades, "code smells", errores y recomendaciones de mejora.
 
 ## Herramienta utilizada
-- Ejemplo: SonarQube (puedes especificar otra si usas diferente)
+- SonarQube
 
 ## Alcance del análisis
-- Módulos, carpetas o archivos analizados
-- Fecha de ejecución
-- Versión del código analizado
+- Módulos, carpetas o archivos analizados: backend/src, frontend/src, controllers, models, services
+- Fecha de ejecución: sábado 22 noviembre 2025
+- Versión del código analizado: 1.0
 
 ## Resultados principales
 - Número total de issues encontrados

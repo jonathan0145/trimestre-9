@@ -16,8 +16,8 @@ Como usuario piloto, tu misión es **probar el sistema Inmotech** en condiciones
 ## 🚀 ACCESO AL SISTEMA
 
 ### **URLs de Acceso:**
-- **Frontend (Aplicación Principal):** `http://localhost:3000` o `https://inmotech-piloto.test.com`
-- **Backend (API):** `http://localhost:5000` o `https://api-inmotech-piloto.test.com`
+- **Frontend (Aplicación Principal):** `http://localhost:3001`
+- **Backend (API):** `http://localhost:3000`
 
 ### **Credenciales por Perfil:**
 

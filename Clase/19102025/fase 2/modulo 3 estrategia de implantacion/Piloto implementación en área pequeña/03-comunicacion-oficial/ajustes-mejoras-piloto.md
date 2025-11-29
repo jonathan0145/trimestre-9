@@ -5,7 +5,7 @@
 - **Fase**: Piloto en Área Pequeña - Ajustes y Mejoras
 - **Actividad**: Consolidación de mejoras antes de la siguiente fase
 - **Período de Implementación**: Noviembre 18 - Diciembre 15, 2025
-- **Responsable General**: Alejandra Morales - Líder de Proyecto
+**Responsable General**: Jonathan Ivan Rendón Bermeo - Líder de Proyecto
 - **Fecha de Creación**: Noviembre 11, 2025
 
 ---
@@ -58,8 +58,8 @@ Implementar todas las **mejoras críticas y de alta prioridad** identificadas du
 - ✅ Performance < 2s con 100+ favoritos
 
 **Asignación**:
-- **Responsable Principal**: David Chen (Backend) + Carmen López (Frontend)
-- **Support**: Carlos Vega (QA Testing)
+**Responsable Principal**: Jonathan Ivan Rendón Bermeo (Backend) + Nadia Masmela (Frontend)
+**Support**: Anderson Mora (QA Testing)
 - **Timeline**: **Nov 18-25, 2025** ⏰
 - **Effort Estimation**: 8 días de desarrollo
 
@@ -100,8 +100,8 @@ Implementar todas las **mejoras críticas y de alta prioridad** identificadas du
 - ✅ Registros completos para depuración futura
 
 **Asignación**:
-- **Responsable Principal**: Roberto Silva (DevOps) + David Chen (Backend)
-- **Support**: Carlos Vega (Pruebas de conectividad)
+**Responsable Principal**: Anderson Mora (DevOps) + Jonathan Ivan Rendón Bermeo (Backend)
+**Support**: Nadia Masmela (Pruebas de conectividad)
 - **Timeline**: **Nov 18-28, 2025** ⏰
 - **Effort Estimation**: 6 días de desarrollo
 
@@ -140,8 +140,8 @@ Búsqueda geográfica:       5.2s 🚫 (Objetivo: <3s)
 - ✅ Proporción de aciertos en caché > 70% para búsquedas repetidas
 
 **Asignación**:
-- **Responsable Principal**: David Chen (Backend) + Roberto Silva (Database)
-- **Support**: Miguel Rodríguez (Revisión de arquitectura)
+**Responsable Principal**: Jonathan Ivan Rendón Bermeo (Backend) + Anderson Mora (Database)
+**Support**: Nadia Masmela (Revisión de arquitectura)
 - **Timeline**: **Nov 20-30, 2025** ⏰
 - **Effort Estimation**: 7 días de optimización
 
@@ -180,7 +180,7 @@ Búsqueda geográfica:       5.2s 🚫 (Objetivo: <3s)
 - ✅ Reducción del 30%+ en consultas de soporte sobre propiedades
 
 **Asignación**:
-- **Responsable**: Carmen López (Frontend) + Patricia Jiménez (UX/UI)
+**Responsable**: Nadia Masmela (Frontend) + Anderson Mora (UX/UI)
 - **Timeline**: **Nov 25 - Dic 2, 2025**
 - **Effort**: 3 días de desarrollo
 
@@ -215,7 +215,7 @@ Búsqueda geográfica:       5.2s 🚫 (Objetivo: <3s)
 - ✅ Satisfacción del vendedor > 9.0 para herramientas de edición
 
 **Asignación**:
-- **Responsable**: Carmen López (Frontend)
+**Responsable**: Nadia Masmela (Frontend)
 - **Timeline**: **Nov 25 - Dic 1, 2025**
 - **Effort**: 4 días de desarrollo
 
@@ -250,7 +250,7 @@ Búsqueda geográfica:       5.2s 🚫 (Objetivo: <3s)
 - ✅ Tasa de adopción > 80% entre vendedores
 
 **Asignación**:
-- **Responsable**: David Chen (Backend) + Carmen López (Frontend)
+**Responsable**: Jonathan Ivan Rendón Bermeo (Backend) + Nadia Masmela (Frontend)
 - **Timeline**: **Nov 28 - Dic 5, 2025**
 - **Effort**: 5 días de desarrollo
 
@@ -285,7 +285,7 @@ Búsqueda geográfica:       5.2s 🚫 (Objetivo: <3s)
 - ✅ Satisfacción de intermediarios > 9.2 para herramientas
 
 **Asignación**:
-- **Responsable**: Carmen López (Frontend) + Analytics Team
+**Responsable**: Nadia Masmela (Frontend) + Anderson Mora (Analytics Team)
 - **Timeline**: **Dic 2 - Dic 10, 2025**
 - **Effort**: 8 días de desarrollo
 
@@ -320,7 +320,7 @@ Búsqueda geográfica:       5.2s 🚫 (Objetivo: <3s)
 - ✅ Tasa de finalización del onboarding > 95%
 
 **Asignación**:
-- **Responsable**: Carmen López (Frontend) + Patricia Jiménez (UX)
+**Responsable**: Nadia Masmela (Frontend) + Anderson Mora (UX)
 - **Timeline**: **Dic 1 - Dic 8, 2025**
 - **Effort**: 6 días de desarrollo
 
@@ -435,13 +435,13 @@ Búsqueda geográfica:       5.2s 🚫 (Objetivo: <3s)
 
 | Rol | Responsable | Carga de Trabajo | Elementos Asignados | Contacto |
 |-----|-------------|------------------|---------------------|----------|
-| **Líder de Proyecto** | Alejandra Morales | 100% | Coordinación general, comunicación con stakeholders | a.morales@inmotech.com |
-| **Líder Técnico** | Miguel Rodríguez | 40% | Revisión de arquitectura, decisiones técnicas | m.rodriguez@inmotech.com |
-| **Líder Backend** | David Chen | 90% | INC-003, INC-006, INC-012, SUG-008 | d.chen@inmotech.com |
-| **Líder Frontend** | Carmen López | 95% | SUG-002, SUG-006, SUG-013, SUG-015, SUG-001, INC-008 | c.lopez@inmotech.com |
-| **Ingeniero DevOps** | Roberto Silva | 70% | INC-006, INC-012, soporte de infraestructura | r.silva@inmotech.com |
-| **Líder QA** | Carlos Vega | 80% | Pruebas de todos los elementos, validación de rendimiento | c.vega@inmotech.com |
-| **Diseñador UX/UI** | Patricia Jiménez | 60% | SUG-002, SUG-015, revisiones de diseño | p.jimenez@inmotech.com |
+| **Líder de Proyecto** | Jonathan Ivan Rendón Bermeo | 100% | Coordinación general, comunicación con stakeholders | jonathan.rendon@inmotech.com |
+| **Líder Técnico** | Anderson Mora | 40% | Revisión de arquitectura, decisiones técnicas | anderson.mora@inmotech.com |
+| **Líder Backend** | Jonathan Ivan Rendón Bermeo | 90% | INC-003, INC-006, INC-012, SUG-008 | jonathan.rendon@inmotech.com |
+| **Líder Frontend** | Nadia Masmela | 95% | SUG-002, SUG-006, SUG-013, SUG-015, SUG-001, INC-008 | nadia.masmela@inmotech.com |
+| **Ingeniero DevOps** | Anderson Mora | 70% | INC-006, INC-012, soporte de infraestructura | anderson.mora@inmotech.com |
+| **Líder QA** | Anderson Mora | 80% | Pruebas de todos los elementos, validación de rendimiento | anderson.mora@inmotech.com |
+| **Diseñador UX/UI** | Nadia Masmela | 60% | SUG-002, SUG-015, revisiones de diseño | nadia.masmela@inmotech.com |
 
 #### **🎯 Distribución de Carga por Semana**
 
@@ -799,18 +799,18 @@ Impacto de Negocio:
 
 #### **📋 Responsables Principales**:
 
-**Alejandra Morales** - Project Manager  
-📧 a.morales@inmotech.com  
+**Jonathan Ivan Rendón Bermeo** - Project Manager  
+📧 jonathan.rendon@inmotech.com  
 📞 +52 55 8765-4321  
 🎯 **Disponibilidad**: Lun-Vie 8:00-18:00, emergencias 24/7  
 
-**David Chen** - Líder Técnico  
-📧 d.chen@inmotech.com  
+**Anderson Mora** - Líder Técnico  
+📧 anderson.mora@inmotech.com  
 📞 +52 55 1234-5678  
 🎯 **Disponibilidad**: Lun-Vie 9:00-19:00, guardia técnica  
 
-**Carmen López** - Líder Frontend  
-📧 c.lopez@inmotech.com  
+**Nadia Masmela** - Líder Frontend  
+📧 nadia.masmela@inmotech.com  
 📞 +52 55 3333-4444  
 🎯 **Disponibilidad**: Lun-Vie 9:00-18:00  
 
@@ -844,8 +844,8 @@ Impacto de Negocio:
 **Fecha de creación**: Noviembre 11, 2025  
 **Fecha de implementación**: Noviembre 18 - Diciembre 15, 2025  
 **Próxima revisión**: Diciembre 31, 2025  
-**Documento preparado por**: Alejandra Morales - Líder de Proyecto  
-**Documento aprobado por**: Miguel Rodríguez - Arquitecto de Software  
+**Documento preparado por**: Jonathan Ivan Rendón Bermeo - Líder de Proyecto  
+**Documento aprobado por**: Anderson Mora - Arquitecto de Software  
 **Versión**: 1.0  
 **Proyecto**: InmoTech - Sistema de Chat Inmobiliario  
 
