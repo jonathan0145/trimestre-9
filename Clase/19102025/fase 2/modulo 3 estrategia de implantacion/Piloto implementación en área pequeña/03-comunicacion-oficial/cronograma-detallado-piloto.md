@@ -3,7 +3,7 @@
 **Proyecto:** Inmotech  
 **Fase:** Piloto - Implementación en Área Pequeña  
 **Período:** 22 - 27 de octubre de 2025  
-**Responsable:** María González - Líder de Proyecto  
+**Responsable:** Jonathan Ivan Rendon Bermeo - Líder de Proyecto  
 
 ---
 
@@ -256,10 +256,10 @@
 
 | Rol | Nombre | Teléfono | Email | Disponibilidad |
 |-----|--------|----------|-------|---------------|
-| **Coordinación General** | María González | +57 301 234 5678 | maria.gonzalez@inmotech.com | 24/7 durante piloto |
-| **Soporte Técnico** | David Paredes | +57 302 345 6789 | david.paredes@inmotech.com | 8AM-6PM |
-| **Soporte Funcional** | Carlos Mendoza | +57 303 456 7890 | carlos.mendoza@inmotech.com | 9AM-5PM |
-| **Desarrollo** | Juan Martínez | +57 304 567 8901 | juan.martinez@inmotech.com | 8AM-7PM |
+| **Coordinación General** | Jonathan Ivan Rendón Bermeo | +57 301 234 5678 | jonathan.rendon@inmotech.com | 24/7 durante piloto |
+| **Soporte Técnico** | Anderson Mora | +57 302 345 6789 | anderson.mora@inmotech.com | 8AM-6PM |
+| **Soporte Funcional** | Nadia Masmela | +57 303 456 7890 | nadia.masmela@inmotech.com | 9AM-5PM |
+| **Desarrollo** | Jonathan Ivan Rendón Bermeo | +57 304 567 8901 | jonathan.rendon@inmotech.com | 8AM-7PM |
 
 ---
 
@@ -279,8 +279,8 @@
 
 ---
 
-**Elaborado por:** María González - Líder de Proyecto  
-**Validado por:** Carlos Mendoza - Responsable de Capacitación  
-**Aprobado por:** Dirección General  
+**Elaborado por:** Jonathan Ivan Rendón Bermeo - Líder de Proyecto  
+**Validado por:** Nadia Masmela - Responsable de Capacitación  
+**Aprobado por:** Anderson Mora - Dirección General  
 **Fecha:** 21 de octubre de 2025  
 **Versión:** 1.0

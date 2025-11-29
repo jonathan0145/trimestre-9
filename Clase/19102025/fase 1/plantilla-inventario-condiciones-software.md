@@ -13,7 +13,7 @@ Esta sección documenta los detalles fundamentales del sistema existente.
 | Campo                                 | Descripción / Respuesta                                              |
 |---------------------------------------|---------------------------------------------------------------------|
 | Nombre del Proveedor/Desarrollador    | Desarrollo Interno (Equipo INMOTECH)                                |
-| Tecnología Principal                  | Backend: Node.js (Express, Sequelize, Socket.io); Frontend: React; Base de datos: MySQL/MariaDB |
+| Tecnología Principal                  | Backend: Node.js (Express, Sequelize, Socket.io); Frontend: React; Base de datos: MariaDB/SQLite(para pruebas) |
 | Licenciamiento                        | Software libre, sin restricciones de usuarios.                      |
 | Fecha de Última Actualización Mayor   | 20/11/2025                                                          |
 | Manuales/Documentación Disponibles    | Sí. Ubicación: carpeta `documentacion/` y archivos `.md` en el repositorio. Estado: Completa y actualizada. |
@@ -25,7 +25,7 @@ Detalles sobre el entorno donde se ejecuta actualmente el software.
 | Componente                | Detalles Técnicos Actuales                                              | Observaciones / Restricciones                  |
 |---------------------------|------------------------------------------------------------------------|-----------------------------------------------|
 | Servidor (SO)             | Debian-web-server, versión estable.                                     | Hardware virtualizado, escalable según demanda.|
-| Base de Datos (SGBD)      | MySQL/MariaDB 10.x, SQLite para pruebas.                               | Volumen de datos moderado, optimización periódica.|
+| Base de Datos (SGBD)      | MariaDB 10.x, SQLite para pruebas.                               | Volumen de datos moderado, optimización periódica.|
 | Integraciones/Interfaces  | Firebase (autenticación, notificaciones), API RESTful, sockets.        | Integración estable, monitoreo activo.         |
 | Copia de Seguridad (Backup)| Diaria, total e incremental, almacenada en servidor y nube.            | Restauración rápida, copias redundantes.       |
 | Hardware de Usuario Final | Mínimo: 4GB RAM, CPU dual-core, SO Windows/Linux/Mac, navegador Chrome/Firefox. | Sin restricciones graves, rendimiento óptimo en la mayoría de equipos. |
@@ -46,7 +46,7 @@ Detalles sobre el entorno donde se ejecuta actualmente el software.
 - Navegadores Chrome/Firefox, Suite ofimática LibreOffice/Microsoft Office, herramientas de desarrollo (VS Code, Node.js, npm)
 - No se detectan conflictos graves, integración estable con el sistema INMOTECH
 **Bases de datos:**
-- MySQL/MariaDB 10.x, SQLite para pruebas
+- MariaDB 10.x, SQLite para pruebas
 
 ### 2.3 Evaluación de Infraestructura de Red
 **Ancho de banda:**

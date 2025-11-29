@@ -38,28 +38,27 @@
 ### **Infraestructura**:
 ```yaml
 Servidor Backend:
-  - CPU: 4 cores @ 2.4GHz
-  - RAM: 8GB
-  - Almacenamiento: SSD 100GB
-  - SO: Ubuntu 20.04 LTS
+   - CPU: 4 cores @ 2.4GHz
+   - RAM: 8GB
+   - Almacenamiento: SSD 100GB
+   - SO: Debian Server 12 (Bookworm)
 
 Base de Datos:
-  - MongoDB 6.0
-  - RAM dedicada: 2GB
-  - Almacenamiento: 20GB
+   - MariaDB 11.3
+   - RAM dedicada: 2GB
+   - Almacenamiento: 20GB
 
 Servidor Frontend:
-  - Nginx 1.18
-  - Node.js 18.x
-  - React 18.2
+   - Nginx 1.26.0
+   - Node.js 20.10.0
+   - React 18.3.0
 ```
 
 ### **Herramientas Utilizadas**:
-- **Carga**: Artillery.js, Apache Bench
-- **Monitoreo**: Prometheus + Grafana
-- **Seguridad**: OWASP ZAP, Burp Suite
-- **APIs**: Postman, Newman
-- **Logs**: ELK Stack (Elasticsearch, Logstash, Kibana)
+**Carga**: Artillery.js
+**Monitoreo**: Grafana
+**Seguridad**: OWASP ZAP
+**APIs**: Swagger, Postman
 
 ---
 

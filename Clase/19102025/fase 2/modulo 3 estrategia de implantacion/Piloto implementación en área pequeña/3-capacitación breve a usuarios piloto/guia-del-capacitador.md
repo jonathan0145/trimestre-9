@@ -85,7 +85,7 @@ Capacitar a los usuarios piloto en el uso del sistema Inmotech para que puedan e
 
 #### 1.1 Bienvenida y Presentaciones (5 min)
 **Script del Capacitador:**
-> "Buenos días/tardes. Bienvenidos a la capacitación del sistema Inmotech. Soy [Nombre], y los acompañaré durante estas 2-3 horas para prepararlos como usuarios piloto de nuestra plataforma."
+> "Buenos días/tardes. Bienvenidos a la capacitación del sistema Inmotech. Soy [Anderson Mora], y los acompañaré durante estas 2-3 horas para prepararlos como usuarios piloto de nuestra plataforma."
 
 **Actividades:**
 - Presentación del facilitador y equipo técnico

@@ -70,7 +70,7 @@ El objeto de esta sección es sustentar la solución propuesta desde la arquitec
 - **Vistas de Alto Nivel:**
    - Backend Node.js expone API RESTful y servicios de sockets.
    - Frontend React consume la API y los sockets en tiempo real.
-   - Base de datos relacional (MySQL/SQLite para pruebas).
+   - Base de datos relacional (MariaDB/SQLite para pruebas).
    - Integración con servicios externos (Firebase para autenticación y notificaciones).
 
 
@@ -88,7 +88,7 @@ El objeto de esta sección es sustentar la solución propuesta desde la arquitec
 ### 5.3. Perspectiva del Desarrollo (Despliegue e Implementación)
 - **Diagrama de Despliegue:**
    - Backend y frontend desplegados en servidor Debian-web-server.
-   - Base de datos MySQL en el mismo servidor o instancia separada.
+   - Base de datos MariaDB en el mismo servidor o instancia separada.
    - Acceso externo mediante NGINX como proxy reverso.
 - **Detalle del desarrollo:**
    - Modelo físico relacional: tablas para usuarios, propiedades, ofertas, mensajes, notificaciones, roles y permisos.

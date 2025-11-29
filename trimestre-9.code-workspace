@@ -5,6 +5,9 @@
 		},
 		{
 			"path": "../componentes"
+		},
+		{
+			"path": "../inmotech-movil"
 		}
 	],
 	"settings": {}
