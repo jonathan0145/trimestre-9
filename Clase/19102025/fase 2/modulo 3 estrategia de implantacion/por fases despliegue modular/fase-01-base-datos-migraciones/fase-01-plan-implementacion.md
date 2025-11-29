@@ -6,18 +6,18 @@
 - **Fecha de Inicio:** 06/01/2026
 - **Fecha de Finalización:** 10/01/2026
 - **Duración:** 5 días hábiles
-- **Responsable de Fase:** Carlos Martínez - Database Administrator
-- **Versión del Plan:** 1.0
-
----
-
-## 🎯 Objetivos de la Fase
-
-### Objetivo Principal
-Establecer la infraestructura de base de datos completa para el sistema InmoTech, incluyendo el diseño, creación e implementación de todas las tablas, relaciones, índices y scripts de migración necesarios para el funcionamiento del sistema.
+**Responsable de Fase:** Jonathan Ivan Rendon Bermeo - Database Administrator
+**Database Administrator (DBA) - Jonathan Ivan Rendon Bermeo**
+**Backend Developer - Anderson Mora**
+**DevOps Engineer - Nadia Masmela**
+**Emergency Contact:** Jonathan Ivan Rendon Bermeo (+34 600 123 456)
+**Nivel 1:** Problemas técnicos → Jonathan Ivan Rendon Bermeo (DBA)
+**Nivel 2:** Decisiones de diseño → Anderson Mora (Backend Lead)
+**Nivel 3:** Impacto en cronograma → Nadia Masmela (Project Manager)
+Establecer la infraestructura de base de datos completa para el sistema InmoTech, incluyendo el diseño, creación e implementación de todas las tablas, relaciones, índices y scripts de migración necesarios para el funcionamiento del sistema en MariaDB.
 
 ### Objetivos Específicos
-- [ ] Diseñar y crear el esquema completo de base de datos PostgreSQL
+- [ ] Diseñar y crear el esquema completo de base de datos MariaDB
 - [ ] Implementar todas las tablas del modelo entidad-relación
 - [ ] Establecer relaciones, llaves foráneas e índices optimizados
 - [ ] Crear scripts de migración y rollback
@@ -29,7 +29,7 @@ Establecer la infraestructura de base de datos completa para el sistema InmoTech
 
 ## 📊 Funcionalidades a Implementar
 
-### 🗄️ Estructura de Base de Datos
+### 🗄️ Estructura de Base de Datos MariaDB
 
 #### Tablas Principales
 1. **users** - Gestión de usuarios del sistema
@@ -109,9 +109,9 @@ Establecer la infraestructura de base de datos completa para el sistema InmoTech
 - Aprobación del esquema por el equipo
 
 **13:00-17:00:** Configuración del entorno
-- Instalación de PostgreSQL 14.0
+- Instalación de MariaDB 10.6
 - Configuración de parámetros de rendimiento
-- Setup de herramientas de administración (pgAdmin)
+- Setup de herramientas de administración (phpMyAdmin, MySQL Workbench)
 
 ### Día 2 (07/01/2026) - Creación de Estructura
 **09:00-12:00:** Creación de tablas principales
@@ -188,7 +188,7 @@ Establecer la infraestructura de base de datos completa para el sistema InmoTech
 ## ✅ Criterios de Aceptación
 
 ### Criterios Técnicos
-- [ ] Base de datos PostgreSQL 14.0 configurada y operativa
+- [ ] Base de datos MariaDB 10.6 configurada y operativa
 - [ ] Todas las 8 tablas principales creadas con sus relaciones
 - [ ] Índices optimizados implementados (tiempo de query < 100ms para consultas frecuentes)
 - [ ] Scripts de migración versionados y documentados
@@ -203,27 +203,29 @@ Establecer la infraestructura de base de datos completa para el sistema InmoTech
 - [ ] Documentación validada por equipo de backend
 
 ### Criterios de Negocio
-- [ ] Soporte completo para todos los módulos planificados
-- [ ] Escalabilidad demostrada para 10,000 propiedades
-- [ ] Estructura preparada para 1,000 usuarios concurrentes
-- [ ] Cumplimiento de normativas GDPR en estructura de datos
+- [ ] Soporte completo para los módulos de gestión de usuarios/agentes, propiedades y ofertas, según el modelo de datos definido.
+- [ ] Infraestructura y arquitectura de base de datos alineada con el inventario de condiciones del software: servidor Debian, MariaDB 10.6, respaldos automáticos y redundantes.
+- [ ] Capacidad de operación para al menos 1000 usuarios concurrentes y arquitectura de base de datos preparada para crecimiento horizontal y escalabilidad según demanda documentada.
+- [ ] Cumplimiento de normativas de seguridad y protección de datos aplicables en la gestión de la base de datos (LOPD, ISO 27001), roles y permisos, backup y restauración rápida.
+- [ ] Documentación técnica de la base de datos y manuales completos y actualizados en el repositorio.
+- [ ] Validación de la configuración y operación de la base de datos según inventario: servidor virtualizado, acceso seguro, respaldo y restauración funcional.
 
 ---
 
 ## 🛠️ Herramientas y Tecnologías
 
 ### Tecnologías Principal
-- **Base de Datos:** PostgreSQL 14.0
+- **Base de Datos:** MariaDB 10.6
 - **ORM:** Sequelize (Node.js)
-- **Administración:** pgAdmin 4
-- **Respaldos:** pg_dump / pg_restore
-- **Monitoreo:** PostgreSQL built-in stats
+- **Administración:** phpMyAdmin, MySQL Workbench
+- **Respaldos:** mysqldump / mysql
+- **Monitoreo:** MariaDB built-in stats
 
 ### Scripts y Utilidades
 - **Migración:** Custom Node.js scripts
 - **Seeding:** Faker.js para datos de prueba
-- **Pruebas:** PostgreSQL TAP (pgTAP)
-- **Performance:** pg_stat_statements
+- **Pruebas:** MySQLTAP (o pruebas SQL directas)
+- **Performance:** MariaDB performance_schema
 
 ---
 
@@ -246,7 +248,7 @@ Establecer la infraestructura de base de datos completa para el sistema InmoTech
 ## 📋 Entregables de la Fase
 
 ### Entregables Técnicos
-1. **Base de datos PostgreSQL completa** con todas las tablas implementadas
+1. **Base de datos MariaDB completa** con todas las tablas implementadas
 2. **Scripts de migración versionados** (up/down migrations)
 3. **Datos semilla completos** para desarrollo y pruebas
 4. **Configuración de respaldo automatizado**
@@ -260,7 +262,7 @@ Establecer la infraestructura de base de datos completa para el sistema InmoTech
 5. **Reporte de pruebas de performance**
 
 ### Entregables de Configuración
-1. **Servidor PostgreSQL** configurado y optimizado
+1. **Servidor MariaDB** configurado y optimizado
 2. **Herramientas de administración** instaladas y configuradas
 3. **Monitoreo básico** implementado
 4. **Procedimientos de respaldos/restore** automatizados
@@ -311,7 +313,7 @@ Establecer la infraestructura de base de datos completa para el sistema InmoTech
 ## 📝 Registro de Cambios y Decisiones
 
 ### Decisiones Arquitectónicas
-- **PostgreSQL vs MySQL:** Elegido PostgreSQL por mejor soporte JSON y extensibilidad
+- **MariaDB vs MySQL:** Elegido MariaDB por mejor soporte de almacenamiento y extensibilidad
 - **Normalización:** Aplicada hasta 3FN para balance performance/integridad
 - **Índices:** Strategy de índices compuestos para queries más frecuentes
 
@@ -325,7 +327,7 @@ Establecer la infraestructura de base de datos completa para el sistema InmoTech
 ## ✅ Checklist de Finalización
 
 ### Pre-Requisitos Completados
-- [ ] Servidor PostgreSQL instalado y configurado
+- [ ] Servidor MariaDB instalado y configurado
 - [ ] Herramientas de desarrollo configuradas
 - [ ] Accesos y permisos establecidos
 - [ ] Ambiente de pruebas preparado
@@ -360,8 +362,8 @@ Establecer la infraestructura de base de datos completa para el sistema InmoTech
 - **Standards de Naming:** `documentacion/standards/database-naming-conventions.md`
 
 ### Recursos Externos
-- **PostgreSQL Documentation:** https://postgresql.org/docs/14/
-- **Best Practices:** Equipo interno + consultor externo PostgreSQL
+- **MariaDB Documentation:** https://mariadb.com/kb/en/documentation/
+- **Best Practices:** Equipo interno + consultor externo MariaDB
 - **Performance Tuning Guide:** Documentación interna optimización
 
 ---
@@ -369,19 +371,21 @@ Establecer la infraestructura de base de datos completa para el sistema InmoTech
 ## ✅ Validación y Aprobación
 
 ### Responsable de Fase
-**Nombre:** Carlos Martínez  
+
+**Responsable de Fase**
+**Nombre:** Jonathan Ivan Rendon Bermeo  
 **Cargo:** Database Administrator  
 **Firma:** ________________  
 **Fecha:** [DD/MM/AAAA]
 
 ### Aprobación Técnica
-**Nombre:** Ana García  
+**Nombre:** Anderson Mora  
 **Cargo:** Backend Lead Developer  
 **Firma:** ________________  
 **Fecha:** [DD/MM/AAAA]
 
 ### Aprobación de Proyecto
-**Nombre:** Miguel Torres  
+**Nombre:** Nadia Masmela  
 **Cargo:** Project Manager  
 **Firma:** ________________  
 **Fecha:** [DD/MM/AAAA]
