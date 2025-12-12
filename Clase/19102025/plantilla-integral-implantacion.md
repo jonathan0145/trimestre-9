@@ -17,7 +17,7 @@
 		- **Backend:**  
 			- API RESTful para gestión de usuarios, propiedades, ofertas, notificaciones, chat y verificación.
 			- Servicios de autenticación y autorización.
-			- Integración con bases de datos relacionales y servicios externos (Firebase, correo electrónico).
+			- Integración con base de datos MariaDB y servicios externos (Firebase, correo electrónico).
 			- Scripts de automatización para roles, permisos y migraciones.
 			- Pruebas automatizadas (Jest, Supertest) y reportes de calidad.
 			- Configuración de despliegue y migración de datos.
@@ -42,10 +42,10 @@
 			- Monitoreo en tiempo real y dashboard de KPIs.
 			- Reportes de análisis estático de código y aseguramiento de la calidad.
 
-- **Equipo responsable:**  
+**Equipo responsable:**  
 	- **Jonathan Ivan Rendon Bermeo**
-	- **Nadia Fernanda Masmela**
-	- **Anderson Stiff Mora**
+	- **Nadia Masmela**
+	- **Anderson Mora**
 
 > **Consulta la arquitectura técnica del sistema en el siguiente documento:**
 > [Documento de Arquitectura del Sistema (DAS)](./Arquitectura%20tecnica%20del%20sistema/documento-arquitectura-sistema.md)

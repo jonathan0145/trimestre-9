@@ -6,14 +6,18 @@
 
 **Fecha:** 15/11/2025
 
-**Elaborado por:** Jonathan Rendon, Nadia Masmela, Anderson Mora
+**Elaborado por:** Nadia Masmela, Anderson Mora y Jonathan Ivan Rendon Bermeo
 
----
+## Diagrama de Casos de Uso
+
+![Diagrama de Casos de Uso](https://docs.google.com/document/d/11YKno4Yn1_MqPRMn5ydDyl6VuiVxj_hc/edit)
+
+*El diagrama muestra los principales actores (usuarios, agentes, administradores) y los flujos clave: registro, autenticación, gestión de propiedades, inicio de conversaciones, envío de mensajes, gestión de archivos y notificaciones.*
 
 ## 0. Historial de Versiones
 | Versión | Fecha  | Autor  | Descripción del Cambio         |
 |---------|--------|--------|-------------------------------|
-| 1.0     | 15/11/2025| Jonathan Rendon, Nadia Masmela, Anderson Mora| Creación del documento        |
+| 1.0     | 15/11/2025| Nadia Masmela, Anderson Mora y Jonathan Ivan Rendon Bermeo| Creación del documento        |
 
 ---
 
@@ -88,7 +92,7 @@ El objeto de esta sección es sustentar la solución propuesta desde la arquitec
 ### 5.3. Perspectiva del Desarrollo (Despliegue e Implementación)
 - **Diagrama de Despliegue:**
    - Backend y frontend desplegados en servidor Debian-web-server.
-   - Base de datos MariaDB en el mismo servidor o instancia separada.
+   - Base de datos MariaDB en el mismo servidor o instancia separada, gestionada por Nadia Masmela, Anderson Mora y Jonathan Ivan Rendon Bermeo.
    - Acceso externo mediante NGINX como proxy reverso.
 - **Detalle del desarrollo:**
    - Modelo físico relacional: tablas para usuarios, propiedades, ofertas, mensajes, notificaciones, roles y permisos.

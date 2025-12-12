@@ -40,17 +40,17 @@ El cronograma se divide en fases que garantizan una progresión lógica y contro
 
 | ID Tarea | Tarea                                                                 | Responsable              | Inicio (Semana) | Fin (Semana) |
 |----------|-----------------------------------------------------------------------|--------------------------|-----------------|--------------|
-| 2.1      | Instalación y configuración del entorno de pruebas (QA).              | IT                       | 5               | 5            |
+| 2.1      | Instalación y configuración del entorno de pruebas (QA) en MariaDB.              | Jonathan Ivan Rendon Bermeo                       | 5               | 5            |
 | 2.2      | Configuración inicial de parámetros del sistema (catálogos, roles, permisos). | Consultor Funcional | 5               | 8            |
 | 2.3      | Desarrollo o ajuste de integraciones con sistemas externos (si aplica). | Equipo de Desarrollo   | 6               | 10           |
 | 2.4      | Desarrollo de reportes personalizados y formatos de impresión.         | Equipo de Desarrollo     | 9               | 12           |
-| 2.5      | Preparación y limpieza de datos maestros para migración (clientes, productos, etc.). | Usuarios Clave | 10              | 12           |
+| 2.5      | Preparación y limpieza de datos maestros para migración en MariaDB (clientes, productos, etc.). | Anderson Mora | 10              | 12           |
 
 ### FASE III: PRUEBAS Y CAPACITACIÓN (Semanas 13 - 18)
 
 | ID Tarea | Tarea                                                                 | Responsable              | Inicio (Semana) | Fin (Semana) |
 |----------|-----------------------------------------------------------------------|--------------------------|-----------------|--------------|
-| 3.1      | Migración de prueba de datos maestros al entorno QA.                  | IT                       | 13              | 13           |
+| 3.1      | Migración de prueba de datos maestros al entorno QA en MariaDB.                  | Nadia Masmela                       | 13              | 13           |
 | 3.2      | Pruebas Funcionales Integrales (Consultor y Usuarios Clave).          | Consultor Funcional      | 14              | 15           |
 | 3.3      | Desarrollo del material de capacitación y manuales de usuario.        | Capacitación             | 15              | 16           |
 | 3.4      | Capacitación a usuarios finales (sesiones por módulo).                | Capacitación             | 17              | 18           |

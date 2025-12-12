@@ -33,6 +33,10 @@
 - **Proxy**: Nginx como reverse proxy
 - **Monitoreo**: Winston para logs, Prometheus + Grafana para métricas
 
+## Diagrama de Casos de Uso
+
+![Diagrama de Casos de Uso](https://docs.google.com/document/d/11YKno4Yn1_MqPRMn5ydDyl6VuiVxj_hc/edit)
+
 ## 2. Diagrama de Componentes
 
 ```

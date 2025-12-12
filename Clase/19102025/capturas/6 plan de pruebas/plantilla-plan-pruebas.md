@@ -22,12 +22,12 @@
 
 | Tipo de Prueba                | Descripción y Responsable                                                                 | Estado de Inclusión |
 |-------------------------------|-----------------------------------------------------------------------------------------|---------------------|
-| Pruebas Unitarias             | Validación del código a nivel de componente/módulo individual. (Desarrolladores)         | [Sí/No - Desarrolladores completadas] |
-| Pruebas Funcionales           | Verificación de que cada función cumple el requisito del negocio. (Consultores Funcionales) | Sí                  |
-| Pruebas de Integración        | Asegurar que el flujo de datos entre módulos o sistemas externos funciona. (IT/Usuarios Clave) | Sí                  |
-| Pruebas de Rendimiento/Carga  | Medir la respuesta del sistema bajo picos de usuarios o transacciones. (IT/Proveedor)    | Sí                  |
-| Pruebas UAT (Aceptación de Usuario) | Validación del sistema por usuarios finales en escenarios de negocio reales. (Usuarios Clave) | Sí                  |
-| Pruebas de Seguridad          | Verificar permisos de acceso y protección de datos sensibles. (IT/Seguridad)             | Sí                  |
+| Pruebas Unitarias             | Validación del código a nivel de componente/módulo individual sobre MariaDB. (Jonathan Ivan Rendon Bermeo)         | [Sí/No - Desarrolladores completadas] |
+| Pruebas Funcionales           | Verificación de que cada función cumple el requisito del negocio. (Anderson Mora) | Sí                  |
+| Pruebas de Integración        | Asegurar que el flujo de datos entre módulos o sistemas externos funciona. (Nadia Masmela) | Sí                  |
+| Pruebas de Rendimiento/Carga  | Medir la respuesta del sistema bajo picos de usuarios o transacciones en MariaDB. (Jonathan Ivan Rendon Bermeo)    | Sí                  |
+| Pruebas UAT (Aceptación de Usuario) | Validación del sistema por usuarios finales en escenarios de negocio reales. (Nadia Masmela) | Sí                  |
+| Pruebas de Seguridad          | Verificar permisos de acceso y protección de datos sensibles en MariaDB. (Anderson Mora)             | Sí                  |
 
 ---
 

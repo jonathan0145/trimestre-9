@@ -3,14 +3,14 @@
 **Título del Proyecto:** [Nombre del Nuevo Proyecto]
 **Versión:** 1.0
 **Fecha:** [Fecha de Creación]
-**Elaborado por:** [Nombre del Arquitecto/Equipo]
+**Elaborado por:** Nadia Masmela, Anderson Mora y Jonathan Ivan Rendon Bermeo
 
 ---
 
 ## 0. Historial de Versiones
-| Versión | Fecha  | Autor  | Descripción del Cambio         |
-|---------|--------|--------|-------------------------------|
-| 1.0     | [Fecha]| [Autor]| Creación del documento        |
+| Versión | Fecha  | Autor(es)  | Descripción del Cambio         |
+|---------|--------|-------------------------------|-------------------------------|
+| 1.0     | [Fecha]| Nadia Masmela, Anderson Mora y Jonathan Ivan Rendon Bermeo | Creación del documento        |
 
 ---
 
@@ -80,8 +80,8 @@ El objeto de esta sección es sustentar la solución propuesta desde la arquitec
 - **Frontend:** (Ej. Framework Angular).
 
 ### 6.2. Lenguaje de Programación de Base de Datos
-- **Motor:** (Ej. MySQL, PostgreSQL, SQL Server).
-- **Herramienta de Gestión:** (Ej. PhpMyAdmin).
+- **Motor:** MariaDB.
+- **Herramienta de Gestión:** PhpMyAdmin, MySQL Workbench.
 
 ### 6.3. Extensiones y Librerías Requeridas
 [Listar todas las librerías o módulos específicos necesarios para el desarrollo.]
@@ -90,7 +90,7 @@ El objeto de esta sección es sustentar la solución propuesta desde la arquitec
 | Componente                | Mínimo Requerido (Ejemplo)           |
 |--------------------------|--------------------------------------|
 | Servidor de Aplicaciones | 4GB RAM, 2 VCPU, 10 GB Almacenamiento|
-| Servidor de Base de Datos| 2GB RAM, 10 GB Almacenamiento        |
+| Servidor de Base de Datos| 2GB RAM, 10 GB Almacenamiento (MariaDB) |
 | Sistema Operativo        | (Ej. Ubuntu 22.04.2 LTS)             |
 | Servidor Web/Proxy       | (Ej. NGINX)                          |
 
